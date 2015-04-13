@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Task3</title>
+    <style type="text/css">
+        p {text-align: left; padding-left: 50px;}
+    </style>
+</head>
+<body>
+<form action="/">
+    <p>Name<br /><input type="text" name="Name"/></p>
+
+    <p>Email<br /><input type="email" name="Address"></p>
+
+    <p>Sex
+        <br /><input type="radio" name="sex" value="1" />Male
+        <input type="radio" name="sex" value="2" />Female
+    </p>
+
+    <p>Current status
+        <br /><input type="checkbox" name="Current status" value="1"/>Student
+        <br /><input type="checkbox" name="Current status" value="2"/>Employed
+        <br /><input type="checkbox" name="Current status" value="3"/>Unemployed
+    </p>
+    <p>Month and Year of birth
+        <br /><select name="Month and Year of birth" id="a1">
+            <option value="1">January</option>
+            <option value="2">Febuary</option>
+            <option value="3">March</option>
+        </select>
+        <select name="Month and Year of birth" id="a2">
+            <option value="">1986</option>
+            <option value="">1987</option>
+            <option value="">1988</option>
+        </select>
+    </p>
+
+        <p>Skills and Technologies
+        <br /><select name="Skills and Technologies" size="10"  multiple="multiple">
+                <optgroup label="Tech Skills">
+                    <option value="11">HTML</option>
+                    <option value="12">CSS</option>
+                    <option value="13">JavaScript</option>
+                    <option value="14">git</option>
+                </optgroup>
+                <optgroup label="Soft Skills">
+                    <option value="21">Time management</option>
+                    <option value="22">Proactivity</option>
+                    <option value="23">Teamwork</option>
+                    <option value="24">Leadership</option>
+                </optgroup>
+            </select>
+        </p>
+        <p>Photo
+            <br /><input type="file" name="photo"/>
+        </p>
+        <p>Comments
+            <br /><textarea name="Comments" id="a3" cols="30" rows="5"></textarea>
+        </p>
+
+        <p><input type="submit" value="Save" /></p>
+
+</form>
+</body>
+</html>
