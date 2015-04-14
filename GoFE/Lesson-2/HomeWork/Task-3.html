@@ -9,21 +9,21 @@
 </head>
 <body>
 <form action="/">
-    <p>Name<br /><input type="text" name="Name"/></p>
+    <p><label>Name<br /><input type="text" name="Name"/></label></p>
 
-    <p>Email<br /><input type="email" name="Address"></p>
+    <p><label>Email<br /><input type="email" name="Address"></label></p>
 
-    <p>Sex
+    <p><label>Sex
         <br /><input type="radio" name="sex" value="1" />Male
-        <input type="radio" name="sex" value="2" />Female
+        <input type="radio" name="sex" value="2" />Female</label>
     </p>
 
-    <p>Current status
+    <p><label>Current status
         <br /><input type="checkbox" name="Current status" value="1"/>Student
         <br /><input type="checkbox" name="Current status" value="2"/>Employed
-        <br /><input type="checkbox" name="Current status" value="3"/>Unemployed
+        <br /><input type="checkbox" name="Current status" value="3"/>Unemployed</label>
     </p>
-    <p>Month and Year of birth
+    <p><label>Month and Year of birth
         <br /><select name="Month and Year of birth" id="a1">
             <option value="1">January</option>
             <option value="2">Febuary</option>
@@ -34,9 +34,10 @@
             <option value="">1987</option>
             <option value="">1988</option>
         </select>
+        </label>
     </p>
 
-        <p>Skills and Technologies
+        <p><label>Skills and Technologies
         <br /><select name="Skills and Technologies" size="10"  multiple="multiple">
                 <optgroup label="Tech Skills">
                     <option value="11">HTML</option>
@@ -51,12 +52,13 @@
                     <option value="24">Leadership</option>
                 </optgroup>
             </select>
+            </label>
         </p>
-        <p>Photo
-            <br /><input type="file" name="photo"/>
+        <p><label>Photo
+            <br /><input type="file" name="photo"/></label>
         </p>
-        <p>Comments
-            <br /><textarea name="Comments" id="a3" cols="30" rows="5"></textarea>
+        <p><label>Comments
+            <br /><textarea name="Comments" id="a3" cols="30" rows="5"></textarea></label>
         </p>
 
         <p><input type="submit" value="Save" /></p>
