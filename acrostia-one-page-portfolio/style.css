@@ -87,13 +87,17 @@ nav>a:hover {
     margin: 0 auto;
     text-align: center;
 }
-.item1 img {
+.item img {
     box-shadow: 0 0 10px rgba(0,0,0,0.5);
     border-radius: 10px;
 }
-.item2,.item3,.item4 {
+.item {
     display: none;
 }
+.item.active1 {
+    display: block;
+}
+
 .arrow-left {
     position: absolute;
     top: 450px;
