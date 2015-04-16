@@ -34,14 +34,13 @@ table {
 }
 body {
     position: relative;
-    width: 1600px;
     height: 1000px;
     margin: 0 auto;
-    background: url("images/home/home-bkgrnd.png") no-repeat;
-    background-position: center;
+    background: url("images/home/home-bkgrnd.png") center center no-repeat;
+    background-size: cover;
 }
 header {
-    position: relative;
+    position: fixed;
     top: 0;
     left: 0;
     height: 200px;
@@ -50,16 +49,14 @@ header {
     background: -moz-linear-gradient(top, rgba(200,200,200,0.95),rgba(255,255,255,0));
 }
 .logo {
-    position: relative;
-    display: inline-block;
-    top: 38px;
-    left: 250px;
+    position: absolute;
+    top: 28px;
+    left: 40px;
 }
 nav {
-    display: inline-block;
-    position: relative;
+    position: absolute;
     top: 38px;
-    left: 850px;
+    right: 40px;
 }
 nav>a {
     text-decoration: none;
