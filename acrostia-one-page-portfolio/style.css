@@ -102,9 +102,11 @@ nav>.active {
     position: absolute;
     top: 450px;
     left: 10px;
+    cursor: pointer;
 }
 .arrow-right {
     position: absolute;
     top: 450px;
     right: 10px;
+    cursor: pointer;
 }
