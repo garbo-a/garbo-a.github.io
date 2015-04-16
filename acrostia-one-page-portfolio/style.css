@@ -83,7 +83,7 @@ nav>.active {
     position: relative;
     width: 800px;
     height: 700px;
-    padding-top: 230px;
+    top: 230px;
     margin: 0 auto;
     text-align: center;
 }
@@ -92,6 +92,8 @@ nav>.active {
     border-radius: 10px;
 }
 .item {
+    position: absolute;
+    text-align: center;
     display: none;
 }
 .item.active {
@@ -100,13 +102,13 @@ nav>.active {
 
 .arrow-left {
     position: absolute;
-    top: 450px;
+    top: 220px;
     left: 10px;
     cursor: pointer;
 }
 .arrow-right {
     position: absolute;
-    top: 450px;
+    top: 220px;
     right: 10px;
     cursor: pointer;
 }
