@@ -37,18 +37,16 @@ body {
     width: 1600px;
     height: 1000px;
     margin: 0 auto;
-    background: url("images/home/home-bkgrnd.png") no-repeat;
+    background: url("images/services/acrostia_onepage_template_by_outlinez.png") no-repeat;
     background-position: center;
 }
 header {
     position: relative;
     top: 0;
     left: 0;
-    height: 200px;
+    height: 100px;
     width: 100%;
-    background: -webkit-linear-gradient(top, rgba(200,200,200,0.95),rgba(255,255,255,0));
-    background: -moz-linear-gradient(top, rgba(200,200,200,0.95),rgba(255,255,255,0));
-}
+ }
 .logo {
     position: relative;
     display: inline-block;
@@ -69,10 +67,67 @@ nav>a {
     padding: 60px 30px 17px 30px;
 }
 nav>a:hover {
-    background-color: #74c7d5;
+    background-color: #df5c64;
     border-radius: 7px;
 }
 .active {
-    background-color: #74c7d5;
+    background-color: #df5c64;
     border-radius: 7px;
+}
+.services {
+    text-align: center;
+    position: relative;
+    margin-top: 70px;
+}
+.services h1 {
+    font-family: sans-serif;
+    font-size: 45px;
+    color: #ffffff;
+}
+.services h2 {
+    font-family: sans-serif;
+    font-size: 16px;
+    color: #ffffff;
+    margin-top: 50px;
+}
+.services h2>a {
+    text-decoration: none;
+    cursor: pointer;
+    color: #fbc4c7;
+}
+.services p {
+    font-family: sans-serif;
+    font-size: 11px;
+    color: #fbc4c7;
+    line-height: 1.5;
+    margin-top: 25px;
+}
+.services-items {
+    position: relative;
+    margin-top: 130px;
+    text-align: center;
+}
+.services-items figure {
+    display: inline-block;
+    width: 300px;
+    height: 400px;
+    margin: 0 10px;
+    background: #c45158;
+    border-radius: 7px;
+}
+figure img {
+    margin-top: 45px;
+}
+figcaption {
+    font-family: sans-serif;
+    font-size: 20px;
+    color: #ffffff;
+    margin-top: 30px;
+}
+figure p {
+    font-family: sans-serif;
+    font-size: 14px;
+    color: #ffffff;
+    margin-top: 50px;
+    line-height: 1.5;
 }
