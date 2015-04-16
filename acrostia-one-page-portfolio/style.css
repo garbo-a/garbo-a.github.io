@@ -1,0 +1,147 @@
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+body {
+
+    background:url("");
+    min-width: 1200px;
+    max-width: 1600px;
+    height: 1000px;
+}
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+.logo {
+    position: relative;
+    display: inline-block;
+    top: 43px;
+    left: 250px;
+}
+nav {
+    display: inline-block;
+    position: relative;
+    top: 41px;
+    left: 840px;
+
+}
+nav>a {
+    text-decoration: none;
+    cursor: pointer;
+    font:13px Verdana,Arial;
+    color:#FFFAFA;
+}
+/*
+#wrapper {
+    width:840px;
+    margin:50px auto;
+}
+#container {
+    position:relative;
+    background:#fff;
+    padding:32px;
+    height:235px;
+    border-right:1px solid #ccc;
+    border-bottom:1px solid #ccc;
+}
+.sliderbutton {
+    float:left;
+    width:25px;
+    height:235px;
+    cursor:pointer;
+}
+#slideleft {
+    background:url(images/icons.gif) -50px -265px no-repeat;
+}
+#slideleft:hover {
+    background-position:-0 -265px;
+}
+#slideright {
+    background:url(images/icons.gif) 0 90px no-repeat;
+}
+#slideright:hover {
+    background-position:-50px 90px;
+}
+#slider {
+    float:left;
+    position:relative;
+    overflow:auto;
+    width:558px;
+    height:235px;
+}
+#slider ul {
+    position:absolute;
+    list-style:none;
+    top:0;
+    left:0;
+}
+#slider li {
+    float:left;
+    width:558px;
+    height:235px;
+}
+.pagination {
+    position:absolute;
+    top:40px;
+    right:61px;
+    list-style:none;
+    height:25px;
+}
+.pagination li {
+    float:left;
+    cursor:pointer;
+    height:8px;
+    width:8px;
+    background:#ccc;
+    margin:0 4px 0 0;
+    border:1px solid #fff;
+}
+.pagination li:hover, li.current {
+    background:#fff;
+}

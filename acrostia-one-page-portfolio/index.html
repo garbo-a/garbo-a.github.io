@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <link href="style.css" rel="stylesheet">
+    <script src="scripts/script.js"></script>
+    <title>Acrostia one page portfolio</title>
+</head>
+
+<body>
+<header>
+    <a class="logo" href="index.html"><img src="images/home/Logo.png" alt="Acrostia TM" width="151" height="30"/></a>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="about.html">About</a>
+        <a href="work.html">Work</a>
+        <a href="contacts.html">Contacts</a>
+    </nav>
+</header>
+
+    <div id="wrapper">
+        <div id="container">
+            <div class="sliderbutton" id="slideleft" onclick="slideshow.move(-1)"></div>
+            <div id="slider">
+                <ul>
+                    <li><img src="images/home/home-bkgrnd.png" width="1600" height="1000" alt="Image One" /></li>
+                    <li><img src="images/home/abstract-q-c-1600-1000-3.jpg" width="1600" height="1000" alt="Image Two" /></li>
+                    <li><img src="images/home/technics-q-c-1600-1000-8.jpg" width="1600" height="1000" alt="Image Three" /></li>
+                </ul>
+            </div>
+            <div class="sliderbutton" id="slideright" onclick="slideshow.move(1)"></div>
+            <ul id="pagination" class="pagination">
+                <li onclick="slideshow.pos(0)"></li>
+                <li onclick="slideshow.pos(1)"></li>
+                <li onclick="slideshow.pos(2)"></li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
