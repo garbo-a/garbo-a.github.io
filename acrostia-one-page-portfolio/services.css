@@ -36,7 +36,7 @@ body {
     position: relative;
     height: 1000px;
     margin: 0 auto;
-    background: url("images/services/acrostia_onepage_template_by_outlinez.png") center center no-repeat;
+    background: #B24A50 url("images/services/acrostia_onepage_template_by_outlinez.png") center center no-repeat;
     background-size: cover;
 }
 header {
@@ -45,6 +45,7 @@ header {
     left: 0;
     height: 200px;
     width: 100%;
+    z-index: 10;
 }
 .logo {
     position: absolute;
@@ -106,13 +107,9 @@ nav>a:hover {
 }
 .services-items figure {
     display: inline-block;
-    min-width: 150px;
-    max-width: 300px;
-    width: 100%;
-
+    width: 300px;
     height: 400px;
-
-    margin: 0 10px;
+    margin: 10px 10px;
     background: #c45158;
     border-radius: 7px;
 }
