@@ -12,7 +12,7 @@ var main = function() {
 
         currentSlide.fadeOut(600).removeClass('active');
         nextSlide.fadeIn(600).addClass('active');
-    })
+    });
     $('.arrow-left').click(function() {
         var currentSlide = $('.item.active');
         var prevSlide = currentSlide.prev();
@@ -23,6 +23,6 @@ var main = function() {
 
         currentSlide.fadeOut(600).removeClass('active');
         prevSlide.fadeIn(600).addClass('active');
-    })
+    });
 }
 $(document).ready(main);
