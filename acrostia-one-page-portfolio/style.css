@@ -93,7 +93,7 @@ nav>.active {
     display: none;
 }
 .item.active {
-    display: block;
+    display: inline;
 }
 
 .arrow-left {
