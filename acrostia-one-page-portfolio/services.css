@@ -43,9 +43,11 @@ header {
     position: fixed;
     top: 0;
     left: 0;
-    height: 200px;
+    height: 100px;
     width: 100%;
     z-index: 10;
+    background: -webkit-linear-gradient(top, rgba(178,74,80,1),rgba(178,74,80,0.8));
+    background: -moz-linear-gradient(top, rgba(178,74,80,0.75),rgba(190,100,100,0));
 }
 .logo {
     position: absolute;
