@@ -1,0 +1,23 @@
+nav {
+    position: relative;
+    background: #8A2BE2;
+    width: 900px;
+    margin: 0 auto;
+}
+nav a:first-child {
+    margin-left: 70px;
+}
+nav a {
+    display: inline-block;
+    font-family: Impact;
+    font-size:20px;
+    color: #fff;
+    text-decoration: none;
+    padding: 8px 15px;
+}
+nav a:hover,nav .active {
+    cursor:pointer;
+    background: #EEE9E9;
+    color: #8B8989;
+    box-shadow: 0 0 7px #8B8989;
+}
