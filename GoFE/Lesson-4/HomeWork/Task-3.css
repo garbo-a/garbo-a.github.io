@@ -29,6 +29,9 @@
     border: 1px solid  #8a2be2;
     cursor: pointer;
 }
-.pagination a.back {
+.pagination a.navigation {
     border: none;
+}
+li[type='none'] {
+    padding: 0 8px;
 }
