@@ -9,7 +9,7 @@ div ul li:nth-child(5) a {
 }
 div ul li:nth-child(5):after {
     display: inline-block;
-    content: '  \21F1';
+    content: '\21F1';
     transform: rotate(90deg);
     margin-left: 5px;
 }
