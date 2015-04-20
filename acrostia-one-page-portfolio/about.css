@@ -97,40 +97,63 @@ nav>a:hover {
     line-height: 1.5;
     margin-top: 25px;
 }
+/* styling block class="about_team" */
+
 .about_team {
     position: relative;
     margin-top: 130px;
     text-align: center;
 }
-.about_team .member {
+.about_team.member {
     display: inline-block;
     width: 300px;
     height: 400px;
     margin: 20px 10px;
-    background: #594957;
+    background: rgba(89, 73, 87, 0.7);
     border-radius: 7px;
+    background-image: url(images/about/User-1.png);
+    background-repeat: no-repeat;
+    background-position: center 35px;
 }
-.about_team a {
-
+.about_team.member:hover {
+    background: rgba(82, 67, 80, 0.7);
+    background-image: url("images/about/User_active.png");
+    background-repeat: no-repeat;
+    background-position: center 35px;
+}
+.about_team.member_data>a {
     text-decoration: none;
+    display: block;
+    position: relative;
+    height: 80px;
+    top: 100px;
 }
-.about_team a:hover {
-    cursor: pointer;
-    background: #524350;
-}
-div img {
-    margin-top: 45px;
-}
-h3 {
+.about_team.member_data>a>h3 {
     font-family: sans-serif;
     font-size: 20px;
-    color: #ffffff;
-    margin-top: 30px;
+    color: #c7b6c5;
+    top: 15px;
 }
-div p {
+.about_team.member_data>a>h3:hover {
+    color: #FFFFFF;
+}
+.about_team.member_data>a>p:hover {
+    color: #FF8973;
+}
+.about_team.member p {
     font-family: sans-serif;
     font-size: 14px;
-    color: #ffffff;
-    margin-top: 50px;
-    line-height: 1.5;
+    color: #a1ca6c;
+    margin-top: 20px;
 }
+.social {
+    margin-top: 100px;
+}
+.social_icon {
+    display: inline-block;
+    height: auto;
+    margin-top: 15px;
+}
+
+
+
