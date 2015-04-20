@@ -47,7 +47,7 @@ header {
     width: 100%;
     z-index: 10;
     background: -webkit-linear-gradient(top, rgba(178,74,80,1),rgba(178,74,80,0.8));
-    background: -moz-linear-gradient(top, rgba(178,74,80,0.75),rgba(190,100,100,0));
+    background: -moz-linear-gradient(top, rgba(178,74,80,1),rgba(178,74,80,0.8));
 }
 .logo {
     position: absolute;
