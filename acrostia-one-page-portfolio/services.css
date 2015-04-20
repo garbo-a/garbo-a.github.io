@@ -107,24 +107,32 @@ nav>a:hover {
     margin-top: 130px;
     text-align: center;
 }
-.services-items figure {
+.services-items div {
+    display: inline-block;
+}
+.services-items a {
     display: inline-block;
     width: 300px;
     height: 400px;
     margin: 20px 10px;
     background: #c45158;
     border-radius: 7px;
+    text-decoration: none;
 }
-figure img {
+.services-items a:hover {
+    cursor: pointer;
+    background: #ff565d;
+}
+div img {
     margin-top: 45px;
 }
-figcaption {
+h3 {
     font-family: sans-serif;
     font-size: 20px;
     color: #ffffff;
     margin-top: 30px;
 }
-figure p {
+div p {
     font-family: sans-serif;
     font-size: 14px;
     color: #ffffff;

@@ -82,7 +82,7 @@ nav>.active {
 }
 .wrapper {
     position: relative;
-    width: 500px;
+    width: 700px;
     height: 500px;
     margin: 0 auto;
     top: 300px;
@@ -96,7 +96,6 @@ nav>.active {
 .item.active {
     display: inline;
 }
-
 .arrow-left {
     position: absolute;
     top: 220px;
