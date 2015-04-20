@@ -1,12 +1,13 @@
+div {
+    background: #8A2BE2;
+}
 nav {
     position: relative;
     background: #8A2BE2;
     width: 900px;
     margin: 0 auto;
 }
-nav a:first-child {
-    margin-left: 70px;
-}
+
 nav a {
     display: inline-block;
     font-family: Impact;
