@@ -134,10 +134,10 @@ nav>a:hover {
     color: #c7b6c5;
     top: 15px;
 }
-.about_team.member_data>a>h3:hover {
+.about_team.member:hover a>h3 {
     color: #FFFFFF;
 }
-.about_team.member_data>a>p:hover {
+.about_team.member:hover a>p {
     color: #FF8973;
 }
 .about_team.member p {
