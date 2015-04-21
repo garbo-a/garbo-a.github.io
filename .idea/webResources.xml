@@ -6,6 +6,7 @@
         <entryData>
           <resourceRoots>
             <path value="file://$PROJECT_DIR$/GoFE/Lesson-3/HomeWork" />
+            <path value="file://$PROJECT_DIR$" />
           </resourceRoots>
         </entryData>
       </entry>
