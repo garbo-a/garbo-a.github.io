@@ -89,26 +89,36 @@ nav>.active {
 }
 .item {
     position: absolute;
-    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    box-shadow: 0 0 20px rgba(128,215,229,0.8);
     border-radius: 10px;
     display: none;
 }
 .item.active {
-    display: inline;
+    display: block;
 }
 .arrow-left {
     position: absolute;
     top: 220px;
-    left: 5px;
+    left: -125px;
+    background: #80d7e5;
     border-radius: 50px;
+    transition-duration: 0.5s;
+    -webkit-transition-duration: 0.5s;
+    -moz-transition-duration: 0.5s;
+    -o-transition-duration: 0.5s;
 }
 .arrow-right {
     position: absolute;
     top: 220px;
-    right: 5px;
+    right: -125px;
+    background: #80d7e5;
     border-radius: 50px;
+    transition-duration: 0.5s;
+    -webkit-transition-duration: 0.5s;
+    -moz-transition-duration: 0.5s;
+    -o-transition-duration: 0.5s;
 }
 .arrow-left:hover,.arrow-right:hover {
     cursor: pointer;
-    background: rgba(255,255,255,0.3);
+    background: #70b7c5;
 }
