@@ -36,7 +36,7 @@ body {
     position: relative;
     height: 1000px;
     margin: 0 auto;
-    background: #665464 url("images/about/about_bckgrnd.jpg") center center no-repeat;
+    background: #665464 url("images/about/about_bckgrnd.jpg") center center no-repeat fixed;
     background-size: cover;
 }
 header {
