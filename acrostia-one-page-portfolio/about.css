@@ -148,14 +148,14 @@ nav>a:hover {
     font-size: 14px;
     margin-top: 20px;
 }
-.about_team_member_data:hover{
+.about_team_member:hover>.about_team_member_data {
     cursor: pointer;
     background-image: url('images/about/User_active.png');
 }
-.about_team_member_data:hover h3{
+.about_team_member:hover>.about_team_member_data h3{
     color: #fff;
 }
-.about_team_member_data:hover p{
+.about_team_member:hover>.about_team_member_data p{
     color: #ff8973;
 }
 .social>a {
