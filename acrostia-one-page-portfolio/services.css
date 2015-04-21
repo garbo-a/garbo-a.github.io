@@ -118,6 +118,10 @@ nav>a:hover {
     background: #c45158;
     border-radius: 7px;
     text-decoration: none;
+    transition-duration: 0.5s;
+    -webkit-transition-duration: 0.5s;
+    -moz-transition-duration: 0.5s;
+    -o-transition-duration: 0.5s;
 }
 .services-items a:hover {
     cursor: pointer;
