@@ -13,6 +13,7 @@ nav>a {
     color: #fff;
     text-decoration: none;
     padding: 8px 8px;
+    transition: color 0.5s;
 }
 nav>a:hover {
     cursor:pointer;
@@ -21,13 +22,14 @@ nav>a:hover {
     box-shadow: 0 -3px 3px #cecccc;
 }
 .navigation-dropdown {
+    display: none;
     background: #EEE9E9;
-    box-shadow: 0 0 4px #cfcdcd;
-    visibility: hidden;
-
+    position: absolute;
+    top: 39px;
+    left: 0;
+    width: 100%;
 }
 .navigation-dropdown-list {
-    position: relative;
     width: 900px;
     margin: 0 auto;
 }
@@ -37,10 +39,18 @@ nav>a:hover {
     font-family: sans-serif;
     font-weight: normal;
     font-size: 16px;
+    background: #EEE9E9;
     color: #8B8989;
     padding: 8px 8px;
+    transition: color 0.5s;
 }
-.dropdown-list-parent:hover~.navigation-dropdown {
-    visibility: visible;
-
+.dropdown-list-parent:hover+.navigation-dropdown {
+    display: block;
+}
+.navigation-dropdown:hover {
+    display: block;
+}
+.navigation-dropdown-list-item:hover {
+    color: #4a4a4a;
+    background: #999999;
 }
