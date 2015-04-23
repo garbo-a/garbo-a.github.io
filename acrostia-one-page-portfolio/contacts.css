@@ -110,7 +110,8 @@ nav > a:hover {
 .contacts__wrapper {
     display: inline-block;
     position: relative;
-    max-width: 45%;
+    min-width: 400px;
+    max-width: 570px;
     margin: 0 10px 0 auto;
     vertical-align: top;
 }
@@ -125,8 +126,7 @@ nav > a:hover {
 .contacts__map {
     display: inline-block;
     vertical-align: bottom;
-    margin-right: 25px;
-    margin-left: 15px;
+    margin:15px 25px 0 15px;
     border-radius: 7px;
     overflow: hidden;
 }
@@ -185,7 +185,8 @@ nav > a:hover {
 .feedback {
     display: inline-block;
     position: relative;
-    max-width: 45%;
+    min-width: 400px;
+    max-width: 570px;
     margin: 0 auto 0 10px;
     vertical-align: bottom;
 }
