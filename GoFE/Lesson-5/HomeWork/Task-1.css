@@ -41,7 +41,7 @@
                         width: 900px;
                         margin: 0 auto;
                     }
-                    .navigation-dropdown-list-item {
+                    .navigation-dropdown-list__item {
                         display: inline-block;
                         text-decoration: none;
                         font-family: sans-serif;
@@ -58,7 +58,8 @@
                     .navigation-dropdown:hover {
                         display: block;
                     }
-                    .navigation-dropdown-list-item:hover {
+                    .navigation-dropdown-list__item:hover {
                         color: #4a4a4a;
                         background: #999999;
+                        box-shadow: none;
                     }
