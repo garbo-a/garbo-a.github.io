@@ -38,7 +38,7 @@ table {
 
 body {
     position: relative;
-    height: 1000px;
+    height: 100%;
     margin: 0 auto;
     background: #75b4aa url("images/contacts/Layer-24.png") center center no-repeat fixed;
     background-size: cover;
@@ -104,10 +104,8 @@ nav > a:hover {
     margin-top: 25px;
 }
 
-.contacts.contacts_name_acrostia {
-    position: relative;
-    top: 125px;
-    margin: 0 auto;
+.contacts {
+    margin: 120px auto 0;
     text-align: center;
 }
 
@@ -115,7 +113,6 @@ nav > a:hover {
     display: inline-block;
     position: relative;
     max-width: 50%;
-    max-height: 300px;
     margin: 0 10px 0 auto;
     vertical-align: top;
 }
@@ -189,7 +186,6 @@ nav > a:hover {
     display: inline-block;
     position: relative;
     max-width: 50%;
-    max-height: 300px;
     margin: 0 auto 0 10px;
     vertical-align: bottom;
 }
@@ -247,18 +243,14 @@ input[type='submit'] {
 }
 
 footer {
-    position: fixed;
-    bottom: 0;
-    left: 0;
+    position: relative;
     height: 150px;
     width: 100%;
-    z-index: 10;
     background: #68a097;
+    margin-top: 200px;
 }
 
 .social {
-    position: relative;
-    margin: 45px auto;
     text-align: center;
 }
 
@@ -279,7 +271,7 @@ footer {
     display: inline-block;
     width: 60px;
     height: 60px;
-    margin: 0 19px;
+    margin: 45px 19px;
     background: #82c8bd url("images/contacts/facebook.png") center center no-repeat;
     border-radius: 30px;
     transition: background 0.3s;
@@ -293,7 +285,7 @@ footer {
     display: inline-block;
     width: 60px;
     height: 60px;
-    margin: 0 19px;
+    margin: 45px 19px;
     background: #82c8bd url("images/contacts/twit.png") center center no-repeat;
     border-radius: 30px;
     transition: background 0.3s;
@@ -307,7 +299,7 @@ footer {
     display: inline-block;
     width: 60px;
     height: 60px;
-    margin: 0 19px;
+    margin: 45px 19px;
     background: #82c8bd url("images/contacts/g+.png") center center no-repeat;
     border-radius: 30px;
     transition: background 0.3s;
@@ -321,7 +313,7 @@ footer {
     display: inline-block;
     width: 60px;
     height: 60px;
-    margin: 0 19px;
+    margin: 45px 19px;
     background: #82c8bd url("images/contacts/lin.png") center center no-repeat;
     border-radius: 30px;
     transition: background 0.3s;
