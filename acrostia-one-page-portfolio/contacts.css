@@ -36,7 +36,7 @@ body {
     position: relative;
     height: 1000px;
     margin: 0 auto;
-    background: #665464 url("images/about/about_bckgrnd.jpg") center center no-repeat fixed;
+    background: #75b4aa url("images/contacts/Layer-24.png") center center no-repeat fixed;
     background-size: cover;
 }
 header {
@@ -46,8 +46,8 @@ header {
     height: 100px;
     width: 100%;
     z-index: 10;
-    background: -webkit-linear-gradient(top, rgba(102,84,100,1),rgba(112,94,110,0.8));
-    background: -moz-linear-gradient(top, rgba(102,84,100,1),rgba(150,104,120,0.8));
+    background: -webkit-linear-gradient(top, rgb(117, 180, 170), rgba(133, 198, 188, 0.8));
+    background: -moz-linear-gradient(top, rgb(117, 180, 170), rgba(133, 198, 188, 0.8));
 }
 .logo {
     position: absolute;
@@ -67,42 +67,35 @@ nav>a {
     padding: 60px 30px 17px 30px;
 }
 nav>a:hover {
-    background-color: #91778e;
+    background-color: #82c8bd;
     border-radius: 7px;
 }
 .active {
-    background-color: #91778e;
+    background-color: #82c8bd;
     border-radius: 7px;
 }
-.about_content {
+.contact-content {
+    font-family: sans-serif;
     text-align: center;
     position: relative;
     margin-top: 170px;
 }
-.about_content h1 {
-    font-family: sans-serif;
+.contact-content h1 {
     font-size: 45px;
     color: #ffffff;
 }
-.about_content h2 {
-    font-family: sans-serif;
-    font-size: 16px;
-    color: #ffffff;
-    margin-top: 50px;
-}
-.about_content p {
-    font-family: sans-serif;
+.contact-content p {
     font-size: 14px;
-    color: #e6d1e3;
+    color: #fff;
     line-height: 1.5;
     margin-top: 25px;
 }
-.meet-the-team {
+/*.meet-the-team {
     display: block;
     margin: 60px auto;
 }
 /* styling block class="about_team" */
-
+/*
 .about_team {
     position: relative;
     margin-top: 60px;
