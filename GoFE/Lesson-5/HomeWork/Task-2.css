@@ -118,8 +118,13 @@ ul {
                 padding-top: 10px;
                 padding-bottom: 7px;
                 background: #ee8129;
-                border-bottom: 3px solid #b3560b;
+                box-shadow: 0 3px #b3560b;
                 border-radius: 4px;
                 text-decoration: none;
                 text-transform: uppercase;
+                transition: background 0.5s;
+            }
+            .plan-enroll-link:hover {
+                background: #ff952b;
+                box-shadow: 0 3px #d1760b;
             }

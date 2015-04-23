@@ -2,55 +2,63 @@
     position: relative;
     background: #2BB9EE;
 }
-nav {
-    width: 900px;
-    margin: 0 auto;
-}
-nav>a {
-    display: inline-block;
-    font-family: Impact;
-    font-size:20px;
-    color: #fff;
-    text-decoration: none;
-    padding: 8px 8px;
-    transition: color 0.5s;
-}
-nav>a:hover {
-    cursor:pointer;
-    background: #EEE9E9;
-    color: #8B8989;
-    box-shadow: 0 -3px 3px #cecccc;
-}
-.navigation-dropdown {
-    display: none;
-    background: #EEE9E9;
-    position: absolute;
-    top: 39px;
-    left: 0;
-    width: 100%;
-}
-.navigation-dropdown-list {
-    width: 900px;
-    margin: 0 auto;
-}
-.navigation-dropdown-list-item {
-    display: inline-block;
-    text-decoration: none;
-    font-family: sans-serif;
-    font-weight: normal;
-    font-size: 16px;
-    background: #EEE9E9;
-    color: #8B8989;
-    padding: 8px 8px;
-    transition: color 0.5s;
-}
-.dropdown-list-parent:hover+.navigation-dropdown {
-    display: block;
-}
-.navigation-dropdown:hover {
-    display: block;
-}
-.navigation-dropdown-list-item:hover {
-    color: #4a4a4a;
-    background: #999999;
-}
+    nav {
+        width: 900px;
+        margin: 0 auto;
+    }
+        .navigation-list {
+            list-style-type: none;
+            display: inline;
+
+        }
+            .navigation-list__item {
+                display: inline-block;
+            }
+                nav a {
+                    display: inline-block;
+                    font-family: Impact;
+                    font-size:20px;
+                    color: #fff;
+                    text-decoration: none;
+                    padding: 8px 8px;
+                    transition: color 0.5s;
+                }
+                nav a:hover {
+                    cursor:pointer;
+                    background: #EEE9E9;
+                    color: #8B8989;
+                    box-shadow: 0 -3px 3px #cecccc;
+                }
+                .navigation-dropdown {
+                    display: none;
+                    background: #EEE9E9;
+                    position: absolute;
+                    top: 39px;
+                    left: 0;
+                    width: 100%;
+                }
+                    .navigation-dropdown-list {
+                        width: 900px;
+                        margin: 0 auto;
+                    }
+                    .navigation-dropdown-list-item {
+                        display: inline-block;
+                        text-decoration: none;
+                        font-family: sans-serif;
+                        font-weight: normal;
+                        font-size: 16px;
+                        background: #EEE9E9;
+                        color: #8B8989;
+                        padding: 8px 8px;
+                        transition: color 0.5s;
+                    }
+                    .dropdown-list-parent:hover+.navigation-dropdown {
+                        display: block;
+                    }
+                    .navigation-dropdown:hover {
+                        display: block;
+                    }
+                    .navigation-dropdown-list-item:hover {
+                        color: #4a4a4a;
+                        background: #999999;
+                    }
