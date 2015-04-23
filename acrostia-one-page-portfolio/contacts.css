@@ -3,6 +3,7 @@
     -moz-box-sizing: border-box;
     box-sizing: border-box;
 }
+
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -23,15 +24,18 @@ time, mark, audio, video {
     font: inherit;
     vertical-align: baseline;
 }
+
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
     display: block;
 }
+
 table {
     border-collapse: collapse;
     border-spacing: 0;
 }
+
 body {
     position: relative;
     height: 1000px;
@@ -39,6 +43,7 @@ body {
     background: #75b4aa url("images/contacts/Layer-24.png") center center no-repeat fixed;
     background-size: cover;
 }
+
 header {
     position: fixed;
     top: 0;
@@ -49,160 +54,280 @@ header {
     background: -webkit-linear-gradient(top, rgb(117, 180, 170), rgba(133, 198, 188, 0.8));
     background: -moz-linear-gradient(top, rgb(117, 180, 170), rgba(133, 198, 188, 0.8));
 }
+
 .logo {
     position: absolute;
     top: 28px;
     left: 50px;
 }
+
 nav {
     position: absolute;
     top: 38px;
     right: 50px;
 }
-nav>a {
+
+nav > a {
     text-decoration: none;
     cursor: pointer;
-    font:13px Verdana,Arial;
-    color:#FFFAFA;
+    font: 13px Verdana, Arial;
+    color: #FFFAFA;
     padding: 60px 30px 17px 30px;
 }
-nav>a:hover {
+
+nav > a:hover {
     background-color: #82c8bd;
     border-radius: 7px;
 }
+
 .active {
     background-color: #82c8bd;
     border-radius: 7px;
 }
-.contact-content {
+
+.contacts-content {
     font-family: sans-serif;
     text-align: center;
     position: relative;
     margin-top: 170px;
 }
-.contact-content h1 {
+
+.contacts-content h1 {
     font-size: 45px;
     color: #ffffff;
 }
-.contact-content p {
+
+.contacts-content p {
     font-size: 14px;
     color: #fff;
     line-height: 1.5;
     margin-top: 25px;
 }
-/*.meet-the-team {
-    display: block;
-    margin: 60px auto;
-}
-/* styling block class="about_team" */
-/*
-.about_team {
+
+.contacts.contacts_name_acrostia {
     position: relative;
-    margin-top: 60px;
+    top: 125px;
+    margin: 0 auto;
     text-align: center;
 }
-.about_team_member {
+
+.contacts__wrapper {
     display: inline-block;
-    width: 300px;
-    height: 400px;
-    margin: 20px 10px;
-    background: rgba(89, 73, 87, 0.7);
-    border-radius: 7px;
-    text-align: center;
-}
-.about_team_member:hover {
-    background: rgba(82, 67, 80, 0.7);
-}
-.about_team_member_data {
-    display: block;
-    margin-top: 60px;
-    padding-top: 164px;
-    background: url('images/about/User-1.png') top center no-repeat;
-    -webkit-background-size: 164px 164px;
-    background-size: 164px 164px;
-    text-decoration: none;
-    font-family: sans-serif;
-}
-.about_team.member_data>a {
-    text-decoration: none;
-    display: block;
     position: relative;
-    height: 80px;
-    top: 30px;
+    max-width: 50%;
+    max-height: 300px;
+    margin: 0 10px 0 auto;
+    vertical-align: top;
 }
-.about_team_member_data h3{
+
+.contacts__text {
+    display: inline-block;
+    margin: 0 40px;
+    vertical-align: top;
+    text-align: left;
+}
+
+.contacts__map {
+    display: inline-block;
+    vertical-align: bottom;
+    border-radius: 5px;
+    margin-right: 25px;
+}
+
+.contacts__header {
+    font-size: 30px;
+    color: #FFF;
+}
+
+.contacts__company-name {
+    margin-top: 24px;
     font-size: 20px;
-    color: #c7b6c5;
-    text-transform: uppercase;
-    margin-top: 40px;
+    color: #b3d7d1;
 }
-.about_team_member_data p{
-    color: #a1ca6c;
-    font-size: 14px;
-    margin-top: 20px;
-}
-.about_team_member:hover>.about_team_member_data {
-    cursor: pointer;
-    background-image: url('images/about/User_active.png');
-}
-.about_team_member:hover>.about_team_member_data h3{
-    color: #fff;
-}
-.about_team_member:hover>.about_team_member_data p{
-    color: #ff8973;
-}
-.social>a {
-    display: inline-block;
-    height: 31px;
+
+.contacts__street {
+    font-size: 16px;
     margin-top: 15px;
-    text-decoration: none;
+    color: #FFFFFF;
 }
-.social_icon_fb {
-    height: 31px;
-    width: 31px;
+
+.contacts__country {
+    font-size: 16px;
+    color: #FFFFFF;
+}
+
+.contacts__phone {
+    margin-top: 65px;
+
+}
+
+.contacts__phone-header, .contacts__fax-header, .contacts__email-header, .contacts__skype-header {
+    display: inline-block;
+    font-size: 16px;
+    color: #b3d7d1;
+}
+
+.contacts__phone-number, .contacts__email-address, .contacts__skype-login {
+    margin-left: 20px;
+    display: inline-block;
+    font-size: 16px;
+    color: #FFFFFF;
+}
+
+.contacts__fax-number {
+    margin-left: 35px;
+    display: inline-block;
+    font-size: 16px;
+    color: #FFFFFF;
+}
+
+#email {
+    color: #FFFFFF;
+}
+
+.feedback {
+    display: inline-block;
+    position: relative;
+    max-width: 50%;
+    max-height: 300px;
+    margin: 0 auto 0 10px;
+    vertical-align: bottom;
+}
+
+input[type='Text'] {
+    display: inline-block;
+    width: 260px;
+    height: 40px;
+    background: #68a097;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    color: #75b4aa;
+    padding-left: 20px;
+    margin-right: 20px;
+    margin-top: 22px;
+    outline: none;
+}
+
+textarea[name='question'] {
     display: block;
-    background: url('images/about/facebook.png') left no-repeat;
-    -webkit-background-size: 31px 31px;
-    background-size: 31px 31px;
-    text-decoration: none;
+    width: 544px;
+    height: 160px;
+    background: #68a097;
+    border: none;
+    border-radius: 5px;
+    font-family: sans-serif;
+    font-size: 16px;
+    color: #75b4aa;
+    padding-left: 20px;
+    padding-top: 12px;
+    margin-right: 20px;
+    margin-top: 20px;
+    outline: none;
 }
-.social_icon_fb:hover {
-    background-image: url('images/about/facebook_a.png');
+
+.feedback__header {
+    font-size: 30px;
+    color: #FFF;
+    text-align: left;
 }
-.social_icon_tw {
-    height: 31px;
-    width: 31px;
-    display: block;
-    background: url('images/about/twit.png') left no-repeat;
-    -webkit-background-size: 31px 31px;
-    background-size: 31px 31px;
-    text-decoration: none;
+
+input[type='submit'] {
+    display: inline-block;
+    width: 260px;
+    margin-top: 20px;
+    height: 47px;
+    border: none;
+    background: #df5c64;
+    font-size: 26px;
+    color: #FFFFFF;
+    text-align: center;
+    box-shadow: 0 3px 3px #c8535a;
+    border-radius: 5px;
 }
-.social_icon_tw:hover {
-    background-image: url('images/about/twit_a.png');
+
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    height: 150px;
+    width: 100%;
+    z-index: 10;
+    background: #68a097;
 }
-.social_icon_g {
-    height: 31px;
-    width: 31px;
-    display: block;
-    background: url('images/about/g+.png') left no-repeat;
-    -webkit-background-size: 31px 31px;
-    background-size: 31px 31px;
-    text-decoration: none;
+
+.social {
+    position: relative;
+    margin: 45px auto;
+    text-align: center;
 }
-.social_icon_g:hover {
-    background-image: url('images/about/g+_a.png');
+
+.social__icon-fb {
+    display: inline-block;
+    width: 60px;
+    height: 60px;
+    background: #82c8bd url("images/contacts/facebook.png") center center no-repeat;
+    border-radius: 30px;
+    transition: background 0.3s;
 }
-.social_icon_li {
-    height: 31px;
-    width: 31px;
-    display: block;
-    background: url('images/about/lin.png') left no-repeat;
-    -webkit-background-size: 31px 31px;
-    background-size: 31px 31px;
-    text-decoration: none;
+
+.social__icon-fb:hover {
+    background: #3b5998 url("images/contacts/facebook.png") center center no-repeat;;
 }
-.social_icon_li:hover {
-    background-image: url('images/about/lin_a.png');
+
+.social__icon-fb {
+    display: inline-block;
+    width: 60px;
+    height: 60px;
+    margin: 0 19px;
+    background: #82c8bd url("images/contacts/facebook.png") center center no-repeat;
+    border-radius: 30px;
+    transition: background 0.3s;
+}
+
+.social__icon-fb:hover {
+    background: #3b5998 url("images/contacts/facebook.png") center center no-repeat;;
+}
+
+.social__icon-tw {
+    display: inline-block;
+    width: 60px;
+    height: 60px;
+    margin: 0 19px;
+    background: #82c8bd url("images/contacts/twit.png") center center no-repeat;
+    border-radius: 30px;
+    transition: background 0.3s;
+}
+
+.social__icon-tw:hover {
+    background: #00aced url("images/contacts/twit.png") center center no-repeat;;
+}
+
+.social__icon-g {
+    display: inline-block;
+    width: 60px;
+    height: 60px;
+    margin: 0 19px;
+    background: #82c8bd url("images/contacts/g+.png") center center no-repeat;
+    border-radius: 30px;
+    transition: background 0.3s;
+}
+
+.social__icon-g:hover {
+    background: #dd4b39 url("images/contacts/g+.png") center center no-repeat;;
+}
+
+.social__icon-in {
+    display: inline-block;
+    width: 60px;
+    height: 60px;
+    margin: 0 19px;
+    background: #82c8bd url("images/contacts/lin.png") center center no-repeat;
+    border-radius: 30px;
+    transition: background 0.3s;
+}
+
+.social__icon-in:hover {
+    background: #007bb6 url("images/contacts/lin.png") center center no-repeat;;
 }
 
