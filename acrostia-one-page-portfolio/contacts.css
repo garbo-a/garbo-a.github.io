@@ -14,20 +14,18 @@ dl, dt, dd, ol, ul, li,
 fieldset, form, label, legend,
 table, caption, tbody, tfoot, thead, tr, th, td,
 article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
-menu, nav, output, ruby, section, summary,
+figure, figcaption, footer, header, menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
     margin: 0;
     padding: 0;
     border: 0;
-    font-size: 100%;
     font: inherit;
     vertical-align: baseline;
 }
 
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section {
+footer, header, menu, nav, section {
     display: block;
 }
 
@@ -41,11 +39,11 @@ body {
     height: 100%;
     margin: 0 auto;
     background: #75b4aa url("images/contacts/Layer-24.png") center center no-repeat fixed;
-    background-size: cover;
+    background-size: auto;
 }
 
 header {
-    position: relative;
+
     height: 90px;
     width: 100%;
     z-index: 10;
@@ -86,7 +84,7 @@ nav > a:hover {
 .contacts-content {
     font-family: sans-serif;
     text-align: center;
-    position: relative;
+
     margin-top: 70px;
 }
 
@@ -126,7 +124,7 @@ nav > a:hover {
 .contacts__map {
     display: inline-block;
     vertical-align: bottom;
-    margin:15px 25px 0 15px;
+    margin: 15px 25px 0 15px;
     border-radius: 7px;
     overflow: hidden;
 }
@@ -184,7 +182,7 @@ nav > a:hover {
 
 .feedback {
     display: inline-block;
-    position: relative;
+
     min-width: 400px;
     max-width: 570px;
     margin: 0 auto 0 10px;
@@ -205,6 +203,7 @@ input[name="Name"] {
     margin-top: 22px;
     outline: none;
 }
+
 input[name="Last name"] {
     display: inline-block;
     width: 260px;
@@ -219,6 +218,7 @@ input[name="Last name"] {
     margin-top: 22px;
     outline: none;
 }
+
 textarea[name='question'] {
     display: block;
     width: 544px;
@@ -259,17 +259,18 @@ input[type='submit'] {
     -o-transition: background 0.3s;
     transition: background 0.3s;
 }
+
 input[type='submit']:hover {
     background: #fb5f67;
     box-shadow: 0 3px 3px #d9555c;
 }
 
 footer {
-    position: relative;
+
     height: 150px;
     width: 100%;
     background: #68a097;
-    margin-top: 50px;
+    margin-top: 100px;
 }
 
 .social {
