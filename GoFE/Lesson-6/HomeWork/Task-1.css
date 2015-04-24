@@ -71,6 +71,9 @@ ul {
     text-transform: uppercase;
     padding-top: 20px;
     padding-bottom: 15px;
+    border: none;
+    -webkit-border-top-left-radius: 4px;
+    -moz-border-radius-topleft: 4px;
 }
 
 .plan-one-enroll-link {
@@ -99,11 +102,12 @@ ul {
     position: relative;
     width: 290px;
     height: 440px;
-    margin-left: -6px;
-    z-index: -1;
+    margin-left: -5px;
     border: 1px solid #e8eaec;
-    border-radius: 4px;
     text-align: center;
+    border-radius: 4px;
+    -webkit-border-bottom-left-radius: 0;
+    -moz-border-radius-bottomleft: 0;
 }
 
 .plan-three-title {
@@ -114,6 +118,8 @@ ul {
     text-transform: uppercase;
     padding-top: 20px;
     padding-bottom: 15px;
+    -webkit-border-top-right-radius: 4px;
+    -moz-border-radius-topright: 4px;
 }
 
 .plan-three-enroll-link {
@@ -135,6 +141,7 @@ ul {
 .plan-three-enroll-link:hover {
     background: #3f97d8;
     box-shadow: 0 3px #19649d;
+    cursor: pointer;
 }
 
 .subscription-plan {
@@ -147,6 +154,7 @@ ul {
     border-radius: 4px;
     text-align: center;
     box-shadow: 0 0 7px #899194;
+    z-index: 1;
 }
 
 .plan-title {
@@ -196,7 +204,7 @@ ul {
 }
 
 .features-list {
-    margin: 22px auto 0px;
+    margin: 22px auto 0;
 }
 
 .features-list__item:nth-child(odd) {
