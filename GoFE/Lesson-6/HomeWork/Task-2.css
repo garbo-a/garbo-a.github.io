@@ -49,11 +49,12 @@ footer, header, hgroup, menu, nav, section {
      color: #ee8129;
 }
 .feedback__item {
-    float: left;
-    width: 45%;
+    display: inline-block;
+    width: 43%;
     margin-left: 4%;
     padding: 20px;
-    border: 1px solid #000000;
+    border: 1px solid #000;
+
 }
 .feedback__item:first-child {
     margin-left: 0;
@@ -61,17 +62,19 @@ footer, header, hgroup, menu, nav, section {
 .feedback__photo {
     display: inline-block;
     width: 101px;
-    padding-right: 10px;
+    margin-right: 3%;
+    height: 90px;
 }
 .feedback_block {
     display: inline-block;
-    width: 380px;
+    width: 75%;
     height: 90px;
     font-size: 13px;
-    margin-left: 20px;
     border: 1px solid #000000;
     padding: 11px 18px;
     position: relative;
+    overflow: auto;
+    background: #ffffff;
 }
 .feedback__name {
     color: #3070a8;
@@ -89,5 +92,9 @@ footer, header, hgroup, menu, nav, section {
 }
 .feedback__text {
     position: absolute;
-    top: 38px;
+    top: 33px;
+    padding-bottom: 11px;
+    border-top: 2px dotted #19649D;
+    margin-right: 18px;
+    padding-top: 5px;
 }
