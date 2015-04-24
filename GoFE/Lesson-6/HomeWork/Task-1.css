@@ -61,6 +61,8 @@ ul {
     border-radius: 4px;
     text-align: center;
     position: relative;
+    -webkit-border-bottom-right-radius: 0;
+    -moz-border-radius-bottomright: 0;
 }
 
 .plan-one-title {
