@@ -52,100 +52,6 @@ ul {
     position: relative;
 }
 
-.subscription-plan-one {
-    display: inline-block;
-    width: 290px;
-    height: 440px;
-    margin-right: -6px;
-    border: 1px solid #e8eaec;
-    border-radius: 4px;
-    text-align: center;
-    position: relative;
-    -webkit-border-bottom-right-radius: 0;
-    -moz-border-radius-bottomright: 0;
-}
-
-.plan-one-title {
-    background: #37c2d3;
-    color: #fff;
-    font-size: 24px;
-    font-weight: bold;
-    text-transform: uppercase;
-    padding-top: 20px;
-    padding-bottom: 15px;
-    border: none;
-    -webkit-border-top-left-radius: 4px;
-    -moz-border-radius-topleft: 4px;
-}
-
-.plan-one-enroll-link {
-    display: block;
-    margin: 17px auto 0;
-    font-size: 14px;
-    font-weight: bold;
-    color: #fff;
-    padding-top: 12px;
-    padding-bottom: 8px;
-    background: #3371a6;
-    box-shadow: 0 3px #16436a;
-    border-radius: 4px;
-    text-decoration: none;
-    text-transform: uppercase;
-    transition: background 0.5s;
-}
-
-.plan-one-enroll-link:hover {
-    background: #3f97d8;
-    box-shadow: 0 3px #19649d;
-}
-
-.subscription-plan-three {
-    display: inline-block;
-    position: relative;
-    width: 290px;
-    height: 440px;
-    margin-left: -6px;
-    border: 1px solid #e8eaec;
-    text-align: center;
-    border-radius: 4px;
-    -webkit-border-bottom-left-radius: 0;
-    -moz-border-radius-bottomleft: 0;
-}
-
-.plan-three-title {
-    background: #1cb79a;
-    color: #fff;
-    font-size: 24px;
-    font-weight: bold;
-    text-transform: uppercase;
-    padding-top: 20px;
-    padding-bottom: 15px;
-    -webkit-border-top-right-radius: 4px;
-    -moz-border-radius-topright: 4px;
-}
-
-.plan-three-enroll-link {
-    display: block;
-    margin: 17px auto 0;
-    font-size: 14px;
-    font-weight: bold;
-    color: #fff;
-    padding-top: 12px;
-    padding-bottom: 8px;
-    background: #3371a6;
-    box-shadow: 0 3px #16436a;
-    border-radius: 4px;
-    text-decoration: none;
-    text-transform: uppercase;
-    transition: background 0.5s;
-}
-
-.plan-three-enroll-link:hover {
-    background: #3f97d8;
-    box-shadow: 0 3px #19649d;
-    cursor: pointer;
-}
-
 .subscription-plan {
     display: inline-block;
     position: relative;
@@ -156,7 +62,32 @@ ul {
     border-radius: 4px;
     text-align: center;
     box-shadow: 0 0 7px #899194;
+}
+
+.subscription-plan_type_standard {
+    width: 290px;
+    height: 440px;
+    margin-right: -6px;
+    border: 1px solid #e8eaec;
+    box-shadow: none;
+    position: relative;
+    -webkit-border-bottom-right-radius: 0;
+    -moz-border-radius-bottomright: 0;
+}
+
+.subscription-plan_type_best-value {
     z-index: 1;
+}
+
+.subscription-plan_type_ultimate {
+    width: 290px;
+    height: 440px;
+    margin-left: -6px;
+    border: 1px solid #e8eaec;
+    box-shadow: none;
+    position: relative;
+    -webkit-border-bottom-left-radius: 0;
+    -moz-border-radius-bottomleft: 0;
 }
 
 .plan-title {
@@ -167,6 +98,23 @@ ul {
     text-transform: uppercase;
     padding-top: 22px;
     padding-bottom: 22px;
+}
+
+.subscription-plan_type_standard .plan-title {
+    background: #37c2d3;
+    padding-top: 20px;
+    padding-bottom: 15px;
+    border: none;
+    -webkit-border-top-left-radius: 4px;
+    -moz-border-radius-topleft: 4px;
+}
+
+.subscription-plan_type_ultimate .plan-title {
+    background: #1cb79a;
+    padding-top: 20px;
+    padding-bottom: 15px;
+    -webkit-border-top-right-radius: 4px;
+    -moz-border-radius-topright: 4px;
 }
 
 .plan-container {
@@ -252,3 +200,25 @@ ul {
     background: #ff952b;
     box-shadow: 0 3px #d1760b;
 }
+
+.subscription-plan_type_standard .plan-enroll-link {
+    background: #3371a6;
+    box-shadow: 0 3px #16436a;
+}
+
+.subscription-plan_type_standard .plan-enroll-link:hover {
+    background: #3f97d8;
+    box-shadow: 0 3px #19649d;
+}
+
+.subscription-plan_type_ultimate .plan-enroll-link {
+    background: #3371a6;
+    box-shadow: 0 3px #16436a;
+}
+
+.subscription-plan_type_ultimate .plan-enroll-link:hover {
+    background: #3f97d8;
+    box-shadow: 0 3px #19649d;
+}
+
+/*/////////////////////////////////////*/
