@@ -32,9 +32,11 @@ footer, header, hgroup, menu, nav, section {
 }
 
 .feedback {
-    background: #a2cadb;
+    background: #a2cadb url("Rectangle-35 copy.png");
     min-width: 500px;
     max-width: 1400px;
+    min-height: 315px;
+    max-height: 630px;
     margin: 50px auto;
     overflow: hidden;
     font-family: 'Trebuchet MS', 'Lucida Grande', 'Lucida Sans Unicode', 'Lucida Sans', Tahoma, sans-serif;
@@ -44,6 +46,7 @@ footer, header, hgroup, menu, nav, section {
     color: #3170a8;
     text-transform: uppercase;
     text-align: center;
+    margin-top: 55px;
 }
 .feedback__header span {
      color: #ee8129;
@@ -51,18 +54,16 @@ footer, header, hgroup, menu, nav, section {
 .feedback__item {
     display: inline-block;
     width: 43%;
-    margin-left: 4%;
-    padding: 20px;
-    border: 1px solid #000;
-
+    margin-left: 97px;
+    padding: 50px 20px 0;
 }
-.feedback__item:first-child {
-    margin-left: 0;
+.feedback__item:last-child {
+    margin-left: 5px;
 }
 .feedback__photo {
     display: inline-block;
     width: 101px;
-    margin-right: 3%;
+    margin-right: 10px;
     height: 90px;
 }
 .feedback_block {
@@ -70,11 +71,23 @@ footer, header, hgroup, menu, nav, section {
     width: 75%;
     height: 90px;
     font-size: 13px;
-    border: 1px solid #000000;
+    border: 1px solid #e0e0e0;
     padding: 11px 18px;
     position: relative;
-    overflow: auto;
+   /* overflow: auto; -пока не разобрался нужно ли его использовать */
     background: #ffffff;
+}
+.feedback_block::before, .feedback_block::after {
+    content: '';
+    position: absolute;
+    left: -19px;
+    top: 35px;
+    height: 0;
+    border: 10px solid transparent;
+}
+.feedback_block::after {
+    border-right: 10px solid white;
+    bottom: -19px;
 }
 .feedback__name {
     color: #3070a8;
@@ -94,7 +107,7 @@ footer, header, hgroup, menu, nav, section {
     position: absolute;
     top: 33px;
     padding-bottom: 11px;
-    border-top: 2px dotted #19649D;
+    border-top: 2px dotted #a9a9a9;
     margin-right: 18px;
     padding-top: 5px;
 }
