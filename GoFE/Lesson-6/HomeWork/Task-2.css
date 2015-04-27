@@ -54,8 +54,8 @@ footer, header, hgroup, menu, nav, section {
 .feedback__item {
     display: inline-block;
     width: 43%;
-    margin-left: 97px;
-    padding: 50px 20px 0;
+    margin-left: 125px;
+    padding: 50px 20px 0 0;
 }
 .feedback__item:last-child {
     margin-left: 5px;
@@ -95,6 +95,9 @@ footer, header, hgroup, menu, nav, section {
     position: absolute;
     top: 9px;
     left: 18px;
+}
+.feedback__name:before {
+    content: '- '
 }
 .feedback__status {
     color: #3070a8;
