@@ -33,14 +33,14 @@ footer, header, menu, nav, section {
 
 @font-face {
     font-family: 'Futura';
-    src: url('fonts/Futura (Light).ttf');
+    src: url('fonts/Futura%20normal.ttf');
 }
 
 @font-face {
     font-family: 'Open-sans Semibold';
     src: url('fonts/open-sans.semibold.ttf');
 }
-
+/*
 @font-face {
     font-family: 'Calibri';
     src: url('fonts/Calibri.ttf');
@@ -50,6 +50,7 @@ footer, header, menu, nav, section {
     font-family: 'Futura-Bold';
     src: url('fonts/Futura-Bold.ttf');
 }
+*/
 
 body {
     min-width: 768px;
@@ -92,9 +93,7 @@ header:before, header:after {
 }
 
 .logo strong {
-    font-family: 'Futura-Bold', sans-serif;
     color: #3070a8;
-
 }
 
 nav {
@@ -111,8 +110,7 @@ nav {
     color: #989898;
     padding: 0 15px 46px;
     margin: 0 5px;
-    transition: all 0.3s;
-
+    transition: border 0.3s;
 }
 
 .navigation:hover {
@@ -139,14 +137,13 @@ nav {
 }
 
 .banner__header strong {
-    font-family: 'Futura-Bold', sans-serif;
     font-size: 48px;
     text-transform: uppercase;
 }
 
 .banner__content {
     padding-top: 15px;
-    font-family: 'Calibri', sans-serif;
+    font-family: Calibri, Candara, Segoe, 'Segoe UI', Optima, Arial, sans-serif;
     font-size: 20px;
     font-style: italic;
 
