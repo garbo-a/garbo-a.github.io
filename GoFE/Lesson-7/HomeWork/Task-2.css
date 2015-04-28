@@ -1,0 +1,168 @@
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, menu, nav, section {
+    display: block;
+}
+
+@font-face {
+    font-family: 'Futura';
+    src: url('fonts/Futura (Light).ttf');
+}
+
+@font-face {
+    font-family: 'Open-sans Semibold';
+    src: url('fonts/open-sans.semibold.ttf');
+}
+
+@font-face {
+    font-family: 'Calibri';
+    src: url('fonts/Calibri.ttf');
+}
+
+@font-face {
+    font-family: 'Futura-Bold';
+    src: url('fonts/Futura-Bold.ttf');
+}
+
+body {
+    min-width: 768px;
+    max-width: 1400px;
+    margin: 0 auto;
+    background: #b2b2b2;
+}
+
+header {
+    position: relative;
+    top: 0;
+    left: 0;
+    min-height: 116px;
+    max-height: 232px;
+    width: 100%;
+    display: inline-block;
+    background: #fff;
+}
+
+header:before, header:after {
+    content: '';
+    display: table;
+}
+
+.header:after {
+    clear: both;
+}
+
+.logo {
+    width: 270px;
+    height: 50px;
+    font-family: 'Futura', sans-serif;
+    color: #ee8129;
+    font-size: 36px;
+    display: inline-block;
+    float: left;
+    margin: 40px 50px 0 188px;
+}
+
+.logo span {
+    font-family: 'Futura-Bold', sans-serif;
+    color: #3070a8;
+    font-weight: bold;
+}
+
+nav {
+
+    float: right;
+    margin: 50px 188px 0 0;
+}
+
+.navigation {
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: 'Open-sans Semibold', sans-serif;
+    font-size: 14px;
+    color: #989898;
+    padding: 0 15px 45px;
+    margin: 0 5px;
+    transition: all 0.3s;
+
+}
+
+.navigation:hover {
+    cursor: pointer;
+    border-bottom: 4px solid #3070a8;
+    color: #3070a8;
+}
+
+.banner {
+
+    margin-top: -4px;
+    height: 584px;
+    width: 100%;
+    background-image: url("images/Rectangle-6.png");
+    text-align: center;
+    color: #FFFFFF;
+}
+
+.banner__header {
+    padding-top: 154px;
+    font-family: 'Futura', sans-serif;
+    font-size: 36px;
+    color: #FFFFFF;
+}
+
+.banner__header span {
+    font-family: 'Futura-Bold', sans-serif;
+    font-size: 48px;
+    text-transform: uppercase;
+}
+
+.banner__content {
+    padding-top: 15px;
+    padding-bottom: 59px;
+    font-family: 'Calibri', sans-serif;
+    font-size: 20px;
+    font-style: italic;
+
+}
+
+.banner__button {
+    text-decoration: none;
+    font-family: 'Open-sans Semibold', sans-serif;
+    font-size: 16px;
+    color: #FFFFFF;
+    padding: 23px 65px;
+    border: 1px solid #FFFFFF;
+    border-radius: 2px;
+    transition: color 0.3s;
+}
+
+.banner__button:hover {
+    cursor: pointer;
+    color: #1cb79a;
+}
