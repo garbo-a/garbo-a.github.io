@@ -79,6 +79,7 @@ header:before, header:after {
 }
 
 .logo {
+    position: relative;
     width: 270px;
     height: 50px;
     font-family: 'Futura', sans-serif;
@@ -89,16 +90,16 @@ header:before, header:after {
     margin: 40px 50px 0 188px;
 }
 
-.logo span {
+.logo strong {
     font-family: 'Futura-Bold', sans-serif;
     color: #3070a8;
-    font-weight: bold;
+
 }
 
 nav {
-
+    position: relative;
     float: right;
-    margin: 50px 188px 0 0;
+    margin: 50px 188px 48px 0;
 }
 
 .navigation {
@@ -124,7 +125,7 @@ nav {
     margin-top: -4px;
     height: 584px;
     width: 100%;
-    background-image: url("images/Rectangle-6.png");
+    background: url("images/Rectangle-6.png") center center no-repeat;
     text-align: center;
     color: #FFFFFF;
 }
@@ -136,7 +137,7 @@ nav {
     color: #FFFFFF;
 }
 
-.banner__header span {
+.banner__header strong {
     font-family: 'Futura-Bold', sans-serif;
     font-size: 48px;
     text-transform: uppercase;
@@ -144,7 +145,6 @@ nav {
 
 .banner__content {
     padding-top: 15px;
-    padding-bottom: 59px;
     font-family: 'Calibri', sans-serif;
     font-size: 20px;
     font-style: italic;
@@ -160,6 +160,8 @@ nav {
     border: 1px solid #FFFFFF;
     border-radius: 2px;
     transition: color 0.3s;
+    margin-top: 36px;
+    display: inline-block;
 }
 
 .banner__button:hover {
