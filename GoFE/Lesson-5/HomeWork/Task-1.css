@@ -58,7 +58,7 @@
                     .navigation-dropdown:hover {
                         display: block;
                     }
-                    .navigation-dropdown:hover .navigation-list__item.dropdown-list-parent {
+                    .navigation-list__item.dropdown-list-parent:hover > a {
                         cursor:pointer;
                         background: #EEE9E9;
                         color: #8B8989;
