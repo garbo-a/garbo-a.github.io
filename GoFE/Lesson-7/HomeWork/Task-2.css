@@ -55,7 +55,7 @@ body {
     min-width: 768px;
     max-width: 1400px;
     margin: 0 auto;
-    background: #b2b2b2;
+
 }
 
 header {
@@ -88,6 +88,7 @@ header:before, header:after {
     display: inline-block;
     float: left;
     margin: 40px 50px 0 188px;
+    text-decoration: none;
 }
 
 .logo strong {
@@ -108,7 +109,7 @@ nav {
     font-family: 'Open-sans Semibold', sans-serif;
     font-size: 14px;
     color: #989898;
-    padding: 0 15px 45px;
+    padding: 0 15px 46px;
     margin: 0 5px;
     transition: all 0.3s;
 
