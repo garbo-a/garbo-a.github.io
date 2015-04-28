@@ -52,11 +52,17 @@
                         padding: 8px 8px;
                         transition: color 0.5s;
                     }
-                    .dropdown-list-parent:hover+.navigation-dropdown {
+                    .navigation-list__item.dropdown-list-parent:hover .navigation-dropdown {
                         display: block;
                     }
                     .navigation-dropdown:hover {
                         display: block;
+                    }
+                    .navigation-dropdown:hover .navigation-list__item.dropdown-list-parent {
+                        cursor:pointer;
+                        background: #EEE9E9;
+                        color: #8B8989;
+                        box-shadow: 0 -3px 3px #cecccc;
                     }
                     .navigation-dropdown-list__item:hover {
                         color: #4a4a4a;
