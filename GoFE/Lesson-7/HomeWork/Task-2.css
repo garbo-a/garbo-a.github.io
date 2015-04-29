@@ -31,28 +31,6 @@ footer, header, menu, nav, section {
     display: block;
 }
 
-/*
-@font-face {
-    font-family: 'Futura';
-    src: url('fonts/Futura%20normal.ttf');
-}
-
-@font-face {
-    font-family: 'Open-sans Semibold';
-    src: url('fonts/open-sans.semibold.ttf');
-}
-
-@font-face {
-    font-family: 'Calibri';
-    src: url('fonts/Calibri.ttf');
-}
-
-@font-face {
-    font-family: 'Futura-Bold';
-    src: url('fonts/Futura-Bold.ttf');
-}
-*/
-
 body {
     min-width: 768px;
     max-width: 1400px;
@@ -489,7 +467,7 @@ nav {
 /*    FEEDBACK   */
 
 .feedback {
-    background: #a2cadb url("images/Rectangle-35 copy.png");
+    background: url("images/Rectangle-35 copy.png");
     min-width: 500px;
     max-width: 1400px;
     min-height: 315px;
@@ -584,4 +562,153 @@ nav {
     border-top: 2px dotted #a9a9a9;
     margin-right: 18px;
     padding-top: 5px;
+    color: #666666;
+}
+
+/* CONTACTS */
+
+.contacts {
+    position: relative;
+    min-width: 500px;
+    max-width: 1400px;
+    height: 345px;
+    margin: 0 auto;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    color: #666666;
+}
+
+.contacts-wrapper {
+    position: relative;
+    width: 50%;
+    height: inherit;
+    float: left;
+    padding-top: 30px;
+    padding-left: 250px;
+}
+
+.contacts__company, .contacts__street, .contacts__city-side, .contacts__post-code, .contacts__phone-number, .contacts__email-address {
+    padding-top: 8px;
+}
+
+.contacts-map {
+    position: relative;
+    width: 50%;
+    float: left;
+}
+
+.contacts__email-address {
+    display: inherit;
+    padding-top: 17px;
+    text-decoration: none;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    color: #666666;
+}
+
+.contacts__company:before {
+    content: url("images/geotag.png");
+    margin-right: 15px;
+}
+
+.contacts__phone-number:before {
+    content: url("images/cellphone.png");
+    margin-right: 15px;
+}
+
+.contacts__email-address:before {
+    content: url("images/mail.png");
+    margin-right: 15px;
+}
+
+.contacts__company {
+    text-indent: -37px;
+}
+
+.contacts__phone-number {
+    text-indent: -34px;
+}
+
+.contacts__email-address {
+    text-indent: -39px;
+}
+
+.contacts__social-wrapper {
+    position: relative;
+    top: 15px;
+    left: -49px;
+}
+
+.contacts__social {
+    display: inline-block;
+    width: 45px;
+    height: 45px;
+    border-radius: 23px;
+    margin: 15px 10px;
+}
+
+.contacts__social.fb {
+    background: #3b5998 url("images/facebook.png") center no-repeat;
+    transition: background 0.5s;
+}
+
+.contacts__social.tw {
+    background: #00aced url("images/twit.png") center no-repeat;
+    transition: background 0.5s;
+}
+
+.contacts__social.in {
+    background: #007bb6 url("images/lin.png") center no-repeat;
+    transition: background 0.5s;
+}
+
+.contacts__social.fb:hover {
+    background: #4a8ad9 url("images/facebook.png") center no-repeat;
+}
+
+.contacts__social.tw:hover {
+    background: #00e7ff url("images/twit.png") center no-repeat;
+}
+
+.contacts__social.in:hover {
+    background: #00a3ec url("images/lin.png") center no-repeat;
+}
+
+/* FOOTER */
+
+footer {
+    position: relative;
+    min-width: 500px;
+    max-width: 1400px;
+    height: 94px;
+    margin: 0 auto;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    color: #FFFFFF;
+    background: #3070a8;
+    text-align: center;
+}
+
+.footer__copyright {
+    padding-top: 30px;
+}
+
+.footer__copyright a {
+    text-decoration: none;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    color: #FFFFFF;
+    font-weight: 600;
+}
+
+.footer__designed-by {
+    padding-top: 10px;
+}
+
+.footer__designed-by a {
+    text-decoration: none;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    color: #1d1c1c;
+    font-weight: 800;
 }
