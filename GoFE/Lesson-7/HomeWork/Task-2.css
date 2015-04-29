@@ -30,6 +30,7 @@ article, aside, details, figcaption, figure,
 footer, header, menu, nav, section {
     display: block;
 }
+
 /*
 @font-face {
     font-family: 'Futura';
@@ -168,12 +169,16 @@ nav {
     cursor: pointer;
     color: #1cb79a;
 }
+
+/* SERVICES    */
+
 .services {
     position: relative;
     height: 562px;
     width: 100%;
     text-align: center;
 }
+
 .services__header {
     font-family: 'Trebuchet MS', 'Lucida Grande', 'Lucida Sans Unicode', 'Lucida Sans', Tahoma, sans-serif;
     font-weight: bold;
@@ -182,22 +187,25 @@ nav {
     top: 67px;
     text-transform: uppercase;
 }
+
 .services__items {
     position: relative;
     top: 142px;
     display: inline-block;
-    width: 306px;
-    margin: 0 15px;
+    width: 22%;
+    padding: 0 15px;
 }
+
 .services__items > a {
     display: block;
     text-decoration: none;
     font-family: 'Futura', sans-serif;
     font-size: 30px;
     color: #3070a8;
-    margin-top: 19px;
+    padding-top: 19px;
     transition: color 0.3s;
 }
+
 .services__items > a:hover {
     color: #75b4aa;
 }
@@ -207,21 +215,27 @@ nav {
     font-size: 14px;
     color: #b0b0b0;
     line-height: 2;
-    margin-top: 11px;
+    padding-top: 11px;
     text-align: center;
 }
+
+/* Middle section   */
+
 .middle-section {
     position: relative;
     height: 577px;
-    background: url("images/Rectangle-14%20copy.png") ;
+    background: url("images/Rectangle-14%20copy.png") center center no-repeat;
     width: 100%;
+    overflow: hidden;
 }
+
 .middle-section-wrapper {
     position: relative;
-    width: 800px;
+    width: 57%;
     top: 77px;
     left: 183px;
 }
+
 .middle-section-header {
     text-align: left;
     font-family: 'Futura', sans-serif;
@@ -230,14 +244,16 @@ nav {
     text-transform: uppercase;
     line-height: 1.85;
 }
+
 .middle-section-content {
     text-align: left;
     font-family: 'Open Sans', sans-serif;
     font-style: italic;
     font-size: 19px;
     color: #FFFFFF;
-    margin-top: 3px;
+    padding-top: 3px;
 }
+
 .middle-section-list {
     list-style-type: none;
     font-family: 'Open Sans', sans-serif;
@@ -245,21 +261,26 @@ nav {
     color: #9d9d9d;
     text-align: left;
     width: 700px;
-    margin-top: 35px;
-    margin-left: 38px;
+    padding-top: 35px;
+    padding-left: 38px;
+
 }
+
 .middle-section-list-item {
     line-height: 2;
     margin: 15px 0;
     text-indent: -21px;
 }
+
 .middle-section-list-item:before {
     content: url("images/Ellipse-17.png");
     margin-right: 13px;
 }
+
 .middle-section-list-item:hover {
     color: #3070a8;
 }
+
 .middle-section-list-item:hover .middle-section-list-item:before {
     content: url("images/Ellipse-17%20copy%204.png");
     margin-right: 13px;
@@ -268,11 +289,11 @@ nav {
 /*       Subscription plan       */
 
 .subscription-wrapper {
-
     font-family: 'Trebuchet MS', 'Lucida Grande', 'Lucida Sans Unicode', 'Lucida Sans', Tahoma, sans-serif;
     text-align: center;
     position: relative;
-    height: 700px;
+    min-height: 700px;
+    max-height: 1400px;
     width: 100%;
 }
 
@@ -291,8 +312,9 @@ nav {
 .subscription-plan {
     display: inline-block;
     position: relative;
-    width: 297px;
-    height: 469px;
+    width: 21.2%;
+    min-height: 469px;
+    max-height: 600px;
     margin: 10px auto;
     border: 4px solid #ee8129;
     border-radius: 4px;
@@ -300,8 +322,9 @@ nav {
 }
 
 .subscription-plan_type_standard {
-    width: 290px;
-    height: 440px;
+    width: 20.7%;
+    min-height: 440px;
+    max-height: 600px;
     margin-right: -6px;
     border: 1px solid #e8eaec;
     position: relative;
@@ -315,8 +338,9 @@ nav {
 }
 
 .subscription-plan_type_ultimate {
-    width: 290px;
-    height: 440px;
+    width: 20.7%;
+    min-height: 440px;
+    max-height: 600px;
     margin-left: -6px;
     border: 1px solid #e8eaec;
     position: relative;
@@ -462,9 +486,7 @@ nav {
     box-shadow: 0 3px #19649d;
 }
 
-
 /*    FEEDBACK   */
-
 
 .feedback {
     background: #a2cadb url("images/Rectangle-35 copy.png");
@@ -476,6 +498,7 @@ nav {
     overflow: hidden;
     font-family: 'Trebuchet MS', 'Lucida Grande', 'Lucida Sans Unicode', 'Lucida Sans', Tahoma, sans-serif;
 }
+
 .feedback__header {
     font-family: 'Futura', sans-serif;
     font-size: 40px;
@@ -485,25 +508,30 @@ nav {
     margin-top: 55px;
     font-weight: 800;
 }
+
 .feedback__header span {
     color: #ee8129;
     font-weight: 200;
 }
+
 .feedback__item {
     display: inline-block;
     width: 43%;
     margin-left: 125px;
     padding: 50px 20px 0 0;
 }
+
 .feedback__item:last-child {
     margin-left: 5px;
 }
+
 .feedback__photo {
     display: inline-block;
     width: 101px;
     margin-right: 10px;
     height: 90px;
 }
+
 .feedback_block {
     display: inline-block;
     width: 75%;
@@ -514,6 +542,7 @@ nav {
     position: relative;
     background: #ffffff;
 }
+
 .feedback_block::before, .feedback_block::after {
     content: '';
     position: absolute;
@@ -522,10 +551,12 @@ nav {
     height: 0;
     border: 10px solid transparent;
 }
+
 .feedback_block::after {
     border-right: 10px solid white;
     bottom: -19px;
 }
+
 .feedback__name {
     color: #3070a8;
     font-style: italic;
@@ -533,9 +564,11 @@ nav {
     top: 9px;
     left: 18px;
 }
+
 .feedback__name:before {
     content: '- '
 }
+
 .feedback__status {
     color: #3070a8;
     font-style: italic;
@@ -543,6 +576,7 @@ nav {
     top: 9px;
     right: 18px;
 }
+
 .feedback__text {
     position: absolute;
     top: 33px;
