@@ -3,7 +3,7 @@
     background: #2BB9EE;
 }
     nav {
-        width: 900px;
+        width: 1000px;
         margin: 0 auto;
     }
         .navigation-list {
@@ -16,7 +16,7 @@
             }
                 nav a {
                     display: inline-block;
-                    font-family: Impact;
+                    font-family: Impact, sans-serif;
                     font-size:20px;
                     color: #fff;
                     text-decoration: none;
