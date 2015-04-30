@@ -40,6 +40,12 @@ footer, header, menu, nav, section {
     background: #ffcc66;
 }
 
+.search-block.gradient {
+    background: -webkit-linear-gradient(-45deg, #ffd95a,#ffcc66);
+    background: -moz-linear-gradient(-45deg, #ffd95a,#ffcc66);
+    background: -o-linear-gradient(-45deg, #ffd95a,#ffcc66);
+}
+
 .search-input {
     width: 75%;
     height: 22px;
@@ -77,4 +83,9 @@ footer, header, menu, nav, section {
 .search-option input {
     margin: 2px 0 0 2px;
     vertical-align: top;
+}
+
+.search-option span {
+    vertical-align: inherit;
+    border-bottom: 1px dotted #000000;
 }

@@ -214,7 +214,7 @@ nav {
     min-height: 577px;
     max-height: 750px;
     background: #1d2124 url("images/Rectangle-14%20copy.png") center center no-repeat;
-    background-size: auto;
+    background-size: cover;
 }
 
 .middle-section-wrapper {
