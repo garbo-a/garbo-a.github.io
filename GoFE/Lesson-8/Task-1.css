@@ -35,7 +35,7 @@ footer, header, menu, nav, section {
     position: relative;
     border: none;
     width: 25%;
-    height: 50px;
+    height: 52px;
     margin: 20px auto;
     background: #ffcc66;
 }
@@ -59,9 +59,9 @@ footer, header, menu, nav, section {
 .search-block::after {
     content: '';
     position: absolute;
-    right: -35px;
+    right: -36px;
     top: 0;
-    border: 25px solid transparent;
+    border: 26px solid transparent;
     border-left: 10px solid #ffcc66;
 }
 
