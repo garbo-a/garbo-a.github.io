@@ -75,7 +75,6 @@ footer, header, menu, nav, section {
     border-left: 10px solid transparent;
     border-image: -webkit-linear-gradient(#ffcc66 30%, #ffd95a 60%, #ffcc66 100%);
     border-image: -moz-linear-gradient(#ffcc66 30%, #ffd95a 60%, #ffcc66 100%);
-
 }
 
 .search-block.gradient::after {
