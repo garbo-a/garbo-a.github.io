@@ -74,6 +74,8 @@ footer, header, menu, nav, section {
     border: 26px solid transparent;
     border-left: 10px solid transparent;
     border-image: -webkit-linear-gradient(#ffcc66 30%, #ffd95a 60%, #ffcc66 100%);
+    border-image: -moz-linear-gradient(#ffcc66 30%, #ffd95a 60%, #ffcc66 100%);
+    border-image: linear-gradient(#ffcc66 30%, #ffd95a 60%, #ffcc66 100%);
 }
 
 .search-block.gradient::after {
@@ -84,6 +86,8 @@ footer, header, menu, nav, section {
     width: 37px;
     height: 37px;
     background: -webkit-linear-gradient(-45deg, #ffcc66 30%, #ffd95a 60%, #ffcc66 100%);
+    background: -moz-linear-gradient(-45deg, #ffcc66 30%, #ffd95a 60%, #ffcc66 100%);
+    background: linear-gradient(-45deg, #ffcc66 30%, #ffd95a 60%, #ffcc66 100%);
     transform: rotate(45deg);
     border: none;
     z-index: -1;
