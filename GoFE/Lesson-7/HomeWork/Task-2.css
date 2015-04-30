@@ -31,20 +31,7 @@ footer, header, menu, nav, section {
     display: block;
 }
 
-@media (min-width: 1180px) {
-    .plan-name {
-        font-size: 15px;
-    }
 
-    .plan-description {
-        font-size: 30px;
-    }
-
-    .features-list__item {
-        padding-left: 5px;
-        font-size: 11px;
-    }
-}
 
 body {
     min-width: 768px;
@@ -650,16 +637,22 @@ nav {
 .contacts__company:before {
     content: url("images/geotag.png");
     margin-right: 15px;
+    position: relative;
+    top: 9px;
 }
 
 .contacts__phone-number:before {
     content: url("images/cellphone.png");
     margin-right: 15px;
+    position: relative;
+    top: 9px;
 }
 
 .contacts__email-address:before {
     content: url("images/mail.png");
     margin-right: 15px;
+    position: relative;
+    top: 4px;
 }
 
 .contacts__company {
@@ -752,4 +745,19 @@ footer {
     font-size: 14px;
     color: #1d1c1c;
     font-weight: 800;
+}
+
+@media (max-width: 1180px) {
+    .plan-name {
+        font-size: 15px;
+    }
+
+    .plan-description {
+        font-size: 30px;
+    }
+
+    .features-list__item {
+        padding-left: 5px;
+        font-size: 11px;
+    }
 }

@@ -31,10 +31,14 @@ footer, header, menu, nav, section {
     display: block;
 }
 
+body {
+    background: #97d6b9;
+}
 .search-block {
     position: relative;
     border: none;
-    width: 25%;
+    min-width: 700px;
+    max-width: 60%;
     height: 52px;
     margin: 20px auto;
     background: #ffcc66;
@@ -47,16 +51,16 @@ footer, header, menu, nav, section {
 }
 
 .search-input {
-    width: 75%;
+    width: 83%;
     height: 22px;
     margin: 3px 1% 7px;
+    padding-left: 5px;
     border: none;
     box-shadow: 0 0 4px #a3a3a3 inset;
 }
 
 .search-submit {
-    width: 17%;
-    height: 22px;
+    padding: 2px 15px;
     margin: 3px 2% 7px 0;
     font-family: sans-serif;
     font-weight: bold;
@@ -72,9 +76,8 @@ footer, header, menu, nav, section {
     right: -36px;
     top: 0;
     border: 26px solid transparent;
-    border-left: 10px solid transparent;
-    border-image: -webkit-linear-gradient(#ffcc66 30%, #ffd95a 60%, #ffcc66 100%);
-    border-image: -moz-linear-gradient(#ffcc66 30%, #ffd95a 60%, #ffcc66 100%);
+    border-left: 10px solid #ffcc66;
+
 }
 
 .search-block.gradient::after {
@@ -92,11 +95,10 @@ footer, header, menu, nav, section {
 }
 
 .search-option {
-    display: inline;
+    display: block;
     font-family: sans-serif;
     font-weight: bold;
     font-size: 0.8em;
-    vertical-align: top;
     padding-left: 1%;
 }
 
