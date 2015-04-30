@@ -21,7 +21,6 @@ time, mark, audio, video {
     padding: 0;
     border: 0;
     font-size: 100%;
-
     vertical-align: baseline;
 }
 
@@ -34,6 +33,7 @@ footer, header, menu, nav, section {
 body {
     background: #97d6b9;
 }
+
 .search-block {
     position: relative;
     border: none;

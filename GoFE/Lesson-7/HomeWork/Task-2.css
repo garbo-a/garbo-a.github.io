@@ -31,8 +31,6 @@ footer, header, menu, nav, section {
     display: block;
 }
 
-
-
 body {
     min-width: 768px;
     max-width: 1400px;
