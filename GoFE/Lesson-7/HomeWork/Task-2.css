@@ -145,14 +145,24 @@ nav {
 
 .banner__button:hover {
     cursor: pointer;
-    color: #1cb79a;
+    color: #1ed6b7;
+    background: #046e56;
+    box-shadow: 0 0 11px #505050 inset;
+}
+
+.banner__button:focus {
+    cursor: pointer;
+    color: #FFFFFF;
+    background: #046e56;
+    box-shadow: 0 0 11px #aaaaaa inset;
 }
 
 /* SERVICES    */
 
 .services {
     position: relative;
-    height: 562px;
+    min-height: 562px;
+    max-height: 750px;
     width: 100%;
     text-align: center;
 }
@@ -162,16 +172,15 @@ nav {
     font-weight: bold;
     font-size: 30px;
     position: relative;
-    top: 67px;
+    padding-top: 67px;
     text-transform: uppercase;
 }
 
 .services__items {
     position: relative;
-    top: 142px;
     display: inline-block;
     width: 22%;
-    padding: 0 15px;
+    padding: 80px 15px 35px;
 }
 
 .services__items > a {
@@ -201,17 +210,19 @@ nav {
 
 .middle-section {
     position: relative;
-    height: 577px;
-    background: url("images/Rectangle-14%20copy.png") center center no-repeat;
     width: 100%;
-    overflow: hidden;
+    min-height: 577px;
+    max-height: 750px;
+    background: #1d2124 url("images/Rectangle-14%20copy.png") center center no-repeat;
+    background-size: auto;
 }
 
 .middle-section-wrapper {
     position: relative;
     width: 57%;
-    top: 77px;
+    padding-top: 77px;
     left: 183px;
+    padding-bottom: 20px;
 }
 
 .middle-section-header {
@@ -444,6 +455,11 @@ nav {
     box-shadow: 0 3px #d1760b;
 }
 
+.plan-enroll-link:focus {
+    background: #ff952b;
+    box-shadow: 0 3px #d1760b, 0 2px 7px #8f4c0a inset;
+}
+
 .subscription-plan_type_standard .plan-enroll-link {
     background: #3371a6;
     box-shadow: 0 3px #16436a;
@@ -452,6 +468,11 @@ nav {
 .subscription-plan_type_standard .plan-enroll-link:hover {
     background: #3f97d8;
     box-shadow: 0 3px #19649d;
+}
+
+.subscription-plan_type_standard .plan-enroll-link:focus {
+    background: #40a6e8;
+    box-shadow: 0 3px #19649d, 0 2px 7px #19649d inset;
 }
 
 .subscription-plan_type_ultimate .plan-enroll-link {
@@ -464,10 +485,15 @@ nav {
     box-shadow: 0 3px #19649d;
 }
 
+.subscription-plan_type_ultimate .plan-enroll-link:focus {
+    background: #40a6e8;
+    box-shadow: 0 3px #19649d, 0 2px 7px #19649d inset;
+}
+
 /*    FEEDBACK   */
 
 .feedback {
-    background: url("images/Rectangle-35 copy.png");
+    background: #1d2124 url("images/Rectangle-35 copy.png") center no-repeat;
     min-width: 500px;
     max-width: 1400px;
     min-height: 315px;
