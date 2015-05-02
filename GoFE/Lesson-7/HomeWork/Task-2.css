@@ -282,7 +282,7 @@ nav {
     text-align: center;
     position: relative;
     min-height: 700px;
-    max-height: 1400px;
+    /*max-height: 1400px; */
     width: 100%;
 }
 
@@ -746,31 +746,56 @@ footer {
 }
 
 @media (max-width: 1200px) {
-    .plan-name {
-        font-size: 15px;
+    .subscription-plan {
+        display: block;
+        position: relative;
+        width: 35%;
+        min-height: inherit;
+        margin: 10px auto;
+        border: 4px solid #ee8129;
+        border-radius: 4px;
+        text-align: center;
     }
 
-    .plan-description {
-        font-size: 30px;
+    .subscription-plan_type_standard {
+        border: 4px solid #37c2d3;
     }
 
-    .features-list__item {
-        padding-left: 5px;
-        font-size: 11px;
+    .subscription-plan_type_ultimate {
+        border: 4px solid #1cb79a;
     }
-    .plan-description .plan-price {
-        font-size: 60px;
+
+    .subscription-plan_type_standard .plan-title, .subscription-plan_type_ultimate .plan-title {
+        -webkit-border-top-left-radius: 0;
+        -webkit-border-top-right-radius: 0;
+        -moz-border-radius-topleft: 0;
+        -moz-border-radius-topright: 0;
     }
+
+    .plan-enroll-link {
+        margin-bottom: 15px;
+    }
+
+    .middle-section-wrapper {
+        left: 10%;
+    }
+
     .feedback__item {
         display: block;
-        width: 49%;
+        width: 64%;
         padding-top: 10px;
         margin: 0 auto;
     }
+
     .feedback__item:last-child {
         margin: 0 auto;
     }
+
     .feedback__header {
         margin-top: 15px;
+    }
+
+    .contacts-wrapper {
+        padding-left: 15%;
     }
 }
