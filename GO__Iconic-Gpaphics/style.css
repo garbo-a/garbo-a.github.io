@@ -443,13 +443,39 @@ nav {
     to {
         transform: rotateY(360deg);
     }
- }
+}
+
+@-moz-keyframes subscription-plan-rotate {
+    from {
+        transform: rotateY(0deg);
+    }
+    to {
+        transform: rotateY(360deg);
+    }
+}
+
+@keyframes subscription-plan-rotate {
+    from {
+        transform: rotateY(0deg);
+    }
+    to {
+        transform: rotateY(360deg);
+    }
+}
 
 .subscription-plan:hover {
     -webkit-animation-name: subscription-plan-rotate;
     -webkit-animation-duration: .5s;
     -webkit-animation-iteration-count: 1;
     -webkit-animation-direction: alternate;
+    -moz-animation-name: subscription-plan-rotate;
+    -moz-animation-duration: .5s;
+    -moz-animation-iteration-count: 1;
+    -moz-animation-direction: alternate;
+    animation-name: subscription-plan-rotate;
+    animation-duration: .5s;
+    animation-iteration-count: 1;
+    animation-direction: alternate;
 }
 
 .subscription-plan_type_standard {
@@ -888,6 +914,10 @@ footer {
 }
 
 @media (max-width: 1200px) {
+    .services__items {
+        width: 25%;
+    }
+
     .subscription-plan {
         display: block;
         position: relative;
