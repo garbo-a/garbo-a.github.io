@@ -436,10 +436,21 @@ nav {
     transition: transform 1s;
 }
 
-.subscription-plan:hover {
-    transform: rotateY(360deg);
-}
+@-webkit-keyframes subscription-plan-rotate {
+    from {
+        transform: rotateY(0deg);
+    }
+    to {
+        transform: rotateY(360deg);
+    }
+ }
 
+.subscription-plan:hover {
+    -webkit-animation-name: subscription-plan-rotate;
+    -webkit-animation-duration: .5s;
+    -webkit-animation-iteration-count: 1;
+    -webkit-animation-direction: alternate;
+}
 
 .subscription-plan_type_standard {
     width: 20.7%;
