@@ -290,6 +290,7 @@ nav {
     animation-duration: .5s;
     animation-iteration-count: 1;
     animation-direction: alternate;
+
 }
 
 .services__items:hover img {
@@ -406,7 +407,6 @@ nav {
     text-align: center;
     position: relative;
     min-height: 700px;
-    /*max-height: 1400px; */
     width: 100%;
 }
 
@@ -912,6 +912,8 @@ footer {
     color: #1d1c1c;
     font-weight: 800;
 }
+
+/* @media  */
 
 @media (max-width: 1200px) {
     .services__items {
