@@ -34,19 +34,25 @@ footer, header, menu, nav, section {
 }
 
 body {
-    padding: 20px;
+    margin: 20px;
+}
+
+.feedback-wrapper {
+    margin: 0 -20px;
+}
+
+.feedback-wrapper::after {
+    content: '';
+    display: block;
+    clear: both;
 }
 
 .feedback {
     float: left;
     min-width: 500px;
-    width: 50%;
-    margin-bottom: 30px;
+    width: 47%;
+    padding: 0 20px 30px;
 
-}
-
-.feedback:nth-child(odd) {
-    padding-right: 40px;
 }
 
 .feedback__image, .feedback__block {
@@ -85,5 +91,9 @@ body {
 .feedback__block-anchor::before {
     content: '• more';
     color: #e4551d;
+    margin-left: 5px;
+}
 
+.feedback__block-anchor:hover::before {
+    color: #007bb6;
 }
