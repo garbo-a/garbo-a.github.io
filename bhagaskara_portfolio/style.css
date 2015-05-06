@@ -68,7 +68,7 @@ footer, header, menu, nav, section {
 }
 
 .home-wrapper {
-    background: url("images/home-bkgrnd.jpg") center no-repeat;
+    background: #33294d url("images/home-bkgrnd.jpg") center no-repeat;
     text-align: center;
 }
 
@@ -100,7 +100,9 @@ footer, header, menu, nav, section {
 }
 
 .home-navigation ul {
-    height: 465px;
+    position: relative;
+    min-height: 465px;
+    max-height: 632px;
 }
 
 .home-navigation li {
@@ -157,11 +159,18 @@ footer, header, menu, nav, section {
 
 @media (max-width: 1250px) {
     .home-navigation li {
-        margin-top: 30px;
+        margin-top: 10px;
     }
 
     .home-navigation .down {
         position: relative;
+        margin-top: 10px;
         top: 0;
+    }
+}
+
+@media (max-width: 550px) {
+    .home-scroller {
+        display: none;
     }
 }
