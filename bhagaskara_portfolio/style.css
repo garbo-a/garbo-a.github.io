@@ -154,3 +154,14 @@ footer, header, menu, nav, section {
     cursor: pointer;
     transform: scale(1.1, 1.1);
 }
+
+@media (max-width: 1250px) {
+    .home-navigation li {
+        margin-top: 30px;
+    }
+
+    .home-navigation .down {
+        position: relative;
+        top: 0;
+    }
+}
