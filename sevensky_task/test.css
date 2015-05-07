@@ -9,6 +9,8 @@
     display: -moz-flex;
     flex-wrap: wrap;
     justify-content: center;
+    background: url("Background.jpg") center no-repeat;
+
 }
 
 .product {
@@ -20,15 +22,17 @@
     -webkit-flex-wrap: nowrap;
     -ms-flex-wrap: nowrap;
     flex-wrap: nowrap;
-    background: #f2f5f8;
+    background: #e6e9ec;
     width: 225px;
     margin: 15px 10px;
     text-align: center;
     font-family: 'Roboto', sans-serif;
     border-radius: 7px;
+
+
 }
 
-.product:after {
+.product:before {
     content: '';
     position: absolute;
     z-index: -1;
@@ -67,8 +71,6 @@
     font-weight: 700;
     color: #000000;
     margin: 0;
-    /* padding-top: 25px; */
-    /* padding-bottom: 14px; */
     position: absolute;
     bottom: 14px;
     width: 100%;
