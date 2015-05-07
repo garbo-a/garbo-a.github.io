@@ -1,0 +1,73 @@
+@charset "UTF-8";
+
+.product-wrapper {
+    text-align: center;
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.product-item {
+    position: relative;
+    display: -webkit-inline-flex;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -webkit-flex-wrap: nowrap;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    background: #f2f5f8;
+    width: 225px;
+    margin: 15px 10px;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    border-radius: 7px;
+}
+
+.product-item:after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    -webkit-box-shadow: 0 0 40px rgba(200, 200, 200, 0.5);
+    box-shadow: 0 0 22px rgb(129, 149, 161);
+    bottom: 0;
+    left: 5%;
+    right: 5%;
+    width: 90%;
+    height: 4%;
+    -moz-border-radius: 100%;
+    border-radius: 100%;
+}
+
+.product-item__details {
+    font-family: 'Roboto', sans-serif;
+    text-decoration: none;
+}
+
+.product-items__image {
+    width: 100%;
+    border-top-left-radius: 7px;
+    border-top-right-radius: 7px;
+}
+
+.product-item__name {
+    font-size: 18px;
+    font-weight: 400;
+    color: #2757b0;
+    padding: 10px 32px 0;
+    margin: 0;
+}
+
+.product-item__price {
+    font-size: 20px;
+    font-weight: 700;
+    color: #000000;
+    margin: 0;
+    padding-top: 25px;
+    padding-bottom: 14px;
+}
+
+.product-item__price:after {
+    content: ' грн';
+    font-size: 14px;
+}
+
+
