@@ -387,12 +387,21 @@ nav {
 }
 
 .middle-section-list-item:before {
-    content: url("images/Ellipse-17.png");
+    content: '';
+    height: 8px;
     margin-right: 13px;
+    width: 8px;
+    display: inline-block;
+    background: #9d9d9d;
+    border-radius: 50%;
 }
 
 .middle-section-list-item:hover {
     color: #3070a8;
+}
+
+.middle-section-list-item:hover:before {
+    background: #3070a8;
 }
 
 .middle-section-list-item:hover .middle-section-list-item:before {
