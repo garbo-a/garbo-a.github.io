@@ -120,7 +120,8 @@
     max-width: 1150px;
     margin: auto;
     height: 560px;
-    background: url("img/popup-bkgnd.jpg") center no-repeat;
+    background-position: center;
+    background-repeat: no-repeat;
     background-clip: border-box;
     border: 3px solid #999999;
     border-radius: 3px;
