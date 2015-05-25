@@ -31,7 +31,6 @@ footer, header, menu, nav, section {
     display: block;
 }
 
-
 .wrapper {
     background: #ffba87 url("landing-img/landing-bkgrnd.jpg");
     min-width: 900px;
@@ -63,7 +62,7 @@ nav {
 .info {
     width: 99%;
     height: 280px;
-    margin: 0 auto;
+    margin: 0 auto 47px;
     background: #fff;
     border: 1px solid #707070;
     padding-top: 47px;
