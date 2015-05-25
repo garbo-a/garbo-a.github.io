@@ -44,3 +44,13 @@ function pow(x,n) {
 pow(3, 2);
 pow(3, 3);
 pow(1, 100);
+
+
+var user = {};
+
+user.name = "Вася";
+user.surname = "Петров";
+
+user.name = "Сергей";
+
+delete user.name;

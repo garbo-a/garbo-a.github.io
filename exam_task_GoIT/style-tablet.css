@@ -1,0 +1,94 @@
+@media (max-width: 1000px) and (min-width: 800px) {
+    .header__wrapper, .banner__wrapper, .advantages__wrapper, .feedback__wrapper, .feedback__started-wrapper, .footer__wrapper {
+        width: 97%;
+    }
+
+    .banner__header, .banner__about {
+        width: 53%;
+    }
+
+    .banner__form {
+        width: 42%;
+    }
+
+    .banner__form p {
+        font-size: 20px;
+    }
+
+    .banner__header-welcome {
+        font-size: 45px;
+    }
+
+    .banner__header-content {
+        font-size: 25px;
+    }
+
+    .advantages__header, .feedback__header {
+        font-size: 20px;
+    }
+
+    .advantages__item {
+        display: block;
+        width: 100%;
+        text-align: left;
+        padding-top: 15px;
+        padding-bottom: 20px;
+    }
+
+    .advantages__item-img {
+        display: inline-block;
+        vertical-align: top;
+    }
+
+    .advantages__item-wrapper {
+        display: inline-block;
+        width: 55%;
+        margin-left: 22px;
+    }
+
+    .advantages__item-header {
+        padding-top: 0;
+    }
+
+    .advantages__item-view {
+        margin: 10px auto 0 0;
+        padding-left: 8px;
+    }
+
+    .feedback__header {
+        font-size: 20px;
+        vertical-align: 0.5em;
+    }
+
+    .feedback__item {
+        width: 70%;
+        padding-bottom: 60px;
+    }
+
+    .feedback__quote {
+        padding-bottom: 10px;
+    }
+
+    .feedback__started-link {
+        width: 60%;
+        font-size: 20px;
+        padding-top: 18px;
+    }
+
+    footer {
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+
+    .footer__logo {
+        width: 32%;
+    }
+
+    .footer__social {
+        width: 62%;
+    }
+
+    .footer__copyright {
+        line-height: 2;
+    }
+}
