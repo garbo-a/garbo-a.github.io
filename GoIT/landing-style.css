@@ -141,8 +141,9 @@ h1 {
 }
 
 .info__team_work {
+    width: 74%;
+    margin: 0 auto;
     text-align: left;
-    margin-left: 12%;
 }
 
 .info__judges {
