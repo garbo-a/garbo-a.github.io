@@ -32,7 +32,7 @@ footer, header, menu, nav, section {
 }
 
 body {
-    background: #ffba87 url("landing-img/bkgrnd.png");
+    background: #ffba87 url("landing-img/bkgrnd-l.png");
     min-width: 900px;
     max-width: 1300px;
     margin: 0 auto;
@@ -305,5 +305,5 @@ h1 {
     background: url("landing-img/facebook_button_png-small.png");
     width: 60px;
     height: 60px;
-   
+   color: #ffd093;
 }
