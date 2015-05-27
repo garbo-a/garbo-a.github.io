@@ -295,8 +295,14 @@ h1 {
     vertical-align: middle;
 }
 
+.info__footer-link {
+    height: 60px;
+}
+
 .info__footer-tan9I-shcherbakova {
-    background: url("landing-img/facebook_button_png-small.png") center no-repeat;
+    display: block;
+    background: url("landing-img/facebook_button_png-small.png");
     width: 60px;
     height: 60px;
+   
 }
