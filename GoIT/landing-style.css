@@ -296,6 +296,7 @@ h1 {
 }
 
 .info__footer-link {
+    width: 60px;
     height: 60px;
 }
 
