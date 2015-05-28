@@ -61,7 +61,7 @@ nav {
 }
 
 .info {
-    width: 99%;
+    width: 95%;
     margin: 0 auto 47px;
     background: #fff;
     border: 1px solid #707070;
@@ -111,7 +111,7 @@ h1 {
     width: 37%;
     margin-left: 3%;
     vertical-align: top;
-    text-align: justify;
+    text-align: left;
 }
 
 .info__registration-link,
