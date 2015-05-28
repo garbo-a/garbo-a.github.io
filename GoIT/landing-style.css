@@ -33,7 +33,7 @@ footer, header, menu, nav, section {
 
 body {
     background: #ffba87 url("landing-img/bkgrnd-l.png");
-    min-width: 950px;
+    min-width: 900px;
     max-width: 1300px;
     margin: 0 auto;
     padding-bottom: 1px;
