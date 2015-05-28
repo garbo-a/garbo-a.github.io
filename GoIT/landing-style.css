@@ -33,7 +33,7 @@ footer, header, menu, nav, section {
 
 body {
     background: #ffba87 url("landing-img/bkgrnd-l.png");
-    min-width: 900px;
+    min-width: 950px;
     max-width: 1300px;
     margin: 0 auto;
     padding-bottom: 1px;
@@ -109,8 +109,9 @@ h1 {
 .info__schedule {
     display: inline-block;
     width: 37%;
+    margin-left: 3%;
     vertical-align: top;
-    text-align: left;
+    text-align: justify;
 }
 
 .info__registration-link,
@@ -120,6 +121,10 @@ h1 {
     font-size: 18px;
     line-height: 1.8;
     padding-top: 20px;
+}
+
+.info__team_work-content span {
+    color: #ff6c00;
 }
 
 .info__registration-link {
@@ -197,6 +202,7 @@ h1 {
 
 .info__judges-person-name span {
     font-weight: 100;
+    line-height: 1.6;
 }
 
 .info__judges-photo {
@@ -264,13 +270,13 @@ h1 {
 
 .info__faq-col {
     display: inline-block;
-    width: 49%;
-    text-align: left;
+    width: 47%;
+    text-align: justify;
     vertical-align: top;
 }
 
-.info__faq-col:first-child {
-    padding-left: 1%;
+.info__faq-col:nth-child(2) {
+    margin-right: 5%;
 }
 
 .info__faq-content {
