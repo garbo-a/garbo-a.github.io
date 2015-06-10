@@ -1,12 +1,12 @@
 /**
- * Created by Александр on 04.05.2015.
+ * Created by РђР»РµРєСЃР°РЅРґСЂ on 04.05.2015.
  */
 
 function checkAge(age) {
     if (age > 18) {
         return confirm('Welcome');
     } else {
-        return confirm('Родители разрешили?');
+        return confirm('Р РѕРґРёС‚РµР»Рё СЂР°Р·СЂРµС€РёР»Рё?');
     }
 }
 var age = prompt('Specify your age:');
@@ -14,7 +14,7 @@ checkAge(age);
 
 function checkAgeTwo(age2) {
 
-  (age2>18) ? confirm('Welcome') : confirm('Родители разрешили?');
+  (age2>18) ? confirm('Welcome') : confirm('Р РѕРґРёС‚РµР»Рё СЂР°Р·СЂРµС€РёР»Рё?');
 }
 var age2 = prompt('Specify your age:');
 checkAgeTwo(age2);
@@ -48,9 +48,13 @@ pow(1, 100);
 
 var user = {};
 
-user.name = "Вася";
-user.surname = "Петров";
+user.name = "Р’Р°СЃСЏ";
+user.surname = "РџРµС‚СЂРѕРІ";
 
-user.name = "Сергей";
+user.name = "РЎРµСЂРіРµР№";
 
 delete user.name;
+
+for(var key in user) {
+    alert (key);
+}
