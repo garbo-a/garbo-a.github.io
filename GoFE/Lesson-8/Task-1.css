@@ -41,13 +41,16 @@ body {
     max-width: 60%;
     height: 52px;
     margin: 20px auto;
-    background: #ffcc66;
+    background: -webkit-linear-gradient(top, rgba(94,172,1,1), rgba(68,126,1,1));
+    background: -moz-linear-gradient(top, rgba(94,172,1,1), rgba(68,126,1,1));
+    background: -o-linear-gradient(top, rgba(94,172,1,1), rgba(68,126,1,1));
+    background: linear-gradient(top, rgba(94,172,1,1), rgba(68,126,1,1));
 }
 
 .search-block.gradient {
-    background: -webkit-linear-gradient(#ffcc66 30%, #ffd95a 60%, #ffcc66 100%);
-    background: -moz-linear-gradient(#ffcc66 30%, #ffd95a 60%, #ffcc66 100%);
-    background: -o-linear-gradient(#ffcc66 30%, #ffd95a 60%, #ffcc66 100%);
+    background: -webkit-linear-gradient(to top, rgba(94,172,1,1), rgba(68,126,1,1));
+    background: -moz-linear-gradient(to top, rgba(94,172,1,1), rgba(68,126,1,1));
+    background: -o-linear-gradient(to top, rgba(94,172,1,1), rgba(68,126,1,1));
 }
 
 .search-input {

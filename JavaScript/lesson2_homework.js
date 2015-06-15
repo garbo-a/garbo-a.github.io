@@ -52,7 +52,7 @@ if(userLogin == 'admin') {
 }
 
 var a = 1, b = 2;
-a + b >= 3 ? result = 'Yep!' : result = 'Noup!';
+result = a + b >= 3 ? 'Yep!' :  'Noup!';
 
 
 var name = 'admin', text;
@@ -62,3 +62,51 @@ name == 'admin' ? text = 'Hi':
             name == '' ? text = 'No login':
                 text = '';
 
+var browser;
+
+if(browser == 'IE') {
+    alert('О, да у вас IE');
+} else if (browser === 'Chrome' || browser === 'Firefox' || browser === 'Safari' || browser === 'Opera') {
+    alert('browser norm!');
+} else {
+    alert('kto zdes?');
+}
+
+switch(+prompt("insert a", '')) {
+    case 0:
+        alert(0);
+        break;
+    case 1:
+        alert(1);
+        break;
+    case(2):
+    case(3):
+        alert('2,3');
+        break;
+}
+
+for (var i = 1; i <= 10; i++) {
+    if (i % 2 === 0) {
+        console.log(i);
+    }
+}
+var a = '';
+for (var i = 0; i < 7; i++) {
+    console.log(a += '#')
+}
+
+function sum(a, b) {
+    return a + b;
+}
+
+console.log(sum(2, 5));
+
+function min(a, b) {
+    if (a >= b) {
+        return b;
+    } else {
+        return a;
+    }
+}
+
+console.log(min(1, 5));
