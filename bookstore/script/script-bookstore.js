@@ -46,9 +46,6 @@ theToggle.onclick = function() {
 };
 
 
-/**
- * Created by Garbovskiy on 13.06.2015.
- */
 var theShow = document.getElementById('show');
 // hasClass
 function hasOwnClass(elem, className) {
@@ -86,5 +83,5 @@ function toggleClasses(elem, className) {
 theShow.onclick = function() {
     toggleClasses(this, 'on');
     return false;
-}
+};
 
