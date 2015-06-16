@@ -60,12 +60,24 @@ for (var i = 0; i <= 100; i++) {
 function chessStr() {
     var str = '';
 
-    for (var i = 0; i < 8; i++) {
-        if (str[0] == '#') {
-            str = 1;
+    for (var j = 1; j <= 8; j++) {
+        if (j % 2 == 0) {
+            for (var i = 0; i < 8; i++) {
+                str += (i % 2) == 0 ? '#' : ' ';
+            }
+            str += '\n';
+        } else {
+            for (var k = 0; k < 8; k++) {
+                str += (k % 2) == 0 ? ' ' : '#';
+            }
+            str += '\n';
         }
     }
+
+    console.log(str);
 }
+
+chessStr();
 
 //Напишите функцию pow(x,n), которая возвращает x в степени n. Иначе говоря, умножает x на себя n раз и возвращает результат.
 
@@ -75,5 +87,6 @@ function pow(a, n) {
     }
     return a;
 }
+
 console.log(pow(1, 100));
 console.log(pow(3, 3));
