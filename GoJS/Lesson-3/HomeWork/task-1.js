@@ -12,6 +12,11 @@ do {
     if (!a) break;
 } while (a < 100);
 
+do {
+    var a = +prompt("insert number > 100");
+
+} while (a < 100 && !a);
+
 
 //Натуральное число, большее 1, называется простым, если оно ни на что не делится, кроме себя и 1.
 //
@@ -65,13 +70,14 @@ function chessStr() {
             for (var i = 0; i < 8; i++) {
                 str += (i % 2) == 0 ? '#' : ' ';
             }
-            str += '\n';
+
         } else {
             for (var k = 0; k < 8; k++) {
                 str += (k % 2) == 0 ? ' ' : '#';
             }
-            str += '\n';
+
         }
+        str += '\n';
     }
 
     console.log(str);
@@ -90,3 +96,23 @@ function pow(a, n) {
 
 console.log(pow(1, 100));
 console.log(pow(3, 3));
+
+////////////////////////////////////
+
+function sumTo(n) {
+    return n ? n + sumTo(n-1) : 0;
+}
+
+function factorial (n) {
+    return n ? n * factorial(n-1) : n;
+}
+factorial(8);
+
+function random( max) {
+    return Math.round(Math.round() * max);
+}
+
+function upperFirst(str) {
+   //return str.length ? str[0].toUpperCase() + str.slice(1, str.length) : str;
+    return str.charAt(0).toUpperCase() + str.slice(1);
+}
