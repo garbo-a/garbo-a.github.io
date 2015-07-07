@@ -1,9 +1,9 @@
 /**
  * Created by Garbovskiy on 27.06.2015.
  */
-//////////// Lesson 6 - Task 1 Напишите функцию removeClass(obj, cls), которая удаляет класс cls, если он есть:
+//////////// Lesson 6 - Task 1 РќР°РїРёС€РёС‚Рµ С„СѓРЅРєС†РёСЋ removeClass(obj, cls), РєРѕС‚РѕСЂР°СЏ СѓРґР°Р»СЏРµС‚ РєР»Р°СЃСЃ cls, РµСЃР»Рё РѕРЅ РµСЃС‚СЊ:
 var obj = {
-    className: 'open menu'
+    className: 'open open menu'
 };
 
 function removeClass(obj, cls) {
@@ -11,6 +11,7 @@ function removeClass(obj, cls) {
     for (var i = 0; i < arr.length; i++) {
         if (arr[i] == cls) {
             arr.splice(i, 1);
+            i = i - 1;
         }
     }
     obj.className = arr.join(' ')
@@ -18,18 +19,16 @@ function removeClass(obj, cls) {
 
 
 removeClass(obj, 'open'); // obj.className='menu'
-removeClass(obj, 'blabla'); // без изменений
+removeClass(obj, 'blabla'); // Р±РµР· РёР·РјРµРЅРµРЅРёР№
 
-///////////// Lesson 6 - Task 2  Есть массив строк arr. Создайте массив arrSorted — из тех же элементов, но отсортированный.
+///////////// Lesson 6 - Task 2  Р•СЃС‚СЊ РјР°СЃСЃРёРІ СЃС‚СЂРѕРє arr. РЎРѕР·РґР°Р№С‚Рµ РјР°СЃСЃРёРІ arrSorted вЂ” РёР· С‚РµС… Р¶Рµ СЌР»РµРјРµРЅС‚РѕРІ, РЅРѕ РѕС‚СЃРѕСЂС‚РёСЂРѕРІР°РЅРЅС‹Р№.
 var array = ['HTML', 'JavaScript', 'CSS'];
 
-var newArr = array.concat();
-
-newArr.sort();
+var newArr = array.slice().sort();
 
 console.log(newArr);
 
-///////////// Lesson 6 - Task 3 Необходимо отсортировать массив в случайном порядке используя метод sort.
+///////////// Lesson 6 - Task 3 РќРµРѕР±С…РѕРґРёРјРѕ РѕС‚СЃРѕСЂС‚РёСЂРѕРІР°С‚СЊ РјР°СЃСЃРёРІ РІ СЃР»СѓС‡Р°Р№РЅРѕРј РїРѕСЂСЏРґРєРµ РёСЃРїРѕР»СЊР·СѓСЏ РјРµС‚РѕРґ sort.
 
 var arrRandSort = [1, 2, 3, 4, 5];
 
@@ -39,13 +38,13 @@ function arraySort(a, b) {
 
 arrRandSort.sort(arraySort);
 
-console.log(arr); // элементы в случайном порядке, например [3,5,1,2,4]
+console.log(arr); // СЌР»РµРјРµРЅС‚С‹ РІ СЃР»СѓС‡Р°Р№РЅРѕРј РїРѕСЂСЏРґРєРµ, РЅР°РїСЂРёРјРµСЂ [3,5,1,2,4]
 
-///////////// Lesson 6 - Task 4  Напишите код, который отсортирует массив объектов people по полю age.
+///////////// Lesson 6 - Task 4  РќР°РїРёС€РёС‚Рµ РєРѕРґ, РєРѕС‚РѕСЂС‹Р№ РѕС‚СЃРѕСЂС‚РёСЂСѓРµС‚ РјР°СЃСЃРёРІ РѕР±СЉРµРєС‚РѕРІ people РїРѕ РїРѕР»СЋ age.
 
-var vasya = {name: 'Вася', age: 23};
-var masha = {name: 'Маша', age: 18};
-var vovochka = {name: 'Вовочка', age: 6};
+var vasya = {name: 'Р’Р°СЃСЏ', age: 23};
+var masha = {name: 'РњР°С€Р°', age: 18};
+var vovochka = {name: 'Р’РѕРІРѕС‡РєР°', age: 6};
 
 var people = [vasya, masha, vovochka];
 
@@ -55,29 +54,29 @@ function ageSort(a, b) {
 
 people.sort(ageSort);
 
-// теперь people: [vovochka, masha, vasya]
+// С‚РµРїРµСЂСЊ people: [vovochka, masha, vasya]
 console.log(people[0].age);// 6
 
-///////////// Lesson 6 - Task 5 Необходимо написать функцию isPal(string) которая возвращает true или false в зависимости от того является ли строка палиндромом или нет.
+///////////// Lesson 6 - Task 5 РќРµРѕР±С…РѕРґРёРјРѕ РЅР°РїРёСЃР°С‚СЊ С„СѓРЅРєС†РёСЋ isPal(string) РєРѕС‚РѕСЂР°СЏ РІРѕР·РІСЂР°С‰Р°РµС‚ true РёР»Рё false РІ Р·Р°РІРёСЃРёРјРѕСЃС‚Рё РѕС‚ С‚РѕРіРѕ СЏРІР»СЏРµС‚СЃСЏ Р»Рё СЃС‚СЂРѕРєР° РїР°Р»РёРЅРґСЂРѕРјРѕРј РёР»Рё РЅРµС‚.
 
-var strPal = 'amama';
+var strPal = 'amama amama';
 function isPal (str) {
-    var newStr = str.split('').reverse().join('');
-    return newStr === str;
+    var newStr = str.toLowerCase().split(' ').reverse().join('');
+    return newStr === str.toLowerCase().split(' ').join('');
 }
 
 console.log(isPal(strPal));
 
-///////////// Lesson 6 - Task 6 Напишите функцию unique(arr), которая возвращает массив, содержащий только уникальные элементы arr (arr — массив строк).
+///////////// Lesson 6 - Task 6 РќР°РїРёС€РёС‚Рµ С„СѓРЅРєС†РёСЋ unique(arr), РєРѕС‚РѕСЂР°СЏ РІРѕР·РІСЂР°С‰Р°РµС‚ РјР°СЃСЃРёРІ, СЃРѕРґРµСЂР¶Р°С‰РёР№ С‚РѕР»СЊРєРѕ СѓРЅРёРєР°Р»СЊРЅС‹Рµ СЌР»РµРјРµРЅС‚С‹ arr (arr вЂ” РјР°СЃСЃРёРІ СЃС‚СЂРѕРє).
 
-function unique(arr) { // сам не додумался - буду разбираться подробнее
+function unique(arr) { // СЃР°Рј РЅРµ РґРѕРґСѓРјР°Р»СЃСЏ - Р±СѓРґСѓ СЂР°Р·Р±РёСЂР°С‚СЊСЃСЏ РїРѕРґСЂРѕР±РЅРµРµ РЎР”Р•Р›РђРўР¬ Р§Р•Р Р•Р— reduce()!!!!!!!!!!
     var result = [];
 
     nextInput:
         for (var i = 0; i < arr.length; i++) {
-            var str = arr[i]; // для каждого элемента
-            for (var j = 0; j < result.length; j++) { // ищем, был ли он уже?
-                if (result[j] == str) continue nextInput; // если да, то следующий
+            var str = arr[i]; // РґР»СЏ РєР°Р¶РґРѕРіРѕ СЌР»РµРјРµРЅС‚Р°
+            for (var j = 0; j < result.length; j++) { // РёС‰РµРј, Р±С‹Р» Р»Рё РѕРЅ СѓР¶Рµ?
+                if (result[j] == str) continue nextInput; // РµСЃР»Рё РґР°, С‚Рѕ СЃР»РµРґСѓСЋС‰РёР№
             }
             result.push(str);
         }
@@ -85,15 +84,15 @@ function unique(arr) { // сам не додумался - буду разбираться подробнее
     return result;
 }
 
-var strings = ["кришна", "кришна", "харе", "харе",
-    "харе", "харе", "кришна", "кришна", "8-()"
+var strings = ["РєСЂРёС€РЅР°", "РєСЂРёС€РЅР°", "С…Р°СЂРµ", "С…Р°СЂРµ",
+    "С…Р°СЂРµ", "С…Р°СЂРµ", "РєСЂРёС€РЅР°", "РєСЂРёС€РЅР°", "8-()"
 ];
 
-alert( unique(strings) ); // кришна, харе, 8-()
+alert( unique(strings) ); // РєСЂРёС€РЅР°, С…Р°СЂРµ, 8-()
 
-///////////// Lesson 6 - Task 7 Напишите функцию anClean(arr), которая возвращает массив слов, очищенный от анаграмм.
+///////////// Lesson 6 - Task 7 РќР°РїРёС€РёС‚Рµ С„СѓРЅРєС†РёСЋ anClean(arr), РєРѕС‚РѕСЂР°СЏ РІРѕР·РІСЂР°С‰Р°РµС‚ РјР°СЃСЃРёРІ СЃР»РѕРІ, РѕС‡РёС‰РµРЅРЅС‹Р№ РѕС‚ Р°РЅР°РіСЂР°РјРј.
 
-var arr = ['воз', 'киборг', 'корсет', 'ЗОВ', 'гробик', 'костер', 'сектор'];
+var arr = ['РІРѕР·', 'РєРёР±РѕСЂРі', 'РєРѕСЂСЃРµС‚', 'Р—РћР’', 'РіСЂРѕР±РёРє', 'РєРѕСЃС‚РµСЂ', 'СЃРµРєС‚РѕСЂ'];
 
 function anClean(arr) {
     var object = {};
@@ -108,4 +107,38 @@ function anClean(arr) {
     return cleanAnArr;
 }
 
-console.log( anClean(arr) ); // 'воз,киборг,корсет' или 'ЗОВ,гробик,сектор'
+console.log( anClean(arr) ); // 'РІРѕР·,РєРёР±РѕСЂРі,РєРѕСЂСЃРµС‚' РёР»Рё 'Р—РћР’,РіСЂРѕР±РёРє,СЃРµРєС‚РѕСЂ'
+
+/////////////////////////////////////////
+
+function Calculator() {
+    var operations = {};
+    return {
+        addMethod: function (op, fn) {
+            operations[op] = fn;
+        },
+        calculate: function(expr) {
+            var tokens = expr.split(' ');
+            var a = +tokens[0],
+                b = +tokens[2],
+                op = tokens[1];
+            return operations[op](a,b);
+        }
+    }
+}
+
+var calc = new Calculator();
+
+var powerCalc = new Calculator;
+powerCalc.addMethod('*', function(a, b) {
+    return a * b;
+});
+powerCalc.addMethod('/', function(a, b) {
+    return a / b;
+});
+powerCalc.addMethod('**', function(a, b) {
+    return Math.pow(a, b);
+});
+
+var result = powerCalc.calculate('2 ** 3');
+console.log( result ); // 8

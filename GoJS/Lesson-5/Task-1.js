@@ -1,7 +1,7 @@
 /**
  * Created by Garbovskiy on 27.06.2015.
  */
-////////////////// УРОК 5 - задание 1 - максимальное значение в объекте
+////////////////// РЈР РћРљ 5 - Р·Р°РґР°РЅРёРµ 1 - РјР°РєСЃРёРјР°Р»СЊРЅРѕРµ Р·РЅР°С‡РµРЅРёРµ РІ РѕР±СЉРµРєС‚Рµ
 var tasksCompleted = {
     'Anna': 29,
     'Serg': 35,
@@ -10,18 +10,18 @@ var tasksCompleted = {
 };
 
 function maxTaskCompl(obj) {
-    var min = 0;
+    var max = 0;
     for (var key in obj) {
         if (obj[key] > min) {
             min = obj[key];
         }
     }
-    return min;
+    return max;
 }
 
 console.log(maxTaskCompl(tasksCompleted));
 
-///////////////////////// УРОК 5 - задание 2 Напишите функцию multiplyNumeric которая принимает на вход объект и возвращает объект в котором все числовые значения у свойств умножены на 2.
+///////////////////////// РЈР РћРљ 5 - Р·Р°РґР°РЅРёРµ 2 РќР°РїРёС€РёС‚Рµ С„СѓРЅРєС†РёСЋ multiplyNumeric РєРѕС‚РѕСЂР°СЏ РїСЂРёРЅРёРјР°РµС‚ РЅР° РІС…РѕРґ РѕР±СЉРµРєС‚ Рё РІРѕР·РІСЂР°С‰Р°РµС‚ РѕР±СЉРµРєС‚ РІ РєРѕС‚РѕСЂРѕРј РІСЃРµ С‡РёСЃР»РѕРІС‹Рµ Р·РЅР°С‡РµРЅРёСЏ Сѓ СЃРІРѕР№СЃС‚РІ СѓРјРЅРѕР¶РµРЅС‹ РЅР° 2.
 
 var image = {
     width: 100,
@@ -38,11 +38,21 @@ function multiplyNumeric(obj) {
 multiplyNumeric(image);
 console.log(image);
 
-///////////////////////// УРОК 5 - задание 3
-var arr = [];
+///////////////////////// РЈР РћРљ 5 - Р·Р°РґР°РЅРёРµ 3
+function calc() {
+    var arr = [];
 
-do {
-    var a = +prompt("insert number");
-    if (!a && a != 0) break;
-    arr.push(a);
-} while (!isNaN(a));
+    do {
+        var a = +prompt("insert number");
+        if (!a && a != 0) break;
+        arr.push(a);
+    } while (!isNaN(a));
+
+    var summ = arr.reduce(function (current, sum) {
+        return current + sum
+    });
+    return summ;
+
+}
+
+console.log(calc());
