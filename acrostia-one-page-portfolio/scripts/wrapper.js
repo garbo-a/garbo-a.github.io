@@ -24,5 +24,5 @@ var main = function() {
         currentSlide.fadeOut(600).removeClass('active');
         prevSlide.fadeIn(600).addClass('active');
     });
-}
+};
 $(document).ready(main);
