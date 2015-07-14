@@ -11,9 +11,9 @@ $(document).ready(function () {
 
         if (typeof $("#" + $justid) != undefined) { // test if target exists
             $root.animate({
-                scrollTop: $("#" + $justid).offset().top
+                scrollTop: $("#" + $justid).offset().top - $('#header').height()
             }, 1000);
         }
         return false;
-});
+    });
 });
