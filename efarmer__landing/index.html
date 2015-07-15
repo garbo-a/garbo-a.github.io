@@ -6,8 +6,6 @@
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,800,300,600,700' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="style.css"/>
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-    <script src="script.js"></script>
-    <script src="script-page-scrolling.js"></script>
     <title>
         eFarm Pilot | eFarm Pilot is a professional Field Guidance system on your Android tablet.
     </title>
@@ -42,14 +40,14 @@
             Discover the precision farming world. Starting from only EUR 99.00*
         </p>
 
-        <a href="#video" id="watch-video" class="btn">watch video</a>
+        <a href="javascript:void(0);" onclick="play();" id="watch-video" class="btn">watch video</a>
         <a href="#buy-it" id="get-it-now" class="btn btn-green">get it now!</a>
     </div>
 </div>
 
 <div class="video" id="video">
     <iframe width="100%" height="100%" src="https://www.youtube.com/embed/TbegrpzyNh4" frameborder="0"
-            allowfullscreen></iframe>
+            allowfullscreen id="myytplayer"></iframe>
 </div>
 
 <div class="slider">
@@ -210,6 +208,7 @@
 
     <div class="company-contacts">
         <h4 class="company-contacts__header">Get in touch</h4>
+
         <p class="company-contacts__phone">Tel: +31 713 020355</p>
         <a href="mailto:info@efarmer.mobi" class="company-contacts__email">Email: info@efarmer.mobi</a>
     </div>
