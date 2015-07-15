@@ -103,7 +103,7 @@ header:after {
     margin: 0 25px;
 }
 
-.navigation > a:after {
+.goto_active_yes:after {
     display: block;
     content: '';
     width: 50%;

@@ -14,6 +14,8 @@ $(document).ready(function () {
                 scrollTop: $("#" + $justid).offset().top - $('#header').height()
             }, 1000);
         }
+        $('.goto_active_yes').removeClass('goto_active_yes');
+        $(this).addClass('goto_active_yes');
         return false;
     });
 });
