@@ -102,5 +102,14 @@ var slider = function () {
 
 $(document).ready(slider);
 
+// Youtube video playing function
+var playVideo = function() {
+    $('#gotovideo').on('click', function(ev) {
 
+        $("#video")[0].src += "&autoplay=1";
+        ev.preventDefault();
 
+    });
+};
+
+$(document).ready(playVideo);
