@@ -83,7 +83,7 @@ header:after {
     height: 90px;
 }
 
-#toogle {
+#toggle {
     display: none;
 }
 
@@ -239,7 +239,7 @@ header:after {
     position: absolute;
     top: -30px;
     right: 30px;
-    transform: rotate(180deg);
+    transform: rotateY(180deg);
 }
 
 .verpraaksaam__description,
@@ -520,6 +520,7 @@ footer:before {
     }
 
     .verpraaksaam__communication-block {
+        min-width: 250px;
         width: 100%;
         min-height: 250px;
         margin-top: 20px;
