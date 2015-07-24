@@ -1,0 +1,72 @@
+body {
+    font-family: 'Roboto', 'Helvetica', 'Arial', sans-serif;
+    font-size: 12px;
+    line-height: 1;
+    color: #000;
+    margin: 0;
+}
+.container {
+    width: 620px;
+    margin: auto;
+}
+
+.header {
+    margin: 160px auto 255px;
+}
+.header h1 {
+    text-transform: uppercase;
+    font-size: 48px;
+    margin: 0;
+}
+.header .desc {
+    font-weight: 100;
+    font-size: 16px;
+    margin-left: 80px;
+}
+.footer {
+    font-size: 16px;
+    text-align: right;
+    margin: 1000px auto 20px;
+}
+.dib {
+    display: inline-block;
+    vertical-align: top;
+}
+.phone-frame {
+    position: relative;
+    background: url(img/mobile-frame.jpg) left top no-repeat;
+    width: 380px;
+    height: 775px;
+    margin-bottom: 300px;
+}
+.phone-frame .screen {
+    position: absolute;
+    left: 30px;
+    top: 120px;
+    width: 320px;
+    height: 510px;
+    overflow: hidden;
+}
+.phone-frame .screen img {
+    max-width: 320px;
+}
+@media  (max-width: 768px) {
+    .phone-frame .screen {
+        overflow-y: scroll;
+    }
+}
+
+.conent {
+    box-sizing: border-box;
+    width: 220px;
+    padding-left: 20px;
+}
+
+.title {
+    font-size: 18px;
+    font-weight: 500;
+    margin: 145px 0 10px;
+}
+.text {
+    line-height: 18px;
+}
