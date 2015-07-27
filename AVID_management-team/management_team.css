@@ -37,7 +37,7 @@ h1 {
 
 /* Content styles */
 body {
-    min-width: 600px;
+    min-width: 500px;
     font-family: sans-serif;
 }
 
@@ -199,7 +199,7 @@ body {
 .member_bios_full {
     display: block;
     font-size: 0.875em;
-    color: #ffffff;
+    color: #8EC28B;
     text-decoration: none;
     margin-top: 20px;
 }
