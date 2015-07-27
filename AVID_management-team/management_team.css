@@ -152,10 +152,10 @@ body {
     background: #006bb6;
     background: rgba(0, 106, 181, 0.75);
     box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2);
-    -webkit-transition: all 0.2s ease-out;
-    -moz-transition: all 0.2s ease-out;
-    -o-transition: all 0.2s ease-out;
-    transition: all 0.2s ease-out;
+    -webkit-transition: all 0.3s ease-out;
+    -moz-transition: all 0.3s ease-out;
+    -o-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
 }
 
 .management_team-block:hover .member_details {
@@ -238,6 +238,6 @@ body {
 
 @media (max-width: 768px) {
     .management_team-block {
-        width: 60%;
+        width: 75%;
     }
 }
