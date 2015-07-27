@@ -31,13 +31,9 @@ footer, header, menu, nav, section {
     display: block;
 }
 
-h1 {
-
-}
-
 /* Content styles */
 body {
-    min-width: 500px;
+    min-width: 320px;
     font-family: sans-serif;
 }
 
@@ -239,5 +235,13 @@ body {
 @media (max-width: 768px) {
     .management_team-block {
         width: 75%;
+        min-height: 375px;
+    }
+
+    .member_name {
+        font-size: 1.2em;
+    }
+    .member_position {
+        font-size: 1em;
     }
 }
