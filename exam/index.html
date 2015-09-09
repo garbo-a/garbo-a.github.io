@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href='http://fonts.googleapis.com/css?family=Arvo:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="gunman.css"/>
+    <title>Gunman | the best gameplay ever</title>
+</head>
+<body>
+
+<div class="mainframe">
+
+    <div class="timer">
+        <p>You: <span></span></p>
+
+        <p>Gunman: <span></span></p>
+    </div>
+
+    <div class="gunman"></div>
+
+    <div class="fire">FIRE!!!</div>
+
+    <div class="score">
+
+        <p>$ &nbsp &nbsp<span>0</span></p>
+
+        <p>REWARD <span></span> </p>
+    </div>
+</div>
+
+<script src="gunman.js"></script>
+<script>
+    var gunman = new Gunman();
+    gunman.gunManOnPosition();
+</script>
+</body>
+</html>
