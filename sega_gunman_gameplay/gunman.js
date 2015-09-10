@@ -1,17 +1,17 @@
 function Gunman() {
     //Local variables
-    var pathGunmanCounter = -100; //in the end set -100px
-    var bcgGunmanCounter = 0;
-    var gunmansArr = [{bgPosY: 0, timer: 1, reward: 100}, {bgPosY: -206, timer: 0.8, reward: 150}, {
-        bgPosY: -412,
-        timer: 0.7,
-        reward: 200
-    }, {
-        bgPosY: -618,
-        timer: 0.65, reward: 250
-    }, {bgPosY: -824, timer: 0.59, reward: 300}];
-    var globalCounter = 0;
-    var gunman = document.body.querySelector('.gunman'),
+    var pathGunmanCounter = -100,
+        bcgGunmanCounter = 0,
+        gunmansArr = [{bgPosY: 0, timer: 1.00, reward: 100}, {bgPosY: -206, timer: 0.80, reward: 150}, {
+            bgPosY: -412,
+            timer: 0.70,
+            reward: 200
+        }, {
+            bgPosY: -618,
+            timer: 0.65, reward: 250
+        }, {bgPosY: -824, timer: 0.59, reward: 300}, {timer: 0.59, reward: 0}],
+        globalCounter = 0,
+        gunman = document.body.querySelector('.gunman'),
         fire = document.body.querySelector('.fire'),
         ready = document.querySelector('.ready'),
         win = document.querySelector('.win'),
@@ -25,13 +25,16 @@ function Gunman() {
         playerDate,
         playerTimeCount,
         rewardSum = 0,
-        bgPosX = -290;
+        bgPosX = -290,
+        timerIdLoose1,
+        timerIdLoose2,
         self = this;
-
 
     //Timers
     self.gunManOnPosition = function () {
         var timerId;
+        console.log(gunman.style.backgroundPositionX);
+        gunman.classList.toggle('active');
         gunman.style.backgroundPositionY = gunmansArr[globalCounter].bgPosY + 'px';
         gunmanTime.innerHTML = '';
 
@@ -66,30 +69,37 @@ function Gunman() {
         }, 9000);
     };
 
-
     //Fire gameplay
     function Fire() {
         gunmanTimeCount = gunmansArr[globalCounter].timer;
-
         ready.classList.toggle('active');
         gunmanTime.innerHTML = gunmanTimeCount + '';
-
 
         setTimeout(function () {
             ready.classList.toggle('active');
             fire.classList.toggle('active');
             playerTimeCounter();
             gunman.addEventListener('click', ShootGamePlay);
+            timerIdLoose1 = setTimeout(function () {
+                gunman.removeEventListener('click', ShootGamePlay);
+                LooseRender();
+                gunman.addEventListener('click', LooseShootTime);
+                timerIdLoose2 = setTimeout(function () {
+                    gunman.removeEventListener('click', LooseShootTime);
+                    Loose();
+                    playerTime.innerHTML = 'infinity!'
+                }, 3000)
+            }, gunmansArr[globalCounter].timer * 1000);
         }, 3000)
     }
-
 
     function playerTimeCounter() {
         date = +new Date();
     }
 
-
     function ShootGamePlay() {
+        clearTimeout(timerIdLoose1);
+        clearTimeout(timerIdLoose2);
         playerDate = +new Date();
         playerTimeCount = (playerDate - date) / 1000;
         playerTime.innerHTML = playerTimeCount.toFixed(2) + '';
@@ -98,11 +108,25 @@ function Gunman() {
 
         if (playerTimeCount < gunmanTimeCount) {
             WinRender();
-            Win();
+            setTimeout(function () {
+                Win();
+            }, 1500);
         } else {
             LooseRender();
-            Loose();
+            setTimeout(function () {
+                Loose();
+            }, 1500);
         }
+    }
+
+    function LooseShootTime() {
+        clearTimeout(timerIdLoose2);
+        playerDate = +new Date();
+        playerTimeCount = (playerDate - date) / 1000;
+        playerTime.innerHTML = playerTimeCount.toFixed(2) + '';
+        fire.classList.toggle('active');
+        gunman.removeEventListener('click', LooseShootTime);
+        Loose();
     }
 
     function Win() {
@@ -110,19 +134,25 @@ function Gunman() {
         rewardSum += gunmansArr[globalCounter].reward;
         reward.innerHTML = rewardSum + '';
         console.log('win');
-
         var timerIdWin = setInterval(function () {
             winBg.classList.toggle('active')
         }, 120);
         setTimeout(function () {
             clearInterval(timerIdWin);
-            if (globalCounter === 5) return;
+            if (globalCounter === 5) {
+                for (var i = 0; i < 6; i++) {
+                    winBg.classList.toggle('active');
+                }
+                console.log(rewardSum);
+                console.log(gunman.style.backgroundPositionX);
+                console.log(gunman.style.backgroundPositionY);
+                return;
+            }
             pathGunmanCounter = -100;
             setTimeout(function () {
                 win.classList.toggle('active');
-                setTimeout(function () {
-                    self.gunManOnPosition();
-                }, 200)
+                gunman.classList.toggle('active');
+                self.gunManOnPosition();
             }, 2500);
         }, 1000);
     }
@@ -137,27 +167,28 @@ function Gunman() {
         console.log('loose');
     }
 
-    function WinRender () {
+    function WinRender() {
         bgPosX = -676;
         var posStep = -97;
-        var timerId = setInterval(function() {
+        var timerId = setInterval(function () {
             bgPosX += posStep;
-            gunman.style.backgroundPositionX = bgPosX + 'px' ;
-            console.log(gunman.style.backgroundPositionX);
+            gunman.style.backgroundPositionX = bgPosX + 'px';
         }, 300);
         setTimeout(function () {
             clearInterval(timerId);
             bgPosX = -290;
         }, 1000);
+        setTimeout(function () {
+            gunman.style.backgroundPositionX = 100 + 'px';
+        }, 4000);
     }
 
-    function LooseRender () {
+    function LooseRender() {
         bgPosX = -289;
         var posStep = -97;
-        var timerId = setInterval(function() {
+        var timerId = setInterval(function () {
             bgPosX += posStep;
-            gunman.style.backgroundPositionX = bgPosX + 'px' ;
-            console.log(gunman.style.backgroundPositionX);
+            gunman.style.backgroundPositionX = bgPosX + 'px';
         }, 300);
         setTimeout(function () {
             clearInterval(timerId);

@@ -78,7 +78,7 @@
 }
 
 .active {
-    display: block;
+    display: block !important;
     visibility: visible;
 }
 
@@ -96,7 +96,7 @@
 }
 
 .gunman {
-    display: block;
+    display:none;
     width: 97px;
     height: 204px;
     position: absolute;
