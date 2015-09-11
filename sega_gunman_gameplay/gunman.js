@@ -20,6 +20,13 @@ function Gunman() {
         playerTime = document.querySelector('.your__time span'),
         gunmanTime = document.querySelector('.gunman__time span'),
         reward = document.querySelector('.amount__reward span'),
+        audio_intro = document.querySelector('.intro'),
+        audio_death = document.querySelector('.death'),
+        audio_fire = document.querySelector('.fire'),
+        audio_shot = document.querySelector('.shot'),
+        audio_shot_fall = document.querySelector('.shot-fall'),
+        audio_wait = document.querySelector('.wait'),
+        audio_win = document.querySelector('.win'),
         gunmanTimeCount,
         date,
         playerDate,
@@ -32,6 +39,7 @@ function Gunman() {
 
     //Timers
     self.gunManOnPosition = function () {
+        //AudioPlay(audio_win);
         var timerId;
         console.log(gunman.style.backgroundPositionX);
         gunman.classList.toggle('active');
@@ -39,7 +47,7 @@ function Gunman() {
         gunmanTime.innerHTML = '';
 
         timerId = setInterval(function () {
-            pathGunmanCounter += 10;
+            pathGunmanCounter += 18;
             gunman.style.right = pathGunmanCounter + 'px';
             playerTime.innerHTML = '';
 
@@ -66,15 +74,31 @@ function Gunman() {
             gunman.style.backgroundPositionX = bgPosX + "px";
             Fire();
             globalCounter++;
-        }, 9000);
+            AudioStop(audio_intro);
+        }, 5000);
     };
+
+    function AudioPlay(audio) {
+        audio.autoplay = true;
+        audio.loop = true;
+    }
+
+    function AudioStop(audio) {
+        audio.autoplay = false;
+        audio.loop = false;
+    }
+
+    //function AudioPlayOnce (audio) {
+    //    AudioPlay(audio);
+    //    setTimeout(AudioStop(audio), 500);
+    //}
 
     //Fire gameplay
     function Fire() {
         gunmanTimeCount = gunmansArr[globalCounter].timer;
         ready.classList.toggle('active');
         gunmanTime.innerHTML = gunmanTimeCount + '';
-
+        AudioPlay(audio_win);
         setTimeout(function () {
             ready.classList.toggle('active');
             fire.classList.toggle('active');
@@ -98,6 +122,7 @@ function Gunman() {
     }
 
     function ShootGamePlay() {
+
         clearTimeout(timerIdLoose1);
         clearTimeout(timerIdLoose2);
         playerDate = +new Date();
