@@ -20,10 +20,10 @@
     </div>
 
     <div class="gunman"></div>
-    <div class="win">YOU WIN!</div>
-    <div class="ready">READY?</div>
-    <div class="fire">FIRE!!!</div>
-    <div class="loose">
+    <div class="bubble__win">YOU WIN!</div>
+    <div class="bubble__ready">READY?</div>
+    <div class="bubble__fire">FIRE!!!</div>
+    <div class="game__over">
         <div>GAME OVER!</div>
     </div>
     <div class="win__bg"></div>
@@ -35,16 +35,14 @@
     </div>
 </div>
 <div class="sounds">
-    <audio class="death" src="sfx/death.m4a"></audio>
-    <audio class="fire" src="sfx/fire.m4a"></audio>
-    <audio class="intro" src="sfx/intro.m4a" loop autoplay></audio>
-    <audio class="shot" src="sfx/shot.m4a"></audio>
-    <audio class="shot-fall" src="sfx/shot-fall.m4a"></audio>
-    <audio class="wait" src="sfx/wait.m4a" on></audio>
-    <audio class="win" src="sfx/win.m4a"></audio>
+    <audio class="sound__death" src="sfx/death.m4a"></audio>
+    <audio class="sound__fire" src="sfx/fire.m4a"></audio>
+    <audio class="sound__intro" src="sfx/intro.m4a" loop></audio>
+    <audio class="sound__shot" src="sfx/shot.m4a"></audio>
+    <audio class="sound__shot-fall" src="sfx/shot-fall.m4a"></audio>
+    <audio class="sound__wait" src="sfx/wait.m4a" on></audio>
+    <audio class="sound__win" src="sfx/win.m4a"></audio>
 </div>
-<a class="btn" href="#" onclick = "function al () {console.log('a'); event.preventDefault();}">BTN</a>
-
 <script src="gunman.js"></script>
 <script>
     var gunman = new Gunman();

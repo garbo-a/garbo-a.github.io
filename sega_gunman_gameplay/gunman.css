@@ -21,7 +21,7 @@
     font-size: 20px;
 }
 
-.loose,
+.game__over,
 .win__bg{
     position: relative;
     display: none;
@@ -34,7 +34,7 @@
     background-color: rgba(75, 200, 110, 0.5);
 }
 
-.loose div{
+.game__over div{
     position: absolute;
     width: 100%;
     height: 100%;
@@ -44,9 +44,9 @@
     line-height: 602px;
 }
 
-.win,
-.ready,
-.fire {
+.bubble__win,
+.bubble__ready,
+.bubble__fire {
     display: none;
     width: 140px;
     height: 50px;
@@ -65,12 +65,12 @@
     visibility: hidden;
 }
 
-.fire {
+.bubble__fire {
     background: #cf2125;
     color: #FFFFFF;
 }
 
-.win {
+.bubble__win {
     width: 180px;
     right: 300px;
     background: #61deec;
