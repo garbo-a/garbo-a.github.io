@@ -32,6 +32,11 @@ function Gunman() {
             audioWait: document.querySelector('.sound__wait'),
             audioWin: document.querySelector('.sound__win')
         },
+        Play = {
+            startGameButtonWrapper: document.querySelector('.play_button-wrapper'),
+            startGameButton: document.querySelector('.play_button'),
+            reStartGameButton: document.querySelector('.play_again-button')
+        },
         gunmanTimeCount,
         date,
         playerDate,
@@ -44,10 +49,12 @@ function Gunman() {
 
     //Timers
     self.gunManOnPosition = function () {
+        Play.startGameButtonWrapper.style.display = 'none';
+        Play.startGameButtonWrapper.removeEventListener('click', self.gunManOnPosition);
         audioPlay(Audio.audioIntro);
         var timerId;
         console.log(gunman.style.backgroundPositionX);
-        gunman.classList.toggle('active');
+        gunman.classList.add('active');
         gunman.style.backgroundPositionY = gunmansArr[globalCounter].bgPosY + 'px';
         gunmanTime.innerHTML = '';
 
@@ -78,7 +85,7 @@ function Gunman() {
             clearInterval(timerId);
             gunman.style.backgroundPositionX = bgPosX + "px";
             firePlay();
-            globalCounter++;
+            //globalCounter++;
             audioStop(Audio.audioIntro);
         }, 5000);
     };
@@ -162,6 +169,7 @@ function Gunman() {
     function winGamePlay() {
         Bubbles.win.classList.toggle('active');
         rewardSum += gunmansArr[globalCounter].reward;
+        globalCounter++;
         reward.innerHTML = rewardSum + '';
         console.log('win');
         var timerIdWin = setInterval(function () {
@@ -187,10 +195,17 @@ function Gunman() {
 
     function looseGamePlay() {
         var timerIdLoose = setInterval(function () {
-            gameOver.classList.toggle('active')
+            gameOver.classList.toggle('active');
         }, 280);
         setTimeout(function () {
             clearInterval(timerIdLoose);
+            setTimeout(function () {
+                Play.startGameButtonWrapper.firstChild.textContent = "PLAY AGAIN!";
+                globalCounter = 0;
+                gameOver.classList.toggle('active');
+                pathGunmanCounter = -100;
+                playGame();
+            }, 1500);
         }, 1000);
         console.log('loose');
     }
@@ -224,5 +239,15 @@ function Gunman() {
             clearInterval(timerId);
             bgPosX = -290;
         }, 1300);
+    }
+
+    this.startGamePlay = function () {
+        playGame();
+    };
+
+    function playGame() {
+        Play.startGameButtonWrapper.style.display = 'block';
+        Play.startGameButton.style.display = 'block';
+        Play.startGameButton.addEventListener('click', self.gunManOnPosition);
     }
 }
