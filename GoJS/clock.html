@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>World clock widget</title>
+    <style>
+        /*should be moved to origin html*/
+
+        * {
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+        }
+
+        html, body, div, span, applet, object, iframe,
+        h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+        a, abbr, acronym, address, big, cite, code,
+        del, dfn, em, img, ins, kbd, q, s, samp,
+        small, strike, strong, sub, sup, tt, var,
+        b, u, i, center,
+        dl, dt, dd, ol, ul, li,
+        fieldset, form, label, legend,
+        table, caption, tbody, tfoot, thead, tr, th, td,
+        article, aside, canvas, details, embed,
+        figure, figcaption, footer, header,
+        menu, nav, output, ruby, section, summary,
+        time, mark, audio, video {
+            margin: 0;
+            padding: 0;
+            border: 0;
+            font-size: 1em;
+            vertical-align: baseline;
+        }
+
+        /* HTML5 display-role reset for older browsers */
+        article, aside, details, figcaption, figure,
+        footer, header, menu, nav, section {
+            display: block;
+        }
+
+        table {
+            border-collapse: collapse;
+            border-spacing: 0;
+        }
+
+        .world-clocks__wrapper {
+            display: block;
+            position: relative;
+            width: 710px;
+            height: 136px;
+
+            margin: 10px auto;
+            padding: 12px 0;
+
+            font-family: 'Arial Bold', sans-serif;
+            font-weight: bold;
+            text-transform: uppercase;
+            text-align: left;
+
+            border: 1px solid black;
+        }
+
+        .world-clocks__top-div {
+            display: block;
+            width: 690px;
+
+            margin: 0 auto 24px;
+            padding-top: 7px;
+            padding-left: 5px;
+
+            border-top: 2px solid #cd8b00;
+
+            font-size: 12px;
+            color: #cd8b00;
+            text-align: left;
+
+        }
+
+        .world-clocks__clock {
+            display: inline-block;
+            position: relative;
+
+            height: 63px;
+
+            text-align: left;
+        }
+
+        #memphis, #toronto, #london, #basel, #sydney {
+            display: block;
+            position: relative;
+            text-align: left;
+        }
+
+        .city-name {
+            display: block;
+            height: 10px;
+            color: #84bd00;
+            font-size: 14px;
+        }
+
+        .hours, .minutes, .colon {
+            color: #c9c7c9;
+            font-family: 'Arial', sans-serif;
+            font-weight: 100;
+            font-size: 40px;
+        }
+
+        .meridian {
+            display: inline-block;
+            position: relative;
+            width: 19px;
+            height: 33px
+        }
+        .pm, .am {
+            position: relative;
+            right: 0;
+            color: #c9c7c9;
+            font-family: 'Arial Bold', sans-serif;
+            font-size: 12px;
+        }
+
+        .pm {
+            top: 4px;
+        }
+
+        .am {
+            -top: 30px;
+        }
+
+        #memphis .city-name,
+        #memphis .active, #memphis .active {
+            color: #cd8b00;
+        }
+
+        .am.active, .pm.active {
+            color: #84bd00;
+        }
+        #memphis {
+            margin-left: 10px;
+            margin-right: 5px;
+        }
+        #toronto, #london, #basel, #sydney {
+            margin-left: 21px;
+            margin-right: 5px;
+        }
+
+
+    </style>
+    <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+
+</head>
+<body>
+
+<div class="world-clocks__wrapper">
+    <div class="world-clocks__top-div">world clocks</div>
+
+    <div class="world-clocks__clock">
+        <div id="memphis">
+            <span class="city-name">memphis, usa</span>
+            <span class="hours">3</span>
+            <span class="colon">:</span>
+            <span class="minutes">06</span><div class="meridian">
+            <span class="pm orange active">pm</span>
+            <span class="am orange">am</span>
+        </div>
+        </div>
+    </div><div class="world-clocks__clock">
+    <div id="toronto">
+        <span class="city-name">toronto, ca</span>
+        <span class="hours">4</span>
+        <span class="colon">:</span>
+        <span class="minutes">06</span><div class="meridian">
+        <span class="pm active">pm</span>
+        <span class="am">am</span>
+    </div>
+    </div>
+</div><div class="world-clocks__clock">
+    <div id="london">
+        <span class="city-name">london, uk</span>
+        <span class="hours">9</span>
+        <span class="colon">:</span>
+        <span class="minutes">06</span><div class="meridian">
+        <span class="pm active">pm</span>
+        <span class="am">am</span>
+    </div>
+    </div>
+</div><div class="world-clocks__clock">
+    <div id="basel">
+        <span class="city-name">basel, sui</span>
+        <span class="hours">10</span>
+        <span class="colon">:</span>
+        <span class="minutes">06</span><div class="meridian">
+        <span class="pm active">pm</span>
+        <span class="am">am</span>
+    </div>
+    </div>
+</div><div class="world-clocks__clock">
+    <div id="sydney">
+        <span class="city-name">sydney, au</span>
+        <span class="hours">6</span>
+        <span class="colon">:</span>
+        <span class="minutes">06</span><div class="meridian">
+        <span class="pm">pm</span>
+        <span class="am active">am</span>
+    </div>
+    </div>
+</div>
+
+</div>
+
+<script>
+
+    $(document).ready(function () {
+        //Local variables
+        var jqObjHours = $(".hours"),
+                jqObjMinutes = $(".minutes"),
+                seconds = 0,
+                jqOblAM = $(".am"),
+                jqObjPM = $(".pm");
+
+        //Local Methods
+        function ReadyStadyGo() {
+            if (+jqObjMinutes.eq(0).text() >= 0 && +jqObjMinutes.eq(0).text() < 9) {
+                jqObjMinutes.text("0" + (+jqObjMinutes.eq(0).text() + 1))
+            }
+
+            if (+jqObjMinutes.eq(0).text() >= 9 && +jqObjMinutes.eq(0).text() < 60) {
+                jqObjMinutes.text(+jqObjMinutes.eq(0).text() + 1)
+            }
+            if (+jqObjMinutes.eq(0).text() == 60) {
+                jqObjMinutes.text("00");
+
+                for (var i = 0; i <= 4; i++) {
+                    if (+jqObjHours.eq(i).text() == 11) {
+                        jqObjHours.eq(i).text(12);
+                        jqOblAM.eq(i).toggleClass("active");
+                        jqObjPM.eq(i).toggleClass("active");
+                    }
+                    if (+jqObjHours.eq(i).text() == 12) {
+                        jqObjHours.eq(i).text(1);
+                    } else {
+                        jqObjHours.eq(i).text(+jqObjHours.eq(i).text() + 1)
+                    }
+                }
+            }
+        }
+
+        //Clocks interval
+        var timerID = setInterval(function () {
+            seconds += 60;
+            console.log(seconds);
+            if (seconds == 60) {
+                seconds = 0;
+                ReadyStadyGo();
+            }
+        }, 100);
+
+        //ClearInterval
+        setTimeout(function () {
+            clearInterval(timerID)
+        }, 60000);
+    });
+
+</script>
+
+</body>
+</html>

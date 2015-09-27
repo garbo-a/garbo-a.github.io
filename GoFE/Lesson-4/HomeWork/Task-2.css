@@ -14,7 +14,7 @@ nav a:first-child {
 }
 nav a {
     float: left;
-    font-family: Impact;
+    font-family: Impact, sans-serif;
     font-size:20px;
     color: #fff;
     text-decoration: none;
