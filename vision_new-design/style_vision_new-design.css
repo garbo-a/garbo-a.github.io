@@ -1,0 +1,280 @@
+/* RESET CSS */
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 1em;
+    vertical-align: baseline;
+}
+
+ul, li {
+    list-style-type: none;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, menu, nav, section {
+    display: block;
+}
+
+body {
+    height: 100%;
+    font-family: "adelle", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: #181818;
+}
+
+/* BS-type styles */
+.ttu {
+    text-transform: uppercase;
+}
+
+.dib {
+    display: inline-block;
+}
+
+.vat {
+    vertical-align: top;
+}
+
+.h-100 {
+    height: 100%;
+}
+
+a {
+    color: #477dca;
+    text-decoration: none;
+    transition: color .1s linear;
+}
+
+.main__wrapper {
+    position: relative;
+    min-width: 75rem;
+    height: 700px;
+    padding: 1rem 2.75rem;
+    margin: 0 auto;
+}
+
+nav {
+    text-align: center;
+    background: #6E2A8D;
+}
+
+.slider-navigation-link {
+    position: relative;
+    padding: 1rem 2rem;
+    font-size: 1.5rem;
+    color: #fff;
+    transition: color 0.2s;
+}
+
+.slider-navigation-link.active {
+    background: #844b9f;
+    box-shadow: 0 8px 7px -4px #58425F inset;
+}
+
+.slider-navigation-link.active:before {
+    content: "";
+    position: absolute;
+    top: 55px;
+    left: 50%;
+    z-index: -1;
+    -webkit-transform-origin: 0 0;
+    transform-origin: 0 0;
+    margin-left: -62.5px;
+    background-color: #6c3289;
+    padding-bottom: 73px;
+    width: 77px;
+    -webkit-transform: rotate(-36deg) skewX(18deg);
+    transform: rotate(-36deg) skewX(18deg);
+}
+
+.slider-navigation-link.active:after {
+    content: "";
+    position: absolute;
+    top: 57px;
+    left: 50%;
+    z-index: -1;
+    -webkit-transform-origin: 0 0;
+    transform-origin: 0 0;
+    margin-left: -57.5px;
+    background-color: #844b9f;
+    padding-bottom: 61px;
+    width: 68px;
+    -webkit-transform: rotate(-32deg) skewX(26deg);
+    transform: rotate(-32deg) skewX(26deg);
+}
+
+.slider__wrapper {
+    position: relative;
+    height: 100%;
+
+}
+
+.slider__content {
+    width: 64.5%;
+    height: 100%;
+
+}
+
+.slider__img {
+    width: 35%;
+    height: 100%;
+    background: url("http://avid-enterprise.herokuapp.com/images/avid-everywhere-logo-lg.jpg") center no-repeat;
+    background-size: contain;
+}
+
+.content-item {
+    position: relative;
+}
+
+.content-item:after {
+    content: '';
+    width: 0;
+    height: 100%;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.item__main-content {
+    width: 98%;
+    vertical-align: middle;
+    padding: 1rem 1rem 1rem 3rem;
+}
+
+.main-content-header {
+    position: relative;
+    font-size: 3rem;
+    font-weight: 300;
+    color: #002897;
+    padding: 10px 20px 10px 145px;
+    background: #f1f3f4;
+}
+
+.main-content-header:before {
+    display: block;
+    content: 'A';
+    color: #FFFFFF;
+    font-size: 4rem;
+    font-weight: 300;
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top: 50%;
+    left: 25px;
+    margin-top: -50px;
+    background: #002897;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 100px;
+}
+
+.main-content-text,
+.expandable-content-text {
+    color: #333;
+    font-size: 1.5rem;
+    font-weight: 300;
+    line-height: 150%;
+    padding: 2rem;
+}
+
+.btn-outline-purple,
+.btn-outline-dark {
+    max-width: 300px;
+    font-weight: 500;
+    line-height: 1;
+    border-radius: 5px;
+    display: inline-block;
+    text-align: center;
+    padding: 15px 60px;
+    font-size: 1.125rem;
+    border: 2px solid #6E2A8D;
+    color: #6E2A8D;
+    margin: 1rem 2rem;
+}
+
+.btn-outline-dark {
+    border: 2px solid #343434;
+    color: #343434;
+}
+
+.btn-outline-dark:hover {
+    color: #fff;
+    border: 2px solid #343434;
+    background-color: #343434;
+    transition: all .2s;
+}
+
+.btn-outline-purple:hover {
+    color: #fff;
+    border: 2px solid #6E2A8D;
+    background-color: #6E2A8D;
+    transition: all .2s;
+}
+
+.item__expandable-content {
+    position: absolute;
+    top: 30px;
+    display: none;
+    background: #f1f3f4;
+    width: 0;
+    height: 0;
+    opacity: 0;
+}
+
+
+
+.item__expandable-back-btn {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: block;
+    width: 140px;
+    height: 50px;
+    background: #6E2A8D;
+    color: #FFFFFF;
+    font-size: 1.125rem;
+    line-height: 50px;
+    text-align: center;
+    transition: all 0.2s;
+}
+
+.item__expandable-back-btn:hover {
+    cursor: pointer;
+    background: #932db3;
+    color: #e2e2e2;
+}
+
+
+.expandable-content-header {
+    font-family: "AvidOmnesLight", sans-serif;
+    font-size: 31px;
+    line-height: 1.28em;
+    font-weight: 300;
+    color: #006bb6;
+    padding: 2rem 2rem 0 2rem;
+}
+
+footer {
+    width: 100%;
+    height: 1412px;
+    background: url("images/footer.png") center no-repeat;
+    background-size: contain;
+}
