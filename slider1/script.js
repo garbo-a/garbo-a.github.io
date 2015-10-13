@@ -1,6 +1,3 @@
-/**
- * Created by Gues on 06.08.2015.
- */
 function Slider(selector, options) {
     var self = this;
 
@@ -93,17 +90,17 @@ function Slider(selector, options) {
 }
 
 
-function setCookie(cname, cvalue, exdays) {
-    var d = new Date();
-    d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
-    var expires = "expires=" + d.toUTCString();
-    document.cookie = cname + "=" + cvalue + "; " + expires;
-}
-
-var $jQ = jQuery.noConflict();
-$jQ(".mktoButton").click(function () {
-        setCookie("form_complete", 1);
-        $jQ("#mktoForm_5%").submit();
-    }
-);
+//function setCookie(cname, cvalue, exdays) {
+//    var d = new Date();
+//    d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+//    var expires = "expires=" + d.toUTCString();
+//    document.cookie = cname + "=" + cvalue + "; " + expires;
+//}
+//
+//var $jQ = jQuery.noConflict();
+//$jQ(".mktoButton").click(function () {
+//        setCookie("form_complete", 1);
+//        $jQ("#mktoForm_5%").submit();
+//    }
+//);
 

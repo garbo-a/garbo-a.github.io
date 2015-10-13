@@ -66,7 +66,9 @@ a {
 
 .main__wrapper {
     position: relative;
-    min-width: 75rem;
+    min-width: 65rem;
+    max-width: 1400px;
+
     height: 700px;
     padding: 1rem 2.75rem;
     margin: 0 auto;
@@ -124,14 +126,15 @@ nav {
 
 .slider__wrapper {
     position: relative;
+    width: 64.5%;
     height: 100%;
-
+    overflow: hidden;
 }
 
 .slider__content {
-    width: 64.5%;
+    width: 700%;
     height: 100%;
-
+    white-space: nowrap;
 }
 
 .slider__img {
@@ -143,6 +146,12 @@ nav {
 
 .content-item {
     position: relative;
+    /*margin-left: -4px;*/
+    white-space: normal;
+}
+
+.content-item:last-child {
+    margin-left: -27px;
 }
 
 .content-item:after {
@@ -168,6 +177,18 @@ nav {
     background: #f1f3f4;
 }
 
+.main-content-header.as {
+    color: #f68623;
+}
+
+.main-content-header.ms {
+    color: #1687c5;
+}
+
+.main-content-header.ss {
+    color: #8fb45a;
+}
+
 .main-content-header:before {
     display: block;
     content: 'A';
@@ -184,6 +205,20 @@ nav {
     border-radius: 50%;
     text-align: center;
     line-height: 100px;
+}
+
+.main-content-header.as:before {
+    background: #f68623;
+}
+
+.main-content-header.ms:before {
+    content: 'M';
+    background: #1687c5;
+}
+
+.main-content-header.ss:before {
+    content: 'S';
+    background: #8fb45a;
 }
 
 .main-content-text,
@@ -239,8 +274,6 @@ nav {
     opacity: 0;
 }
 
-
-
 .item__expandable-back-btn {
     position: absolute;
     bottom: 0;
@@ -261,7 +294,6 @@ nav {
     background: #932db3;
     color: #e2e2e2;
 }
-
 
 .expandable-content-header {
     font-family: "AvidOmnesLight", sans-serif;
