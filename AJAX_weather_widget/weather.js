@@ -29,7 +29,7 @@ function Weather() {
             var currElem = objectCity[i];
 
             currElem.onclick = function (event) {
-                var weatherUrlAjax = 'http://api.openweathermap.org/data/2.5/weather?lat=' + event.currentTarget.dataset.latitude + '&lon=' + event.currentTarget.dataset.longitude + '&units=metric';
+                var weatherUrlAjax = 'http://api.openweathermap.org/data/2.5/weather?appid=53c50defe390864e563ff1aa30410810&lat=' + event.currentTarget.dataset.latitude + '&lon=' + event.currentTarget.dataset.longitude + '&units=metric';
                 //console.log(weatherUrlAjax);
                 Ajax.getJSON(weatherUrlAjax, function (weatherData) {
                     console.log(weatherData);
