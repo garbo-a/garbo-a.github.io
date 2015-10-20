@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <link href='https://fonts.googleapis.com/css?family=Roboto:400,500,700,300' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="stylesheets/normalize.css"/>
     <link rel="stylesheet" type="text/css" href="stylesheets/config.css">
     <script src="javascripts/angular.min.js"></script>
     <script>
@@ -130,36 +131,31 @@
         <input class="add_slide" type="button" ng-click="addOne()" value="+">
 
         <div class="repeat-block" ng-repeat="config in formData.slides track by $index" config="config">
-
+            <h4>Select & set color theme</h4>
             <!--set color theme of each slide-->
             <div class="theme-colors">
-                <label id="blue"><input name="color-{{$index}}" type="radio" ng-model="config.color" value="blue">
-                    Set blue theme</label>
 
-                <label id="green"><input name="color-{{$index}}" type="radio" ng-model="config.color" value="green">
-                    Set green theme</label>
+                <label id="blue"><input name="color-{{$index}}" type="radio" ng-model="config.color" value="blue">blue theme</label>
 
-                <label id="orange"><input name="color-{{$index}}" type="radio" ng-model="config.color" value="orange">
-                    Set orange theme</label>
+                <label id="green"><input name="color-{{$index}}" type="radio" ng-model="config.color" value="green">green theme</label>
 
-                <label id="purple"><input name="color-{{$index}}" type="radio" ng-model="config.color" value="purple">
-                    Set purple theme</label>
+                <label id="orange"><input name="color-{{$index}}" type="radio" ng-model="config.color" value="orange">orange theme</label>
 
-                <label id="red"><input name="color-{{$index}}" type="radio" ng-model="config.color" value="red">
-                    Set red theme</label>
+                <label id="purple"><input name="color-{{$index}}" type="radio" ng-model="config.color" value="purple">purple theme</label>
 
-                <label id="none"><input name="color-{{$index}}" type="radio" ng-model="config.color" value="none">
-                    Set images only theme</label>
+                <label id="red"><input name="color-{{$index}}" type="radio" ng-model="config.color" value="red">red theme</label>
+
+                <label id="none"><input name="color-{{$index}}" type="radio" ng-model="config.color" value="none">images only theme</label>
             </div>
-
+            <h4>Select & set slider position</h4>
 
             <!-- set position of each slide-->
             <div class="slider-position">
                 <label><input id="left-{{$index}}" name="position" type="radio" ng-model="config.position" value="left">
-                    Set slider position LEFT <br/><<<<<<<<<<<</label>
+                    Set slider position LEFT <<< </label>
 
                 <label><input name="position-{{$index}}" type="radio" ng-model="config.position" value="right">
-                    Set slider position RIGHT <br/>>>>>>>>>>>></label>
+                    Set slider position RIGHT >>> </label>
             </div>
 
 
