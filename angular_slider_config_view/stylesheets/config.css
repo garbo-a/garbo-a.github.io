@@ -1,5 +1,6 @@
 .config-wrapper {
     display: block;
+    min-width: 900px;
     width: 45%;
     background: #41B8F3;
     color: #fff;
