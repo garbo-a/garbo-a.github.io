@@ -135,17 +135,23 @@
             <!--set color theme of each slide-->
             <div class="theme-colors">
 
-                <label id="blue"><input name="color-{{$index}}" type="radio" ng-model="config.color" value="blue">blue theme</label>
+                <label id="blue"><input name="color-{{$index}}" type="radio" ng-model="config.color" value="blue">blue
+                    theme</label>
 
-                <label id="green"><input name="color-{{$index}}" type="radio" ng-model="config.color" value="green">green theme</label>
+                <label id="green"><input name="color-{{$index}}" type="radio" ng-model="config.color" value="green">green
+                    theme</label>
 
-                <label id="orange"><input name="color-{{$index}}" type="radio" ng-model="config.color" value="orange">orange theme</label>
+                <label id="orange"><input name="color-{{$index}}" type="radio" ng-model="config.color" value="orange">orange
+                    theme</label>
 
-                <label id="purple"><input name="color-{{$index}}" type="radio" ng-model="config.color" value="purple">purple theme</label>
+                <label id="purple"><input name="color-{{$index}}" type="radio" ng-model="config.color" value="purple">purple
+                    theme</label>
 
-                <label id="red"><input name="color-{{$index}}" type="radio" ng-model="config.color" value="red">red theme</label>
+                <label id="red"><input name="color-{{$index}}" type="radio" ng-model="config.color" value="red">red
+                    theme</label>
 
-                <label id="none"><input name="color-{{$index}}" type="radio" ng-model="config.color" value="none">images only theme</label>
+                <label id="none"><input name="color-{{$index}}" type="radio" ng-model="config.color" value="none">images
+                    only theme</label>
             </div>
             <h4>Select & set slider position</h4>
 
@@ -161,34 +167,37 @@
 
             <!--putting contents and links of each slide-->
 
-            <label><p>Title for this slide, max 30 symbols</p>
+            <label class="config__string">
+                <p>Title for this slide, max 30 symbols</p>
 
                 <p><input type="text" ng-model="config.title" value="{{config.title}}" placeholder="{{config.title}}"
                           maxlength="30">
                 </p>
             </label>
 
-            <label><p>Description for this title, max 120 symbols</p>
+            <label class="config__string">
+                <p>Description for this title, max 120 symbols</p>
 
                 <p><input type="text" ng-model="config.subtitle" value="{{config.subtitle}}"
                           placeholder="{{config.subtitle}}" maxlength="120"></p>
             </label>
 
-            <label><p>Action, max 20 symbols. <br/>
-                "Learn more..." as default
-            </p>
+            <label class="config__string">
+                <p>Action, max 20 symbols ("Learn more..." as default)</p>
 
                 <p><input class="action" type="text" ng-model="config.action" value="{{config.action}}"
                           placeholder="{{config.action}}" maxlength="20"></p>
             </label>
 
-            <label><p>Set destination URL</p>
+            <label class="config__string">
+                <p>Set destination URL</p>
 
                 <p><input type="text" ng-model="config.titleUrl" value="{{config.titleUrl}}"
                           placeholder="{{config.titleUrl}}"></p>
             </label>
 
-            <label><p>Set background image URL</p>
+            <label class="config__string">
+                <p>Set background image URL</p>
 
                 <p><input type="text" ng-model="config.imageUrl" value="{{config.imageUrl}}"
                           placeholder="{{config.imageUrl}}"></p>
@@ -196,10 +205,9 @@
 
             <!-- delete this slide button-->
             <input class="delete-button" type="button" ng-click="deleteSlide($event)" data-index="{{$index}}"
-                   value="Delete this slide">
+                   value="-">
 
         </div>
-
 
     </form>
 </div>
