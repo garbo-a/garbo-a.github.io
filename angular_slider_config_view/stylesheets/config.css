@@ -141,6 +141,12 @@ button {
     outline: 1px solid #F51111;
 }
 
+.config-wrapper .add_slide:focus,
+.config-wrapper .delete-button:focus {
+    outline: none;
+    box-shadow: 0 2px 1px 1px rgba(62, 62, 66, 0.58);
+}
+
 .config-wrapper input[type = 'text']:after {
     content: 's';
 }
