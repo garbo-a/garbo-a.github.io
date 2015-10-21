@@ -39,4 +39,5 @@ body {
     min-width: 900px;
     font-family: Roboto, sans-serif;
     -webkit-font-smoothing: antialiased;
+    text-shadow: 0 0 1px #A2A2A2;
 }

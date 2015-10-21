@@ -2,7 +2,7 @@
     display: block;
     min-width: 900px;
     width: 45%;
-    background: #41B8F3;
+    background: #8ED8E4;
     color: #fff;
     font-family: Roboto, sans-serif;
     margin: 0 auto;
@@ -31,32 +31,13 @@
     margin: 5px;
 }
 
-button {
-    display: block;
-    width: 36%;
-    text-transform: uppercase;
-    color: #fff;
-    padding: 7px 16px;
-    text-align: center;
-    border: none;
-    border-radius: 2px;
-    cursor: pointer;
-    font-family: inherit;
-    font-size: 0.875rem;
-    font-weight: 400;
-    background-clip: padding-box;
-    margin: 10px auto;
-    text-decoration: none;
-    outline: none;
-}
-
 .config-wrapper .add_slide,
 .config-wrapper .delete-button {
     display: block;
     width: 60px;
     height: 60px;
     border-radius: 50%;
-    background: #068BF5;
+    background: #54B9CA;
     box-shadow: 0 3px 4px 0 rgba(62, 62, 66, 0.58);
     text-transform: uppercase;
     color: #fff;
@@ -85,7 +66,7 @@ button {
     font-size: 1em;
     text-align: left;
     cursor: pointer;
-    background: #1972D0;
+    background: #59CEE2;
     vertical-align: top;
     box-shadow: 0 7px 26px 2px rgba(62, 62, 66, 0.58);
 }
@@ -115,8 +96,21 @@ button {
 .submit-button {
     width: 21%;
     margin: 0 auto;
-    background: #068BF5;
+    background: #54B9CA;
     box-shadow: 0 3px 4px 0 rgba(62, 62, 66, 0.58);
+    display: block;
+    text-transform: uppercase;
+    color: #fff;
+    padding: 7px 16px;
+    text-align: center;
+    border: none;
+    border-radius: 2px;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: 0.875rem;
+    font-weight: 400;
+    text-decoration: none;
+    outline: none;
 }
 
 .config-wrapper input[type = 'text'] {
@@ -145,10 +139,6 @@ button {
 .config-wrapper .delete-button:focus {
     outline: none;
     box-shadow: 0 2px 1px 1px rgba(62, 62, 66, 0.58);
-}
-
-.config-wrapper input[type = 'text']:after {
-    content: 's';
 }
 
 .theme-colors,
