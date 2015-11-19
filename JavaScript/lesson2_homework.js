@@ -110,3 +110,19 @@ function min(a, b) {
 }
 
 console.log(min(1, 5));
+
+
+
+var twoMultiply = multiply() * 2;
+
+function multiply (param) {
+    return param * param;
+}
+
+multiply();
+
+var multy = function () {
+
+};
+
+multy();
