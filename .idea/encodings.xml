@@ -1,32 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="Encoding">
-    <file url="file://$PROJECT_DIR$/AVID_management-team/management_team.css" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/AVID_management-team/management_team__bios.css" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/GoFE/Lesson-10/HomeWork/normalize.css" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Angular_1/angular_slider_config_view/stylesheets/config.css" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Angular_1/angular_slider_config_view/stylesheets/normalize.css" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/GoIT/landing-style.css" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/GoJS/DOM/self-practice-DOM.js" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/GoJS/Lesson-10/Task-1.js" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/GoJS/Lesson-11/Practice_lesson_12.js" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/GoJS/Lesson-11/Task-1.js" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/GoJS/Lesson-11/Task-2.js" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/GoJS/Lesson-11/Task-5.js" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/GoJS/Lesson-14/Practice_lesson_14.js" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/GoJS/Lesson-3/HomeWork/task-1.js" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/GoJS/Lesson-4/HomeWork/task-1.js" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/GoJS/Lesson-5/Task-1.js" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/GoJS/Lesson-6/Task-1.js" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/GoJS/Lesson-8/Task-1.js" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/GoJS/Lesson-9/Task-1.js" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/JavaScript/lesson2_homework.js" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/JavaScript/selfStudying.js" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/angular_slider_config_view/stylesheets/config.css" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/angular_slider_config_view/stylesheets/normalize.css" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/bookstore/script/script-bookstore.js" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/bookstore/style.css" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/css3-bounce-effect/css/style.css" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/efarmer__landing/style.css" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/exam_task_GoIT/style.css" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/slider1/script.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/js/GoJS/DOM/self-practice-DOM.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/js/GoJS/Lesson-10/Task-1.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/js/GoJS/Lesson-11/Practice_lesson_12.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/js/GoJS/Lesson-11/Task-1.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/js/GoJS/Lesson-11/Task-2.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/js/GoJS/Lesson-11/Task-5.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/js/GoJS/Lesson-14/Practice_lesson_14.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/js/GoJS/Lesson-3/HomeWork/task-1.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/js/GoJS/Lesson-4/HomeWork/task-1.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/js/GoJS/Lesson-5/Task-1.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/js/GoJS/Lesson-6/Task-1.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/js/GoJS/Lesson-8/Task-1.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/js/GoJS/Lesson-9/Task-1.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/js/JavaScript/lesson2_homework.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/js/JavaScript/selfStudying.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/js/pureJsSlider/script.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/markup/AVID_management-team/management_team.css" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/markup/AVID_management-team/management_team__bios.css" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/markup/GoFE/Lesson-10/HomeWork/normalize.css" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/markup/bookstore/script/script-bookstore.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/markup/bookstore/style.css" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/markup/css3-bounce-effect/css/style.css" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/markup/efarmer__landing/style.css" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/markup/exam_task_GoIT/style.css" charset="UTF-8" />
   </component>
 </project>
