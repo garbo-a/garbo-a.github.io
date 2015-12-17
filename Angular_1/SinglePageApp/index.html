@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SPA Angular JS</title>
+    <link rel="stylesheet" href="../../usefulCss/bootstrap-3.3.6-dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="style.css"/>
+    <script src="../../usefulCss/bootstrap-3.3.6-dist/js/bootstrap.min.js"></script>
+    <script src="bower_components/angular/angular.min.js"></script>
+    <script src="bower_components/angular-route/angular-route.min.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/controllers/controllers.js"></script>
+</head>
+<body ng-app="app">
+
+<div class="row">
+    <div class="col-lg-4">
+        <a href="#/">
+            <button class="btn btn-danger">Главная</button>
+        </a>
+    </div>
+    <div class="col-lg-4">
+        <a href="#/about">
+            <button class="btn btn-success">О нас</button>
+        </a>
+    </div>
+    <div class="col-lg-4">
+        <a href="#/date">
+            <button class="btn btn-warning">Дата</button>
+        </a>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-lg-6 col-lg-offset-3">
+        <div ng-view>
+            <!-- Представление будет здесь -->
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
