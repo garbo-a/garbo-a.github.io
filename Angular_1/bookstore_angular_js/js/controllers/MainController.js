@@ -33,6 +33,14 @@ app.controller('MainController', ['$scope', function($scope) {
             cover: 'img/program-or-be-programmed.jpg' ,
             likes: 0,
             dislikes: 0
+        },
+        {
+            name: 'Kate',
+            price: 1111,
+            pubdate: new Date('2016', '12', '02'),
+            cover: 'img/program-or-be-programmed.jpg' ,
+            likes: 0,
+            dislikes: 0
         }
     ];
     $scope.plusOne = function(index) {

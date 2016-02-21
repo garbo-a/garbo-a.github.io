@@ -64,6 +64,7 @@ var Ajax = {
         xhr.onreadystatechange = function () {
             if (xhr.readyState != 4) return;
             callback(JSON.parse(xhr.responseText));
+
         };
         //fetch(url).then(function(response) {
         //    return response.json();

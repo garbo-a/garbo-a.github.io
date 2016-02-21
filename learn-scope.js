@@ -1,5 +1,5 @@
 function bufferConstr () {
-    var buffer = '1 ';
+    let buffer = '1 ';
 
     return function (data) {
         if (arguments.length === 0) {
@@ -9,9 +9,9 @@ function bufferConstr () {
     }
 }
 
-var newBuffer = bufferConstr();
+let newBuffer = bufferConstr();
 
-var secondBuffer = bufferConstr();
+let secondBuffer = bufferConstr();
 
 newBuffer('dog');
 newBuffer();

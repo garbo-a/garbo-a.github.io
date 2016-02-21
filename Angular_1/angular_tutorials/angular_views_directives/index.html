@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Angular Views & Directives</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
+</head>
+<body ng-app="myApp">
+
+<div ng-controller="MyController">
+    <h2 ng-show="myData.showIt">{{myData.textF()}}</h2>
+    <button ng-click="myData.click()">{{myData.buttonText}}</button>
+
+    <div ng-switch on="myData.switch">
+        <div ng-switch-when="1">Shown when switch is 1</div>
+        <div ng-switch-when="2">SHOW when 2</div>
+        <div ng-switch-default>Shown when switch is anything else than 1 and 2</div>
+    </div>
+
+    <div ng-if="myData.showIt">ng-if is {{myData.showIt}}</div>
+
+    <ul>
+        <li ng-repeat="item in myData.items | filter:filterArray">
+            {{$index + 1}} {{item.text}} : {{$first}}, {{$middle}}, {{$last}}
+        </li>
+    </ul>
+    <ul>
+        <li ng-repeat="item in myData.items | orderBy:sortField:reverse">
+            {{$index + 1}} {{item.text}} : {{$first}}, {{$middle}}, {{$last}}
+        </li>
+    </ul>
+
+    <ol>
+        <li ng-repeat="item in filteredItems = ( myData.items | filter:filterArray) ">
+            {{item.text}} : {{$first}}, {{$middle}}, {{$last}}
+        </li>
+    </ol>
+    <div>{{filteredItems.length}}</div>
+
+</div>
+
+<script>
+    angular.module('myApp', [])
+            .controller('MyController', function($scope) {
+                var self = $scope;
+                self.myData = {};
+                self.myData.textF = function () {return 'Text from function'};
+                self.myData.showIt = false;
+                self.myData.click = function () {
+                    self.myData.showIt = self.myData.showIt ? false : true;
+                    self.myData.switch = Math.floor(Math.random() * 3) + 1;
+                };
+                self.myData.buttonText = 'Click me';
+                self.myData.switch = 3;
+                self.myData.items    =
+                        [ {text : "one"}, {text : "two"}, {text : "three"}, {text : "four"}, {text : "six"}, {text : "seven"} ];
+
+                self.filterArray = function(item) {
+                    if (item.text == "two") return false;
+                    return true;
+                };
+                $scope.sortField = "text";
+                $scope.reverse   = false;
+            });
+</script>
+
+</body>
+</html>

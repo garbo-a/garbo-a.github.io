@@ -130,6 +130,7 @@ header {
     line-height: 32px;
     border-radius: 19px;
     transition: box-shadow 0.2s;
+    border: 2px solid transparent;
 }
 
 .log_in {
@@ -137,9 +138,9 @@ header {
     margin-right: 4px;
 }
 
-.log_in.active,
-.sign_up.active {
-    box-shadow: 0 0 0 2px #ffffff;
+.log_in:hover,
+.sign_up:hover {
+    border: 2px solid #ffffff;
 }
 
 .header__content {

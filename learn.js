@@ -2,7 +2,7 @@
  * Created by aleksandrgarbovskij on 1/27/16.
  */
 
-var obj1 = {bonus: 10},
+const obj1 = {bonus: 10},
     obj2 = {bonus: 35},
     obj3 = {bonus: 15};
 
