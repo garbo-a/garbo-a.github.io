@@ -31,7 +31,8 @@
     </ul>
 
     <ol>
-        <li ng-repeat="item in filteredItems = ( myData.items | filter:filterArray) ">
+        <li ng-repeat="item in filteredItems = ( myData.items | filter:filterArray)"
+            ng-click="myData.doClick(item, $event)">
             {{item.text}} : {{$first}}, {{$middle}}, {{$last}}
         </li>
     </ol>
@@ -39,12 +40,51 @@
 
 </div>
 
+<div ng-controller="watcherController">
+    <p>{{data.date}}</p>
+    <br/>
+    <button ng-click="updateDateTime()">Update time by ngClick</button>
+    <button id="updateTimeButton">Update time</button>
+</div>
+
+<div ng-controller="myAJAXController">
+    <button ng-click="myData.doClick(item, $event)">Get the data from server!</button>
+    <br/>
+
+    <p>{{myData.fromServer}}</p>
+
+    <p>{{myData.fromServerJSONP}}</p>
+</div>
+
+<div ng-controller="myFormController">
+    <form>
+        <label><input type="text" name="firstName" ng-model="myForm.firstName"/>FirstName</label><br/><br/>
+        <label><input type="text" name="lastName" ng-model="myForm.lastName"/>LastName</label>
+        <br/><br/>
+        <input type="radio" ng-model="myForm.whichNewsletter" value="weeklyNews">
+        <input type="radio" ng-model="myForm.whichNewsletter" value="monthlyNews">
+        <br/><br/>
+        <select ng-model="myForm.car">
+            <option value="nissan">Nissan</option>
+            <option value="toyota">Toyota</option>
+            <option value="fiat">Fiat</option>
+        </select>
+    </form>
+    <p>{{myForm.firstName}}</p>
+    <p>{{myForm.lastName}}</p>
+    <p>{{myForm.whichNewsletter}}</p>
+    <p>{{myForm.car | uppercase}}</p>
+</div>
+
+
 <script>
     angular.module('myApp', [])
-            .controller('MyController', function($scope) {
+            .controller('MyController', function ($scope) {
                 var self = $scope;
                 self.myData = {};
-                self.myData.textF = function () {return 'Text from function'};
+                self.myData.textF = function () {
+                    return 'Text from function'
+                };
                 self.myData.showIt = false;
                 self.myData.click = function () {
                     self.myData.showIt = self.myData.showIt ? false : true;
@@ -52,16 +92,65 @@
                 };
                 self.myData.buttonText = 'Click me';
                 self.myData.switch = 3;
-                self.myData.items    =
-                        [ {text : "one"}, {text : "two"}, {text : "three"}, {text : "four"}, {text : "six"}, {text : "seven"} ];
+                self.myData.items =
+                        [{text: "one"}, {text: "two"}, {text: "three"}, {text: "four"}, {text: "six"}, {text: "seven"}];
 
-                self.filterArray = function(item) {
+                self.filterArray = function (item) {
                     if (item.text == "two") return false;
                     return true;
                 };
                 $scope.sortField = "text";
-                $scope.reverse   = false;
-            });
+                $scope.reverse = false;
+
+                self.myData.doClick = function (item, event) {
+                    alert(item.text + ' ' + event.clientX + " " + event.clientY);
+                }
+            })
+            .controller('watcherController', function ($scope) {
+                $scope.data = {date: new Date()};
+                $scope.updateDateTime = function () {
+                    $scope.data.date = new Date();
+                    console.log("ng-click is clicked " + $scope.data.date);
+                };
+                document.getElementById('updateTimeButton')
+                        .addEventListener('click', function () {
+                            $scope.data.date = new Date();
+                            console.log("update time clicked " + $scope.data.date);
+                            $scope.$digest();
+                        })
+            })
+            .controller('myAJAXController', function ($scope, $http) {
+                $scope.myData = {};
+                $scope.myData.doClick = function (item, event) {
+                    var responsePromise = $http.get("http://tutorials.jenkov.com/angularjs-examples/json-test-data.jsp");
+
+                    responsePromise.success(function (data, status, headers, config) {
+                        $scope.myData.fromServer = data.title;
+                    });
+
+                    responsePromise.error(function (data, status, headers, config) {
+                        $scope.myData.fromServer = 'Satatus: ' + new Error(status) + ' ' + item + ' ' + event + ' ' + config.toJSON;
+                    });
+
+                    var responseJSONPPromise = $http.jsonp("http://jenkov.com/theService.json?callback=theServiceResponse&p1=v1&p2=v2");
+
+                    responseJSONPPromise.success(function (data, status, headers, config) {
+                        $scope.myData.fromServerJSONP = data;
+                    });
+
+                    responseJSONPPromise.error(function (data, status, headers, config) {
+                        $scope.myData.fromServer = 'Satatus: ' + new Error(status) + ' ' + item + ' ' + event + ' ' + config.toJSON;
+                    });
+
+                }
+            })
+            .controller('myFormController', function ($scope) {
+                $scope.myForm = {};
+                $scope.myForm.firstName = "Jakob";
+                $scope.myForm.lastName  = "Jenkov";
+                $scope.myForm.whichNewsletter = 'choose';
+                $scope.myForm.car;
+            })
 </script>
 
 </body>

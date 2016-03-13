@@ -1,0 +1,51 @@
+<html>
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.min.js"></script>
+    <script>
+        // Write a directive that will translate text inside tags having "translate" attribute.
+        // Translations must be loaded from  translations.json  file
+        // json file should be loaded only once
+        //
+        // nice to have:  application shouldn't run until translations are loaded
+        // (i.e. user shouldn't see untranslated text if loading translations file takes a long time)
+    </script>
+</head>
+<body ng-app="myApp">
+<div ng-controller="myCtrl">
+    <h1 translate ng-if="lib.dataHasLoaded">Hello!</h1>
+    <h1 translate ng-if="lib.dataHasLoaded">Bye</h1>
+</div>
+<script>
+    var myApp = angular.module("myApp", []);
+
+    myApp.controller("myCtrl", function ($scope, $http) {
+        $scope.lib = {};
+        $scope.lib.dataHasLoaded = false;
+        $scope.lib.getTranslation = function() {
+            var responsePromise = $http.get("./translations.json");
+
+            responsePromise.success(function(data, status, headers, config) {
+                //console.log(data);
+                $scope.lib.dataHasLoaded = true;
+                $scope.lib.textToInsert =  data;
+            });
+        };
+        $scope.lib.getTranslation();
+
+    });
+
+    myApp.directive("translate", function () {
+
+        var directive = {};
+
+        directive.strict = "A";
+
+        directive.link = function($scope, element, attrs) {
+            element.html($scope.lib.textToInsert[ element.text() ] );
+        };
+
+        return directive;
+    });
+</script>
+</body>
+</html>

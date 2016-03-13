@@ -29,6 +29,7 @@
         <a href="#" id="sign_in">sign in </a>
     </nav>
 </header>
+<h1><span>UN435VC® &reg; ACSR Avid ISIS 5500 System Support Recertification (Virtual Classroom)</span></h1>
 
 <div class="main-info" id="main">
     <img src="images/main-equipment.png" alt="GPS & Tablet" class="main-equipment"/>
@@ -215,6 +216,27 @@
     </div>
 </footer>
 <script src="script.js"></script>
+<script>
+    (function() {
+        var nav  = document.createElement('nav');
+        var ul = document.createElement('ul');
+        nav.appendChild(ul);
+        var headerArr = document.querySelectorAll('h4');
+
+        for(var i = 0; i < headerArr.length; i++ ) {
+            var textNode = headerArr[i].textContent;
+            headerArr[i].id = 'header' + i;
+            var li = document.createElement('li');
+            var a = document.createElement('a');
+            a.href = '#header' + i;
+            a.innerText = textNode;
+            li.appendChild(a);
+            ul.appendChild(li)
+        }
+
+        document.body.insertBefore(nav, document.body.firstChild);
+    })();
+</script>
 
 </body>
 </html>
