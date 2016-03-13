@@ -43,9 +43,6 @@ body .data__block .data__item .item__description {
   color: #3a3a3a;
 }
 @media (max-width: 1150px) {
-  body .data__block {
-    justify-content: space-around;
-  }
   body .data__block .data__item:nth-child(3) {
     align-self: stretch;
     max-width: 100%;
@@ -53,6 +50,9 @@ body .data__block .data__item .item__description {
   }
 }
 @media (max-width: 825px) {
+  body .data__block {
+    justify-content: space-around;
+  }
   body .data__block .data__item:nth-child(2) {
     margin-left: 25px;
     margin-right: 25px;
