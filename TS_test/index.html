@@ -5,40 +5,232 @@
     <title>TS test task</title>
     <link rel="stylesheet" href="normalize.css"/>
     <link rel="stylesheet" href="style.css"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.js"></script>
+    <script src="https://code.angularjs.org/1.4.5/angular-mocks.js"></script>
+
 </head>
-<body>
-<div class="main__wrapper">
-    <div class="data__container">
-        <div class="data__block">
-            <div class="data__item">
-                <figure>
-                    <img src="./images/1.png" alt="some img" class="item__img"/>
-                    <figcaption>
-                        <h3 class="item__header">new zealand timelapse</h3>
-                        <p class="item__description">Equipé de son appareil Canon 5D Mark II, le réalis ateur Bevan Percival nous offre une nouvelle vidéo en  technique timelapse absolument magnifique</p>
-                    </figcaption>
-                </figure>
-            </div>
-            <div class="data__item">
-                <figure>
-                    <img src="./images/2.png" alt="some img" class="item__img"/>
-                    <figcaption>
-                        <h3 class="item__header">new zealand timelapse</h3>
-                        <p class="item__description">Equipé de son appareil Canon 5D Mark II, le réalis ateur Bevan Percival nous offre une nouvelle vidéo en  technique timelapse absolument magnifique</p>
-                    </figcaption>
-                </figure>
-            </div>
-            <div class="data__item">
-                <figure>
-                    <img src="./images/3.png" alt="some img" class="item__img"/>
-                    <figcaption>
-                        <h3 class="item__header">new zealand timelapse</h3>
-                        <p class="item__description">Equipé de son appareil Canon 5D Mark II, le réalis ateur Bevan Percival nous offre une nouvelle vidéo en  technique timelapse absolument magnifique</p>
-                    </figcaption>
-                </figure>
-            </div>
+<body ng-app="myApp">
+<!-- you can use "scroll-glue" if you want to scroll to bottom every time the items are loaded -->
+<div class="main__wrapper" ng-controller="myCtrl">
+
+    <div class="data__block">
+        <div class="data__item" ng-repeat="item in data.responseItems" ng-if="data.loaded">
+            <figure>
+                <img ng-src="{{item.image}}" alt="some img" class="item__img"/>
+                <figcaption>
+                    <h3 class="item__header">{{item.title}}</h3>
+
+                    <p class="item__description">{{item.paragraph}}</p>
+                </figcaption>
+            </figure>
         </div>
     </div>
+
+    <span ng-click="data.getItems()" class="load__more">Load more...</span>
+    <script>
+        (function (angular, undefined) {
+            'use strict';
+
+            function createActivationState($parse, attr, scope) {
+                function unboundState(initValue) {
+                    var activated = initValue;
+                    return {
+                        getValue: function () {
+                            return activated;
+                        },
+                        setValue: function (value) {
+                            activated = value;
+                        }
+                    };
+                }
+
+                function oneWayBindingState(getter, scope) {
+                    return {
+                        getValue: function () {
+                            return getter(scope);
+                        },
+                        setValue: function () {
+                        }
+                    }
+                }
+
+                function twoWayBindingState(getter, setter, scope) {
+                    return {
+                        getValue: function () {
+                            return getter(scope);
+                        },
+                        setValue: function (value) {
+                            if (value !== getter(scope)) {
+                                scope.$apply(function () {
+                                    setter(scope, value);
+                                });
+                            }
+                        }
+                    };
+                }
+
+                if (attr !== "") {
+                    var getter = $parse(attr);
+                    if (getter.assign !== undefined) {
+                        return twoWayBindingState(getter, getter.assign, scope);
+                    } else {
+                        return oneWayBindingState(getter, scope);
+                    }
+                } else {
+                    return unboundState(true);
+                }
+            }
+
+            function createDirective(module, attrName, direction) {
+                module.directive(attrName, ['$parse', '$window', '$timeout', function ($parse, $window, $timeout) {
+                    return {
+                        priority: 1,
+                        restrict: 'A',
+                        link: function (scope, $el, attrs) {
+                            var el = $el[0];
+                            var activationState = createActivationState($parse, attrs[attrName], scope);
+                            console.log(activationState + '');
+                            function scrollIfGlued() {
+                                $timeout(function () {
+                                    if (activationState.getValue() || !direction.isAttached(el)) {
+                                        direction.scroll(el);
+                                    }
+                                }, 350, false);
+                            }
+
+                            function onScroll() {
+                                activationState.setValue(direction.isAttached(el));
+                            }
+
+                            scope.$watch(scrollIfGlued);
+
+                            scrollIfGlued();
+
+                            $window.addEventListener('resize', scrollIfGlued, false);
+
+                            $el.on('scroll', function () {
+                                $timeout(onScroll, 350, false);
+                            });
+
+                            // Remove listeners on directive destroy
+                            $el.on('$destroy', function () {
+                                $el.unbind('scroll', onScroll);
+                            });
+
+                            scope.$on('$destroy', function () {
+                                $window.removeEventListener('resize', scrollIfGlued, false);
+                            });
+                        }
+                    };
+                }]);
+            }
+
+            var bottom = {
+                isAttached: function (el) {
+                    // + 1 catches off by one errors in chrome
+                    return el.scrollTop + el.clientHeight + 1 >= el.scrollHeight;
+                },
+                scroll: function (el) {
+                    el.scrollTop = el.scrollHeight;
+                }
+            };
+
+            var top = {
+                isAttached: function (el) {
+                    return el.scrollTop <= 1;
+                },
+                scroll: function (el) {
+                    el.scrollTop = 0;
+                }
+            };
+
+            var right = {
+                isAttached: function (el) {
+                    return el.scrollLeft + el.clientWidth + 1 >= el.scrollWidth;
+                },
+                scroll: function (el) {
+                    el.scrollLeft = el.scrollWidth;
+                }
+            };
+
+            var left = {
+                isAttached: function (el) {
+                    return el.scrollLeft <= 1;
+                },
+                scroll: function (el) {
+                    el.scrollLeft = 0;
+                }
+            };
+
+            var module = angular.module('luegg.directives', []);
+
+            createDirective(module, 'scrollGlue', bottom);
+            console.log('bottom directive created');
+            createDirective(module, 'scrollGlueTop', top);
+            createDirective(module, 'scrollGlueBottom', bottom);
+            createDirective(module, 'scrollGlueLeft', left);
+            createDirective(module, 'scrollGlueRight', right);
+        }(angular));
+    </script>
+    <script>
+        var myApp = angular.module('myApp', ['ngMockE2E', 'luegg.directives']);
+        // define our fake backend
+        myApp.run(function ($httpBackend) {
+
+            var items = angular.fromJson([
+                {
+                    "title": "new zealand timelapse",
+                    "paragraph": "Equipé de son appareil Canon 5D Mark II, le réalis ateur Bevan Percival nous offre une nouvelle vidéo en  technique timelapse absolument magnifique",
+                    "image": "./images/1.png"
+                },
+                {
+                    "title": "new zealand timelapse",
+                    "paragraph": "Equipé de son appareil Canon 5D Mark II, le réalis ateur Bevan Percival nous offre une nouvelle vidéo en  technique timelapse absolument magnifique",
+                    "image": "./images/2.png"
+                },
+                {
+                    "title": "new zealand timelapse",
+                    "paragraph": "Equipé de son appareil Canon 5D Mark II, le réalis ateur Bevan Percival nous offre une nouvelle vidéo en  technique timelapse absolument magnifique",
+                    "image": "./images/3.png"
+                }
+            ]);
+
+            $httpBackend.whenGET('/items').respond(function (method, url, data) {
+                console.log("Getting items");
+                return [200, items, {}];
+            });
+        });
+        // define our controller
+        myApp.controller('myCtrl', function ($scope, $http) {
+            $scope.data = {};
+            $scope.data.loaded = false;
+
+            $scope.data.getItems = function (item, event) {
+                var responsePromise = $http.get('/items');
+
+                responsePromise.success(function (data, status, headers, config) {
+                    if (!$scope.data.responseItems) {
+                        $scope.data.responseItems = data;
+                        $scope.data.loaded = true;
+                    } else {
+                        for (var i = 0; i < data.length; i++) {
+                            $scope.data.responseItems.push(data[i]);
+                        }
+                        // angular.extend($scope.data.responseItems, data);
+                        // push( { title: "bla-bla", paragraph: 'bla-bla-bla', image: './images/2.png'});
+                        // console.log($scope.data.responseItems);
+                    }
+                });
+
+                responsePromise.error(function (data, status, headers, config) {
+                    console.error('AJAX failed! ' + status);
+                })
+            };
+
+            $scope.data.getItems();
+        });
+    </script>
+
 </div>
 </body>
 </html>

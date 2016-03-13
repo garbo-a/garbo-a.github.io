@@ -1,17 +1,42 @@
 body {
   width: 100%;
   min-height: 100vh;
-  background: url("images/bkg.png") center no-repeat;
-  background-size: cover;
+  background: url("images/bkg1.png") center;
+
   font-size: 16px;
   font-family: Arial, Helvetica, San-serif, serif;
+
+  .main__wrapper {
+    position: relative;
+
+    .load__more {
+      display: block;
+      position: absolute;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-73px);
+      padding: 9px 25px;
+      max-width: 270px;
+      font-size: .875rem;
+      color: #fff;
+      text-decoration: none;
+      text-transform: uppercase;
+      background: #72199c;
+      border-radius: 2px;
+      transition: color .45s;
+      &:hover {
+        background: #971ac5;
+        color: #a6a6a6;
+        cursor: pointer;
+      }
+    }
+  }
 
   .data__block {
     min-height: 100vh;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    //align-content: space-between;
     align-items: center;
     padding: 50px 100px 75px;
 
@@ -22,12 +47,12 @@ body {
       background: #fff;
       padding: 20px;
       margin: 25px 0 0;
-      &:nth-child(2) {
-        margin-left: 25px;
-      }
-      &:nth-child(3) {
-        margin-left: 25px;
-      }
+      //&:nth-child(2) {
+      //  margin-left: 25px;
+      //}
+      //&:nth-child(n+3) {
+      //  margin-left: 25px;
+      //}
 
       .item__img {
         width: 100%;
@@ -49,11 +74,11 @@ body {
     .data__block {
 
       .data__item {
-        &:nth-child(3) {
-          align-self: stretch;
-          max-width: 100%;
-          margin-left: 0;
-        }
+        //&:nth-child(3) {
+        //  align-self: stretch;
+        //  max-width: 100%;
+        //  margin-left: 0;
+        //}
       }
     }
   }
@@ -63,14 +88,14 @@ body {
       justify-content: space-around;
 
       .data__item {
-        &:nth-child(2) {
-          margin-left: 25px;
-          margin-right: 25px;
-        }
-        &:nth-child(3) {
-          align-self: auto;
-          max-width: 300px;
-        }
+        //&:nth-child(2) {
+        //  margin-left: 25px;
+        //  margin-right: 25px;
+        //}
+        //&:nth-child(3) {
+        //  align-self: auto;
+        //  max-width: 300px;
+        //}
       }
     }
   }
@@ -79,10 +104,10 @@ body {
     .data__block {
 
       .data__item {
-        &:nth-child(2) {
-          margin-left: 0;
-          margin-right: 0;
-        }
+        //&:nth-child(2) {
+        //  margin-left: 0;
+        //  margin-right: 0;
+        //}
       }
     }
   }
