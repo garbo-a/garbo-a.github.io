@@ -21,7 +21,8 @@
     </footer>
 </div>
 
-<!--<script src="eventHandler.js"></script> don't need this stuff for now -->
+
+<script src="enentHandler.js"></script>
 <script src="scrollGlueDirectives.js"></script>
 <script>
     var myApp = angular.module('myApp', ['ngMockE2E', 'luegg.directives']);
@@ -49,11 +50,11 @@
             }
         ]);
 
+
         var template = '<div class="data__block" data-block>' +
                 '<div class="data__item" ng-repeat="item in data.responseItems" ng-if="data.responseItems.length > 0">' +
                 '<figure>' +
                 '<img ng-src="{{item.image}}" alt="some img" class="item__img"/>' +
-                '<div star-rating ng-model="item.rating" max="5" style="text-align: center; height: 20px;"></div>' +
                 '<figcaption>' +
                 '<h3 class="item__header">{{item.title}}</h3>' +
                 '<p class="item__description">{{item.paragraph}}</p>' +
@@ -70,112 +71,116 @@
             return [200, template, {}];
         });
     });
-    // define our controller
-    myApp.controller('myCtrl', function ($scope, $http) {
-        $scope.data = {};
-        $scope.data.responseItems = [];
-        $scope.data.scrollBtnTxt = 'Enable scroll mode';
-        $scope.data.switchMethod = true;
-
-        $scope.data.getItems = function (item, event) {
-            var responsePromise = $http.get('/items');
-
-            responsePromise.success(function (data, status, headers, config) {
-                $scope.data.responseItems = $scope.data.responseItems.concat(data);
-            });
-            responsePromise.error(function (data, status, headers, config) {
-                console.error('AJAX failed! ' + status);
-            })
-        };
-
-        $scope.data.switchScroll = function (event) {
-            var element = angular.element(event.target);
-            if ($scope.data.switchMethod) {
-                console.log(!element.hasClass('active'));
-                element.toggleClass("active");
-                $scope.data.switchMethod = false;
-                document.addEventListener('scroll', scrollHandler);
-                $scope.data.scrollBtnTxt = 'Disable scroll mode';
-                $scope.data.getItems();
-            } else {
-                element.toggleClass("active");
-                $scope.data.switchMethod = true;
-                document.removeEventListener('scroll', scrollHandler);
-                $scope.data.scrollBtnTxt = 'Enable scroll mode';
-            }
-
-        };
-
-        function scrollHandler() {
-            var displayHeight = Math.max(document.documentElement.clientHeight, window.innerHeight || 0),
-                    scrolled = displayHeight + (window.pageYOffset || document.documentElement.scrollTop),
-                    body = document.body,
-                    html = document.documentElement,
-                    height = Math.max(body.scrollHeight, body.offsetHeight,
-                            html.clientHeight, html.scrollHeight, html.offsetHeight);
 
 
-            if ((scrolled >= height - 200) && !$scope.switch) $scope.data.getItems();
-        }
+        // define our controller
+        myApp.controller('myCtrl', function ($scope, $http) {
+            $scope.data = {};
+            $scope.data.responseItems = [];
+            $scope.data.scrollBtnTxt = 'Enable scroll mode';
+            $scope.data.switchMethod = true;
 
-        // init getting of first 3 items
-        $scope.data.getItems();
-    });
+            $scope.data.getItems = function (item, event) {
+                var responsePromise = $http.get('/items');
 
-    myApp.directive('sections', [function () {
-        return {
-            restrict: "E",
-            templateUrl: "/templatesHtml/data-block-template.html"
-        }
-    }]);
-
-    //  stars rating directive
-    myApp.directive('starRating', starRating);
-
-    //  star rating directive function
-    function starRating() {
-        return {
-            restrict: 'EA',
-            template: '<ul class="star-rating" ng-class="{readonly: readonly}">' +
-            '<li ng-repeat="star in stars" class="star" ng-class="{filled: star.filled}" ng-click="toggle($index)">' +
-            '&#9733' +
-            '</li>' +
-            '</ul>',
-            scope: {
-                ratingValue: '=ngModel',
-                max: '=?', // optional (default is 5)
-                onRatingSelect: '&?',
-                readonly: '=?'
-            },
-            link: function (scope, element, attributes) {
-                if (scope.max == undefined) {
-                    scope.max = 5;
-                }
-                function updateStars() {
-                    scope.stars = [];
-                    for (var i = 0; i < scope.max; i++) {
-                        scope.stars.push({
-                            filled: i < scope.ratingValue
-                        });
-                    }
-                }
-
-                scope.toggle = function (index) {
-                    if (scope.readonly == undefined || scope.readonly === false) {
-                        scope.ratingValue = index + 1;
-                        scope.onRatingSelect({
-                            rating: index + 1
-                        });
-                    }
-                };
-                scope.$watch('ratingValue', function (oldValue, newValue) {
-                    if (newValue) {
-                        updateStars();
-                    }
+                responsePromise.success(function (data, status, headers, config) {
+                    $scope.data.responseItems = $scope.data.responseItems.concat(data);
                 });
+                responsePromise.error(function (data, status, headers, config) {
+                    console.error('AJAX failed! ' + status);
+                })
+            };
+
+            $scope.data.switchScroll = function (event) {
+                var element = angular.element(event.target);
+                if ($scope.data.switchMethod) {
+                    console.log(!element.hasClass('active'));
+                    element.toggleClass("active");
+                    $scope.data.switchMethod = false;
+                    document.addEventListener('scroll', scrollHandler);
+                    $scope.data.scrollBtnTxt = 'Disable scroll mode';
+                    $scope.data.getItems();
+                } else {
+                    element.toggleClass("active");
+                    $scope.data.switchMethod = true;
+                    document.removeEventListener('scroll', scrollHandler);
+                    $scope.data.scrollBtnTxt = 'Enable scroll mode';
+                }
+
+            };
+
+            function scrollHandler() {
+                var displayHeight = Math.max(document.documentElement.clientHeight, window.innerHeight || 0),
+                        scrolled = displayHeight + (window.pageYOffset || document.documentElement.scrollTop),
+                        body = document.body,
+                        html = document.documentElement,
+                        height = Math.max(body.scrollHeight, body.offsetHeight,
+                                html.clientHeight, html.scrollHeight, html.offsetHeight);
+
+
+                if ((scrolled >= height - 200) && !$scope.switch) $scope.data.getItems();
             }
-        };
-    }
+
+            // init getting of first 3 items
+            $scope.data.getItems();
+        });
+
+        myApp.directive('sections', [function () {
+            return {
+                restrict: "E",
+                templateUrl: "/templatesHtml/data-block-template.html"
+            }
+        }]);
+
+        //  stars rating directive
+        myApp.directive('starRating', starRating);
+
+        //  star rating directive function
+        function starRating() {
+            return {
+                restrict: 'EA',
+                template: '<ul class="star-rating" ng-class="{readonly: readonly}">' +
+                '<li ng-repeat="star in stars" class="star" ng-class="{filled: star.filled}" ng-click="toggle($index)">' +
+                '&#9733' +
+                '</li>' +
+                '</ul>',
+                scope: {
+                    ratingValue: '=ngModel',
+                    max: '=?', // optional (default is 5)
+                    onRatingSelect: '&?',
+                    readonly: '=?'
+                },
+                link: function (scope, element, attributes) {
+                    if (scope.max == undefined) {
+                        scope.max = 5;
+                    }
+                    function updateStars() {
+                        scope.stars = [];
+                        for (var i = 0; i < scope.max; i++) {
+                            scope.stars.push({
+                                filled: i < scope.ratingValue
+                            });
+                        }
+                    }
+
+                    scope.toggle = function (index) {
+                        if (scope.readonly == undefined || scope.readonly === false) {
+                            scope.ratingValue = index + 1;
+                            scope.onRatingSelect({
+                                rating: index + 1
+                            });
+                        }
+                    };
+                    scope.$watch('ratingValue', function (oldValue, newValue) {
+                        if (newValue) {
+                            updateStars();
+                        }
+                    });
+                }
+            }
+        }
+
+
 </script>
 
 
