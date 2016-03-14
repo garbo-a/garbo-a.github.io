@@ -13,4 +13,4 @@ function addEvent(object, type, callback) {
     }
 };
 
-//# sourceMappingURL=enentHandler-compiled.js.map
+//# sourceMappingURL=eventHandler-compiled.js.map

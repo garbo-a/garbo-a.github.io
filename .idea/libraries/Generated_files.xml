@@ -29,7 +29,7 @@
       <root url="file://$PROJECT_DIR$/Angular_1/bookstore_angular_js/js/controllers/MainController-compiled.js" />
       <root url="file://$PROJECT_DIR$/filter-compiled.js" />
       <root url="file://$PROJECT_DIR$/TS_test/scrollGlueDirectives-compiled.js" />
-      <root url="file://$PROJECT_DIR$/TS_test/enentHandler-compiled.js" />
+      <root url="file://$PROJECT_DIR$/TS_test/eventHandler-compiled.js" />
     </CLASSES>
     <SOURCES />
   </library>

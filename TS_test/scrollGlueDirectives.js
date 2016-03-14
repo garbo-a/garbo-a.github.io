@@ -135,7 +135,6 @@
     var module = angular.module('luegg.directives', []);
 
     createDirective(module, 'scrollGlue', bottom);
-    console.log('bottom directive created');
     createDirective(module, 'scrollGlueTop', top);
     createDirective(module, 'scrollGlueBottom', bottom);
     createDirective(module, 'scrollGlueLeft', left);
