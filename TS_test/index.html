@@ -24,158 +24,167 @@
 <!--<script src="eventHandler.js"></script> don't need this stuff for now -->
 <script src="scrollGlueDirectives.js"></script>
 <script>
-    var myApp = angular.module('myApp', ['ngMockE2E', 'luegg.directives']);
-    // define our fake backend
-    myApp.run(function ($httpBackend) {
+    (function (angular) {
+        'use srtrict';
+        angular.module('myApp', ['ngMockE2E', 'luegg.directives']);
+        // define our fake backend
+        angular.module('myApp')
+                .run(function ($httpBackend) {
 
-        var items = angular.fromJson([
-            {
-                "title": "new zealand timelapse",
-                "paragraph": "Equipé de son appareil Canon 5D Mark II, le réalis ateur Bevan Percival nous offre une nouvelle vidéo en  technique timelapse absolument magnifique",
-                "image": "./images/1.png",
-                "rating": 1
-            },
-            {
-                "title": "new zealand timelapse",
-                "paragraph": "Equipé de son appareil Canon 5D Mark II, le réalis ateur Bevan Percival nous offre une nouvelle vidéo en  technique timelapse absolument magnifique",
-                "image": "./images/2.png",
-                "rating": 1
-            },
-            {
-                "title": "new zealand timelapse",
-                "paragraph": "Equipé de son appareil Canon 5D Mark II, le réalis ateur Bevan Percival nous offre une nouvelle vidéo en  technique timelapse absolument magnifique",
-                "image": "./images/3.png",
-                "rating": 1
-            }
-        ]);
+                    var items = angular.fromJson([
+                        {
+                            "title": "new zealand timelapse",
+                            "paragraph": "Equipé de son appareil Canon 5D Mark II, le réalis ateur Bevan Percival nous offre une nouvelle vidéo en  technique timelapse absolument magnifique",
+                            "image": "./images/1.png",
+                            "rating": 1
+                        },
+                        {
+                            "title": "new zealand timelapse",
+                            "paragraph": "Equipé de son appareil Canon 5D Mark II, le réalis ateur Bevan Percival nous offre une nouvelle vidéo en  technique timelapse absolument magnifique",
+                            "image": "./images/2.png",
+                            "rating": 1
+                        },
+                        {
+                            "title": "new zealand timelapse",
+                            "paragraph": "Equipé de son appareil Canon 5D Mark II, le réalis ateur Bevan Percival nous offre une nouvelle vidéo en  technique timelapse absolument magnifique",
+                            "image": "./images/3.png",
+                            "rating": 1
+                        }
+                    ]);
 
-        var template = '<div class="data__block" data-block>' +
-                '<div class="data__item" ng-repeat="item in data.responseItems" ng-if="data.responseItems.length > 0">' +
-                '<figure>' +
-                '<img ng-src="{{item.image}}" alt="some img" class="item__img"/>' +
-                '<div star-rating ng-model="item.rating" max="5" style="text-align: center; height: 20px;"></div>' +
-                '<figcaption>' +
-                '<h3 class="item__header">{{item.title}}</h3>' +
-                '<p class="item__description">{{item.paragraph}}</p>' +
-                '</figcaption>' +
-                '</figure>' +
-                '</div>' +
-                '</div>';
+                    var template = '<div class="data__block" data-block>' +
+                            '<div class="data__item" ng-repeat="item in data.responseItems" ng-if="data.responseItems.length > 0">' +
+                            '<figure>' +
+                            '<img ng-src="{{item.image}}" alt="some img" class="item__img"/>' +
+                            '<div star-rating ng-model="item.rating" max="5" style="text-align: center; height: 20px;"></div>' +
+                            '<figcaption>' +
+                            '<h3 class="item__header">{{item.title}}</h3>' +
+                            '<p class="item__description">{{item.paragraph}}</p>' +
+                            '</figcaption>' +
+                            '</figure>' +
+                            '</div>' +
+                            '</div>';
 
-        $httpBackend.whenGET('/items').respond(function (method, url, data) {
-            console.log("Getting items");
-            return [200, items, {}];
-        });
-        $httpBackend.whenGET('/templatesHtml/data-block-template.html').respond(function (method, url, data) {
-            return [200, template, {}];
-        });
-    });
-    // define our controller
-    myApp.controller('myCtrl', function ($scope, $http) {
-        $scope.data = {};
-        $scope.data.responseItems = [];
-        $scope.data.scrollBtnTxt = 'Enable scroll mode';
-        $scope.data.switchMethod = true;
+                    $httpBackend.whenGET('/items').respond(function (method, url, data) {
+                        console.log("Getting items");
+                        return [200, items, {}];
+                    });
+                    $httpBackend.whenGET('/templatesHtml/data-block-template.html').respond(function (method, url, data) {
+                        return [200, template, {}];
+                    });
+                });
+        // define our controller
+        angular.module('myApp')
+                .controller('myCtrl', function ($scope, $http) {
+                    $scope.data = {};
+                    $scope.data.getItems = getItems;
+                    $scope.data.responseItems = [];
+                    $scope.data.scrollBtnTxt = 'Enable scroll mode';
+                    $scope.data.switchMethod = true;
+                    $scope.data.switchScroll = switchScroll;
 
-        $scope.data.getItems = function (item, event) {
-            var responsePromise = $http.get('/items');
+                    // init getting of first 3 items
+                    $scope.data.getItems();
 
-            responsePromise.success(function (data, status, headers, config) {
-                $scope.data.responseItems = $scope.data.responseItems.concat(data);
-            });
-            responsePromise.error(function (data, status, headers, config) {
-                console.error('AJAX failed! ' + status);
-            })
-        };
+                    function getItems(item, event) {
+                        var responsePromise = $http.get('/items');
 
-        $scope.data.switchScroll = function (event) {
-            var element = angular.element(event.target);
-            if ($scope.data.switchMethod) {
-                console.log(!element.hasClass('active'));
-                element.toggleClass("active");
-                $scope.data.switchMethod = false;
-                document.addEventListener('scroll', scrollHandler);
-                $scope.data.scrollBtnTxt = 'Disable scroll mode';
-                $scope.data.getItems();
-            } else {
-                element.toggleClass("active");
-                $scope.data.switchMethod = true;
-                document.removeEventListener('scroll', scrollHandler);
-                $scope.data.scrollBtnTxt = 'Enable scroll mode';
-            }
-
-        };
-
-        function scrollHandler() {
-            var displayHeight = Math.max(document.documentElement.clientHeight, window.innerHeight || 0),
-                    scrolled = displayHeight + (window.pageYOffset || document.documentElement.scrollTop),
-                    body = document.body,
-                    html = document.documentElement,
-                    height = Math.max(body.scrollHeight, body.offsetHeight,
-                            html.clientHeight, html.scrollHeight, html.offsetHeight);
-
-
-            if ((scrolled >= height - 200) && !$scope.switch) $scope.data.getItems();
-        }
-
-        // init getting of first 3 items
-        $scope.data.getItems();
-    });
-
-    myApp.directive('sections', [function () {
-        return {
-            restrict: "E",
-            templateUrl: "/templatesHtml/data-block-template.html"
-        }
-    }]);
-
-    //  stars rating directive
-    myApp.directive('starRating', starRating);
-
-    //  star rating directive function
-    function starRating() {
-        return {
-            restrict: 'EA',
-            template: '<ul class="star-rating" ng-class="{readonly: readonly}">' +
-            '<li ng-repeat="star in stars" class="star" ng-class="{filled: star.filled}" ng-click="toggle($index)">' +
-            '&#9733' +
-            '</li>' +
-            '</ul>',
-            scope: {
-                ratingValue: '=ngModel',
-                max: '=?', // optional (default is 5)
-                onRatingSelect: '&?',
-                readonly: '=?'
-            },
-            link: function (scope, element, attributes) {
-                if (scope.max == undefined) {
-                    scope.max = 5;
-                }
-                function updateStars() {
-                    scope.stars = [];
-                    for (var i = 0; i < scope.max; i++) {
-                        scope.stars.push({
-                            filled: i < scope.ratingValue
+                        responsePromise.success(function (data, status, headers, config) {
+                            $scope.data.responseItems = $scope.data.responseItems.concat(data);
                         });
-                    }
-                }
+                        responsePromise.error(function (data, status, headers, config) {
+                            console.error('AJAX failed! ' + status);
+                        })
+                    };
 
-                scope.toggle = function (index) {
-                    if (scope.readonly == undefined || scope.readonly === false) {
-                        scope.ratingValue = index + 1;
-                        scope.onRatingSelect({
-                            rating: index + 1
-                        });
-                    }
-                };
-                scope.$watch('ratingValue', function (oldValue, newValue) {
-                    if (newValue) {
-                        updateStars();
+                    function switchScroll(event) {
+                        var element = angular.element(event.target);
+                        if ($scope.data.switchMethod) {
+                            console.log(!element.hasClass('active'));
+                            element.toggleClass("active");
+                            $scope.data.switchMethod = false;
+                            document.addEventListener('scroll', scrollHandler);
+                            $scope.data.scrollBtnTxt = 'Disable scroll mode';
+                            $scope.data.getItems();
+                        } else {
+                            element.toggleClass("active");
+                            $scope.data.switchMethod = true;
+                            document.removeEventListener('scroll', scrollHandler);
+                            $scope.data.scrollBtnTxt = 'Enable scroll mode';
+                        }
+
+                    };
+
+                    function scrollHandler() {
+                        var displayHeight = Math.max(document.documentElement.clientHeight, window.innerHeight || 0),
+                                scrolled = displayHeight + (window.pageYOffset || document.documentElement.scrollTop),
+                                body = document.body,
+                                html = document.documentElement,
+                                height = Math.max(body.scrollHeight, body.offsetHeight,
+                                        html.clientHeight, html.scrollHeight, html.offsetHeight);
+
+                        if ((scrolled >= height - 300) && !$scope.switch) $scope.data.getItems();
                     }
                 });
+
+        angular.module('myApp')
+                .directive('sections', sections);
+
+        function sections() {
+            return {
+                restrict: "E",
+                templateUrl: "/templatesHtml/data-block-template.html"
             }
-        };
-    }
+        }
+
+        //  stars rating directive
+        angular.module('myApp').directive('starRating', starRating);
+
+        //  star rating directive function
+        function starRating() {
+            return {
+                restrict: 'EA',
+                template: '<ul class="star-rating" ng-class="{readonly: readonly}">' +
+                '<li ng-repeat="star in stars" class="star" ng-class="{filled: star.filled}" ng-click="toggle($index)">' +
+                '&#9733' +
+                '</li>' +
+                '</ul>',
+                scope: {
+                    ratingValue: '=ngModel',
+                    max: '=?', // optional (default is 5)
+                    onRatingSelect: '&?',
+                    readonly: '=?'
+                },
+                link: function (scope, element, attributes) {
+                    if (scope.max == undefined) {
+                        scope.max = 5;
+                    }
+                    function updateStars() {
+                        scope.stars = [];
+                        for (var i = 0; i < scope.max; i++) {
+                            scope.stars.push({
+                                filled: i < scope.ratingValue
+                            });
+                        }
+                    }
+
+                    scope.toggle = function (index) {
+                        if (scope.readonly == undefined || scope.readonly === false) {
+                            scope.ratingValue = index + 1;
+                            scope.onRatingSelect({
+                                rating: index + 1
+                            });
+                        }
+                    };
+                    scope.$watch('ratingValue', function (oldValue, newValue) {
+                        if (newValue) {
+                            updateStars();
+                        }
+                    });
+                }
+            };
+        }
+    })(angular);
 </script>
 
 

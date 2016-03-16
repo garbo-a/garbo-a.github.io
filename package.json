@@ -1,7 +1,7 @@
 {
   "name": "garbo-a.github.io",
   "version": "1.0.0",
-  "description": "Crated on lesson 2",
+  "description": "my private rep",
   "main": "gulpfile.js",
   "dependencies": {
     "deprecated": "^0.0.1",
